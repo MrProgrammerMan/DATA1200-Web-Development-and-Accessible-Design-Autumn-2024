@@ -1,3 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 0.5em;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+}
+
+.main {
+    overflow: auto;
+    padding-bottom: 100px;
+    background-color: red;
+}
+
+footer{
+    background-color: rgb(140, 240, 240);
+    position: relative;
+    height: 300px;
+    margin-top: -100px;
+}
+
+.footer-top{
+    height: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.5px solid black;
+}
+
+
+.footer-bot {
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+}
+
+.link:hover, .f-icon:hover {
+    text-decoration: underline;
+}
+
+.link{
+    color: black;
+    line-height: 15px;
+}
+
+.f-icon, .oslomet{
+    color: black;
+    line-height: 20px;
+}
+
+.link, .oslomet {
+    font-weight: bold;
+}
+
+.subscribe { 
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+
+.updated {
+    flex: 1;
+    font-size: 15px;
+}
+
+.footer-contact {
+    flex: 2;
+}
+
+.footer-nav {
+    flex: 1.2;
+}
+
+.footer-icons{
+    flex: 0.5;
+}
+
+.footer-list {
+    list-style-type: none;
+}
+
 .f-img {
     height: 15px;
     padding-right: 5px;
