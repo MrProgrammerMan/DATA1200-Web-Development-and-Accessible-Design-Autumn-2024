@@ -3,6 +3,7 @@
     /* Base text color and font family */
     color: #222222;
     font-family: Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 /* Headings */
