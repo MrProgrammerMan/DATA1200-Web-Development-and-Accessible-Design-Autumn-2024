@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: aqua;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li > a {
+  display: block;
+  padding: .8em;
+  color: black;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  background-color:rgb(0, 166, 255);
+}
+
+nav > ul > li > a:active {
+  background-color: rgb(0, 123, 255);
+}
