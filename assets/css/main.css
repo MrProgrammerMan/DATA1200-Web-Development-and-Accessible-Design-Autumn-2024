@@ -3,17 +3,39 @@ body {
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 10% auto 1fr auto 10%; /* Navbar takes up available space */
+  justify-items: start; /* Navbar is aligned left in the header */
+  gap: 0;
+  padding: 0;
+  
   background-color: #ffd500;
-  padding: 0 10% 0 10%;
+}
+
+#logoWrapper {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 #logo {
   height: 2em;
-  padding-right: 1em;
+  object-fit: contain;
+}
+
+nav {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  
+  display: flex;
+  flex-direction: row;
 }
 
 nav > ul {
@@ -28,7 +50,9 @@ nav > ul > li {
 
 nav > ul > li > a {
   display: block;
+  
   padding: 1.2em;
+  
   color: black;
   text-decoration: none;
 }
@@ -42,8 +66,11 @@ nav > ul > li > a:active {
 }
 
 #search-container {
-  margin-left: auto;
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -59,11 +86,16 @@ nav > ul > li > a:active {
 
 #search-container input[type="text"] {
   width: 0;
+  /* 
+   * When closed, preserve vertical padding.
+   * This makes the opening animation look like it's happening in one dimension;
+   * i.e.: The box "slides out" instead of "expanding into existance".
+   */
   padding: .8em 0;
   opacity: 0;
   border: 0;
   outline: none;
-  transition: width 0.3s ease, padding 0.3s ease, opacity 0.01s linear;
+  transition: width 0.3s ease, padding 0.3s ease, opacity;
 }
 
 #search-container:focus-within input[type="text"] {
