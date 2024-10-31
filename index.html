@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-    <header id="head">
-        <div id="logoWrapper">
-            <img id="logo" src="assets/imgs/OsloMet_logo_svart_OsloMet.png" alt="OsloMet - Oslo Metropolitan University logo.">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">MatMod</a></li>
-                <li><a href="#TBA">Accessibility</a></li>
-                <li><a href="#TBA">GitHub</a></li>
-                <li><a href="#TBA">Activity</a></li>
-            </ul>
-        </nav>
-        <form id="search-container">
-            <label for="search">SØK</label>
-            <input id="search" type="text">
-            <button id="search-btn" type="button">
-                <img id="search-icon" src="assets/imgs/search-icon.svg" alt="Search icon" aria-disabled="true">
-            </button>
-        </form>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="margin0">
+    <header class="padding0">
+      <div class="margin0 padding0" id="logoWrapper">
+        <img
+          id="logo"
+          src="assets/imgs/OsloMet_logo_svart_OsloMet.png"
+          alt="OsloMet - Oslo Metropolitan University logo."
+        />
+      </div>
+      <input type="checkbox" id="menu-toggle" hidden />
+      <nav>
+        <ul class="margin0 padding0">
+          <li><a href="index.html">MatMod</a></li>
+          <li><a href="#TBA">Accessibility</a></li>
+          <li><a href="#TBA">GitHub</a></li>
+          <li><a href="#TBA">Activity</a></li>
+        </ul>
+      </nav>
+      <form id="search-container">
+        <label for="search">SØK</label>
+        <input id="search" type="text" />
+        <button type="button">
+          <img
+            id="search-icon"
+            src="assets/imgs/search-icon.svg"
+            alt="Search icon"
+            aria-disabled="true"
+          />
+        </button>
+      </form>
+      <div id="menu-toggle-wrapper">
+        <label for="menu-toggle">
+          <p>MENY</p>
+          <div class="margin0 padding0" id="menu-icon">
+            <span class="margin0"></span>
+            <span class="margin0"></span>
+            <span class="margin0"></span>
+          </div>
+        </label>
+      </div>
     </header>
-</body>
+  </body>
 </html>
