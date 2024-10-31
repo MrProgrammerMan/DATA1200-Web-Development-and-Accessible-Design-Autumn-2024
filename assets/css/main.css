@@ -126,7 +126,7 @@ nav > ul > li > a:active {
 
 @media (max-width: 900px) {
   header {
-    grid-template-columns: 5% auto auto auto auto 5%;
+    grid-template-columns: 5% repeat(4, auto) 5%;
   }
 
   nav {
@@ -166,7 +166,7 @@ nav > ul > li > a:active {
 
 @media (max-width: 480px) {
   header {
-    grid-template-columns: 3% auto auto auto auto 3%;
+    grid-template-columns: 3% repeat(4, auto) 3%;
   }
 
   #search-container:focus-within input[type="text"] {
