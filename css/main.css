@@ -18,12 +18,13 @@
 }
 
 .studyinfo-details {
-    padding: 1.75em;
+
     margin: 0.5em;
 }
 
 /* font style for summary */
 .studyinfo summary {
+    padding: 1.75em;
     font-weight: 700;
     font-size: 1.20rem;
 }
