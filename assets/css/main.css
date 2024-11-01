@@ -110,6 +110,7 @@ nav > ul > li > a:active {
 }
 
 #menu-icon {
+  position: relative;
   width: 1.5em;
   height: 1em;
   display: flex;
@@ -119,9 +120,23 @@ nav > ul > li > a:active {
 
 #menu-icon > span {
   width: 1.5em;
-  height: 2px;
+  height: .2em;
   background-color: black;
   padding: 0;
+  transition: all .5s ease;
+  position: absolute;
+}
+
+#menu-icon > span:nth-child(1) {
+  top: 0;
+}
+
+#menu-icon > span:nth-child(2) {
+  top: .4em;
+}
+
+#menu-icon > span:nth-child(3) {
+  top: .8em;
 }
 
 @media (max-width: 900px) {
@@ -139,6 +154,24 @@ nav > ul > li > a:active {
 
   #menu-toggle:checked ~ nav {
     height: auto;
+  }
+
+  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon > span:nth-child(1) {
+    top: .5em;
+    transform: rotate(-45deg);
+  }
+
+  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon > span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon > span:nth-child(3) {
+    top: .5em;
+    transform: rotate(45deg);
+  }
+
+  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon {
+    position: relative;
   }
 
   #logo {
