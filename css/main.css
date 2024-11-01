@@ -7,12 +7,19 @@
 }
 
 .studyinfo {
-    margin: auto;
+    margin: auto; 
     padding: 0;
     max-width: 600px;
 }
 
+.studyinfo-top {
+    font-size: 1.5em;
+    padding: 1.75em;
+    margin: 0;
+}
+
 .studyinfo-details {
+    font-size: 1.15em;
     padding: 1.75em;
     margin: 0.5em;
 }
