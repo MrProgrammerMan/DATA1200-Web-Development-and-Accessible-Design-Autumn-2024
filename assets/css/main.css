@@ -1,3 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Variables */
+:root {
+  /* Base text color and font family */
+  color: #222222;
+  font-family: Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.studyinfo {
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
+}
+
+.studyinfo-details {
+  margin: 0.5em;
+}
+
+/* font style for summary */
+.studyinfo summary {
+  padding: 1.75em;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* font style for details summary child */
+.studyinfo-sub-details summary {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.studyinfo-sub-details p {
+  margin-left: 1.5em;
+}
+
+/* styling for  in .studyinfo */
+.studyinfo div {
+  margin-left: 1.5em;
+}
+/* styling for lists in .studyinfo */
+.studyinfo li {
+  margin-top: 1em;
+}
+
+/* Styling for links in .studyinfo */
+.studyinfo a {
+  color: black;
+  font-weight: 700;
+}
+
+.studyinfo a:hover {
+  text-decoration: none;
+}
+
+/* Headings */
+h2 {
+  /* Font size for h2 headings */
+  font-size: 2rem;
+}
+
+/* Article Styling */
+article {
+  /* Center the article and set max width */
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
+}
+
+/* Other Studies Section */
+.other-studies ul {
+  /* Remove padding and list style for unordered lists in .other-studies */
+  padding: 0;
+  list-style: none;
+}
+
+.other-studies span {
+  /* Font weight and size for spans in .other-studies */
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.other-studies a {
+  /* Styling for links in .other-studies */
+  border-top: 0.0625rem solid #e2e2e2;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #222;
+  padding: 1.1875rem 1.875rem 1.1875rem 0;
+  background-image: url(/images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center right 50px;
+  transition: 0.1s ease-in-out;
+}
+
+.other-studies a:hover {
+  /* Change background position on hover for links in .other-studies */
+  background-position: center right 43px;
+}
+
+.other-studies ul ul li {
+  /* Display inline for nested list items in .other-studies */
+  display: inline;
+}
+
+.other-studies ul ul > li:not(:last-child)::after {
+  /* Add a separator for nested list items in .other-studies */
+  content: "|";
+  padding: 0 8px;
+}
+
+.border-bottom {
+  /* Add a bottom border */
+  border-bottom: 0.0625rem solid #e2e2e2;
+}
+
+footer {
+  background-color: rgb(140, 240, 240);
+  position: relative;
+  height: 600px;
+  margin-top: -100px;
+}
+
+.footer-top,
+.footer-bot {
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+}
+
+.footer-top {
+  height: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 0.5px solid black;
+}
+
+.footer-bot {
+  padding-top: 75px;
+}
+
+.link:hover,
+.f-icon:hover {
+  text-decoration: underline;
+}
+
+.link,
+.f-icon,
+.oslomet {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  line-height: 30px;
+}
+
+.f-icon,
+.oslomet {
+  line-height: 40px;
+}
+
+.link,
+.oslomet {
+  font-weight: bold;
+}
+
+.subscribe {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.updated {
+  flex: 1;
+}
+
+.footer-contact {
+  flex: 2;
+}
+
+.footer-nav {
+  flex: 1.2;
+}
+
+.footer-icons {
+  flex: 0.5;
+}
+
+.footer-list {
+  list-style-type: none;
+}
+
+.f-img {
+  height: 25px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    background-color: rgb(140, 240, 240);
+    position: relative;
+    height: 1000px;
+    margin-top: -100px;
+  }
+
+  .footer-top {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 150px;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-bottom: 0.5px solid black;
+  }
+
+  .footer-bot {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+  }
+  .footer-contact,
+  .footer-nav,
+  .footer-icons {
+    padding-bottom: 5%;
+  }
+}
+
 .margin0 {
   margin: 0;
 }
@@ -120,10 +361,10 @@ nav > ul > li > a:active {
 
 #menu-icon > span {
   width: 1.5em;
-  height: .2em;
+  height: 0.2em;
   background-color: black;
   padding: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   position: absolute;
 }
 
@@ -132,11 +373,11 @@ nav > ul > li > a:active {
 }
 
 #menu-icon > span:nth-child(2) {
-  top: .4em;
+  top: 0.4em;
 }
 
 #menu-icon > span:nth-child(3) {
-  top: .8em;
+  top: 0.8em;
 }
 
 @media (max-width: 900px) {
@@ -156,17 +397,29 @@ nav > ul > li > a:active {
     height: auto;
   }
 
-  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon > span:nth-child(1) {
-    top: .5em;
+  #menu-toggle:checked
+    ~ #menu-toggle-wrapper
+    > label
+    > #menu-icon
+    > span:nth-child(1) {
+    top: 0.5em;
     transform: rotate(-45deg);
   }
 
-  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon > span:nth-child(2) {
+  #menu-toggle:checked
+    ~ #menu-toggle-wrapper
+    > label
+    > #menu-icon
+    > span:nth-child(2) {
     opacity: 0;
   }
 
-  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon > span:nth-child(3) {
-    top: .5em;
+  #menu-toggle:checked
+    ~ #menu-toggle-wrapper
+    > label
+    > #menu-icon
+    > span:nth-child(3) {
+    top: 0.5em;
     transform: rotate(45deg);
   }
 
