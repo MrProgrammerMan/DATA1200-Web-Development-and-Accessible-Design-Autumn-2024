@@ -11,6 +11,53 @@
   text-rendering: optimizeLegibility;
 }
 
+.studyinfo {
+    margin: auto;
+    padding: 0;
+    max-width: 600px;
+}
+
+.studyinfo-details {
+    padding: 1.75em;
+    margin: 0.5em;
+}
+
+/* font style for summary */
+.studyinfo summary {
+    font-weight: 700;
+    font-size: 1.20rem;
+}
+
+/* font style for details summary child */
+.studyinfo-sub-details summary {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.studyinfo-sub-details p {
+    margin-left: 1.5em;
+}
+
+/* styling for  in .studyinfo */
+.studyinfo div {
+    margin-left: 1.5em;
+}
+/* styling for lists in .studyinfo */
+.studyinfo li {
+    margin-top: 1em;
+}
+
+ /* Styling for links in .studyinfo */
+.studyinfo a {
+    color: black;
+    font-weight: 700;
+}
+
+.studyinfo a:hover {
+    text-decoration: none;
+}
+
+
 /* Headings */
 h2 {
   /* Font size for h2 headings */
