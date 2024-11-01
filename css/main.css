@@ -1,123 +1,122 @@
 /* Root Variables */
 :root {
-    /* Base text color and font family */
-    color: #222222;
-    font-family: Helvetica, Arial, sans-serif;
-    text-rendering: optimizeLegibility;
+/* Base text color and font family */
+  color: #222222;
+  font-family: Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 .studyinfo {
-    margin: auto; 
-    padding: 0;
-    max-width: 600px;
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
 }
 
 .studyinfo-top {
-    font-size: 1.5em;
-    padding: 1.75em;
-    margin: 0;
+  font-size: 1.5em;
+  padding: 1.75em;
+  margin: 0;
 }
 
 .studyinfo-details {
-    font-size: 1.15em;
-    padding: 1.75em;
-    margin: 0.5em;
+  font-size: 1.15em;
+  padding: 1.75em;
+  margin: 0.5em;
 }
 
 /* font style for summary */
 .studyinfo summary {
-    font-weight: 700;
-    font-size: 1.20rem;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 /* font style for details summary child */
 .studyinfo-sub-details summary {
-    font-size: 1.15rem;
-    font-weight: 500;
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .studyinfo-sub-details p {
-    margin-left: 1.5em;
+  margin-left: 1.5em;
 }
 
 /* styling for  in .studyinfo */
 .studyinfo div {
-    margin-left: 1.5em;
+  margin-left: 1.5em;
 }
 /* styling for lists in .studyinfo */
 .studyinfo li {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
- /* Styling for links in .studyinfo */
+/* Styling for links in .studyinfo */
 .studyinfo a {
-    color: black;
-    font-weight: 700;
+  color: black;
+  font-weight: 700;
 }
 
 .studyinfo a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 /* Headings */
 h2 {
-    /* Font size for h2 headings */
-    font-size: 2rem;
+  /* Font size for h2 headings */
+  font-size: 2rem;
 }
 
 /* Article Styling */
 article {
-    /* Center the article and set max width */
-    margin: auto;
-    padding: 0;
-    max-width: 600px;
+  /* Center the article and set max width */
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
 }
 
 /* Other Studies Section */
 .other-studies ul {
-    /* Remove padding and list style for unordered lists in .other-studies */
-    padding: 0;
-    list-style: none;
+  /* Remove padding and list style for unordered lists in .other-studies */
+  padding: 0;
+  list-style: none;
 }
 
 .other-studies span {
-    /* Font weight and size for spans in .other-studies */
-    font-weight: 700;
-    font-size: 1.25rem;
+  /* Font weight and size for spans in .other-studies */
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .other-studies a {
-    /* Styling for links in .other-studies */
-    border-top: 0.0625rem solid #e2e2e2;
-    display: flex;
-    align-items: flex-start;
-    text-decoration: none;
-    color: #222;
-    padding: 1.1875rem 1.875rem 1.1875rem 0;
-    background-image: url(/images/arrow-right.svg);
-    background-repeat: no-repeat;
-    background-position: center right 50px;
-    transition: 0.1s ease-in-out;
+  /* Styling for links in .other-studies */
+  border-top: 0.0625rem solid #e2e2e2;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #222;
+  padding: 1.1875rem 1.875rem 1.1875rem 0;
+  background-image: url(/images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center right 50px;
+  transition: 0.1s ease-in-out;
 }
 
 .other-studies a:hover {
-    /* Change background position on hover for links in .other-studies */
-    background-position: center right 43px;
+  /* Change background position on hover for links in .other-studies */
+  background-position: center right 43px;
 }
 
 .other-studies ul ul li {
-    /* Display inline for nested list items in .other-studies */
-    display: inline;
+  /* Display inline for nested list items in .other-studies */
+  display: inline;
 }
 
 .other-studies ul ul > li:not(:last-child)::after {
-    /* Add a separator for nested list items in .other-studies */
-    content: "|";
-    padding: 0 8px;
+  /* Add a separator for nested list items in .other-studies */
+  content: "|";
+  padding: 0 8px;
 }
 
 .border-bottom {
-    /* Add a bottom border */
-    border-bottom: 0.0625rem solid #e2e2e2;
+  /* Add a bottom border */
+  border-bottom: 0.0625rem solid #e2e2e2;
 }
