@@ -2,7 +2,7 @@
 :root {
   /* Base text color and font family */
   color: #222222;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -73,30 +73,32 @@ section {
 
 /* Student Stories */
 
-.student-stories > div {
+.student-stories {
+  margin: auto;
   display: flex;
-  width: 90vw;
+  max-width: 1200px;
+  height: 40svh;
+  box-sizing: border-box;
 }
 
-.stories-info {
+.stories-text {
   flex: 1;
-  background-color: rgba(255, 0, 0, 0.154);
-}
+  background-color: #ffd500;
+  height: 100%;
 
-.stories-img {
-  flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 0, 0, 0.154);
-
 }
 
-.stories-img img {
-  max-width: 100%;
-  max-height: 100%;
+.image-section {
+  flex: 1;
+  height: 100%;
+}
+
+.image-section img {
   object-fit: cover;
-  image-rendering: optimizeSpeed;
+  width: 100%;
+  height: 100%;
 }
-
-
