@@ -303,7 +303,7 @@ footer {
     }
 
     .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
-    .oStudiestart, .oUndervisningsspråk, .oStudieplasser {
+    .oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
     border-top: solid black;
     border-width: 0.01em;
     }
