@@ -73,6 +73,7 @@ section {
 
 /* Student Stories */
 .student-stories-main {
+  /* Center the main container and set width constraints */
   margin: auto;
   width: 90vw;
   max-width: 1100px;
@@ -81,12 +82,14 @@ section {
 }
 
 .student-stories {
+  /* Flex container for student stories */
   width: 100%;
   display: flex;
   background-color: #ffd500;
 }
 
 .stories-text {
+  /* Flex item for text content */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -97,34 +100,41 @@ section {
 }
 
 .teknologi {
+  /* Styling for technology link */
   font-weight: 700;
   font-size: 1em;
 }
 
 .stories-text a {
+  /* Link styling */
   color: rgb(34, 34, 34);
 }
 
 .no-underline {
+  /* Remove underline from links */
   text-decoration: none;
 }
 
 .stories-text h3 {
+  /* Heading styling */
   font-size: 1.75rem;
   hyphens: manual;
 }
 
 .stories-text p {
+  /* Paragraph styling */
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-weight: 400;
 }
 
 .image-section {
+  /* Flex item for image */
   flex: 1;
 }
 
 .image-section img {
+  /* Image styling */
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -132,15 +142,18 @@ section {
 
 @media screen and (max-width: 800px) {
   .student-stories {
+    /* Stack items vertically on small screens */
     flex-direction: column-reverse;
   }
 
   .stories-text {
+    /* Adjust padding and width on small screens */
     padding: 2rem 1rem;
     max-width: 100%;
   }
 
   .image-section img {
+    /* Adjust image dimensions on small screens */
     width: 100%;
     height: auto;
     max-height: 400px;
