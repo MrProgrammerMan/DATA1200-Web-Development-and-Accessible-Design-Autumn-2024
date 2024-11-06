@@ -289,7 +289,7 @@ footer {
     padding-bottom: 10px;
 }
 
-.oInfo {
+.oInfo, .oHead{
     margin-left: 0%;
     display: flex;
     justify-content: space-between;
@@ -366,3 +366,14 @@ footer {
     font-size:small;
     margin-left: 0;
 }
+
+#study-yearTop {
+    justify-content: end;
+}
+
+.s-img {
+    height: 10px;
+    padding-right: 5px;
+    padding-left: 20px;
+    vertical-align: center;
+  }
