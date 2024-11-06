@@ -15,7 +15,7 @@ header {
   justify-items: start; /* Navbar is aligned left in the header */
   gap: 0;
 
-  background-color: #ffd500;
+  background-color: rgb(140, 240, 240);
 }
 
 #logoWrapper {
