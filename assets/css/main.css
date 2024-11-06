@@ -241,19 +241,38 @@ body {
   font-size: 1.5em;
   padding: 1.75em;
   margin: 0;
+  font-weight: lighter;
 }
 
 .studyinfo-details {
   font-size: 1.15em;
-  padding: 1.75em;
   margin: 0.5em;
+}
+.studyinfo details summary::before{
+  content: ' + ';
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 1em;
+  border-width: 1px;
+  text-align: center;
+  min-width: 0.6em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  background-color: lightblue;
+}
+.studyinfo details[open] summary::before {
+  content: ' - ';
 }
 
 /* font style for summary */
 .studyinfo summary {
+  padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
-  padding: 1.75em;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 /* styling for  in .studyinfo */
@@ -275,19 +294,17 @@ body {
 /* font style for details summary child */
 .studyinfo-sub-details summary {
   font-size: 1.15rem;
-  font-weight: 500;
+  font-weight: normal;
 }
 .studyinfo-sub-details p {
   margin-left: 1.5em;
 }
 /* Headings */
 h2 {
-  /* Font size for h2 headings */
   font-size: 2rem;
 }
 /* Article Styling */
 article {
-  /* Center the article and set max width */
   margin: auto;
   padding: 0;
   max-width: 600px;
@@ -295,19 +312,16 @@ article {
 
 /* Other Studies Section */
 .other-studies ul {
-  /* Remove padding and list style for unordered lists in .other-studies */
   padding: 0;
   list-style: none;
 }
 
 .other-studies span {
-  /* Font weight and size for spans in .other-studies */
   font-weight: 700;
   font-size: 1.25rem;
 }
 
 .other-studies a {
-  /* Styling for links in .other-studies */
   border-top: 0.0625rem solid #e2e2e2;
   display: flex;
   align-items: flex-start;
@@ -321,38 +335,34 @@ article {
 }
 
 .other-studies a:hover {
-  /* Change background position on hover for links in .other-studies */
   background-position: center right 43px;
 }
 
 .other-studies ul ul li {
-  /* Display inline for nested list items in .other-studies */
   display: inline;
 }
 
 .other-studies ul ul > li:not(:last-child)::after {
-  /* Add a separator for nested list items in .other-studies */
   content: "|";
   padding: 0 8px;
 }
 
 .border-bottom {
-  /* Add a bottom border */
   border-bottom: 0.0625rem solid #e2e2e2;
 }
 
 footer {
+  /* set size and color of footer */
   background-color: rgb(140, 240, 240);
-  position: relative;
-  height: 600px;
-  margin-top: -100px;
+  height: 650px;
+  margin-top: 100px;
 }
 
-.footer-top,
-.footer-bot {
-  padding-left: 15%;
-  padding-right: 15%;
-  display: flex;
+.footer-top, .footer-bot {
+     /*Set padding left and right of containers, and containers in footer as flex-box */
+     padding-left: 15%;
+     padding-right: 15%;
+     display: flex;
 }
 
 .footer-top {
@@ -429,16 +439,16 @@ footer {
 
 @media screen and (max-width: 800px) {
   footer {
-    background-color: lightblue;
+    background-color: rgb(140, 240, 240);
     position: relative;
-    height: 1000px;
+    height: 1200px;
     margin-top: -100px;
   }
 
   .footer-top {
     padding-top: 3%;
     padding-bottom: 3%;
-    height: 150px;
+    height: 200px;
     padding-left: 3%;
     padding-right: 3%;
     display: flex;
@@ -459,4 +469,86 @@ footer {
   .footer-icons {
     padding-bottom: 5%;
   }
+}
+
+*/*{background-color: rgba(255, 0, 0, 0.174);}*/
+
+.overview {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    line-height: 2em;
+}
+
+#h1Wrapper {
+    /*Center h1 in a flexbox */
+    height: 70px;
+    display:flex;
+    align-items: center;
+}
+
+.oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
+.oStudiestart, .oUndervisningsspråk, .oStudieplasser {
+    border-top: solid black;
+    border-width: 0.01em;
+    padding: 2%;
+    padding-left: 0;
+    margin: 10px 10px 10px 0;
+    flex-basis: calc(22% - 5px);
+}
+
+.oHeader, .oBachelor {
+    margin-left: 10%;
+}
+
+.oBachelor {
+    padding-bottom: 10px;
+}
+
+.oInfo {
+    margin-left: 0%;
+}
+
+.oHead {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .overview {
+        display: flex;
+        flex-direction: column;
+        line-height: 2em;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
+    .oStudiestart, .oUndervisningsspråk, .oStudieplasser {
+    border-top: solid black;
+    border-width: 0.01em;
+    }
+    .oHeader, .oBachelor {
+        margin-left: 5%;
+    }
+    
+}
+
+.innsikt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    max-width: 40%;
+    min-width: 600px;
+    margin: 3% auto;
+    padding: 20px;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 600px) {
+    .innsikt {
+        min-width: fit-content;
+    }
 }
