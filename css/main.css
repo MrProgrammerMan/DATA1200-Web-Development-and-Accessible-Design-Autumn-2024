@@ -307,6 +307,10 @@ footer {
         width: 90%;
     }
 
+    .subjects {
+      width: 100%;
+    }
+
     .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
     .oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
     border-top: solid black;
