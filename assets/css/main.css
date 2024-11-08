@@ -248,7 +248,7 @@ body {
   font-size: 1.15em;
   margin: 0.5em;
 }
-.studyinfo details summary::before{
+.studyinfo-details > summary::before{
   content: ' + ';
   display: inline-block;
   font-weight: normal;
@@ -256,13 +256,10 @@ body {
   border-width: 1px;
   text-align: center;
   min-width: 0.6em;
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding: 0.5em 0.6em;
   background-color: lightblue;
 }
-.studyinfo details[open] summary::before {
+.studyinfo details[open] > summary::before {
   content: ' - ';
 }
 
@@ -295,6 +292,21 @@ body {
 .studyinfo-sub-details summary {
   font-size: 1.15rem;
   font-weight: normal;
+  list-style-type: none;
+  padding: 0.5em;
+}
+.studyinfo-sub-details > summary::before{
+  content: ' + ';
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 1em;
+  text-align: center;
+  min-width: 0.6em;
+  padding: 0.2em 0.3em;
+  background-color: lightblue;
+}
+.studyinfo-sub-details details[open] > summary::before {
+  content: ' - ';
 }
 .studyinfo-sub-details p {
   margin-left: 1.5em;
