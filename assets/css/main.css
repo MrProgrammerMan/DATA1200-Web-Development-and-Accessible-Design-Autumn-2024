@@ -316,7 +316,7 @@ h2 {
   font-size: 2rem;
 }
 /* Article Styling */
-article {
+.other-studies {
   margin: auto;
   padding: 0;
   max-width: 600px;
@@ -436,7 +436,7 @@ footer {
 }
 
 .footer-icons {
-  flex: 0.5;
+  flex: 0.6;
 }
 
 .footer-list {
@@ -454,7 +454,7 @@ footer {
     background-color: rgb(140, 240, 240);
     position: relative;
     height: 1200px;
-    margin-top: -100px;
+
   }
 
   .footer-top {
@@ -485,13 +485,20 @@ footer {
 
 */*{background-color: rgba(255, 0, 0, 0.174);}*/
 
-.overview {
+.overview, .subjects {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
     justify-content: flex-start;
-    line-height: 2em;
+}
+
+.subjects {
+  width: 100%;
+}
+
+.overview {
+  line-height: 2em;
 }
 
 #h1Wrapper {
@@ -502,10 +509,10 @@ footer {
 }
 
 .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
-.oStudiestart, .oUndervisningsspråk, .oStudieplasser {
+.oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
     border-top: solid black;
     border-width: 0.01em;
-    padding: 2%;
+    padding: 1%;
     padding-left: 0;
     margin: 10px 10px 10px 0;
     flex-basis: calc(22% - 5px);
@@ -519,8 +526,10 @@ footer {
     padding-bottom: 10px;
 }
 
-.oInfo {
+.oInfo, .oHead {
     margin-left: 0%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .oHead {
@@ -528,7 +537,7 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    .overview {
+    .overview, .subjects {
         display: flex;
         flex-direction: column;
         line-height: 2em;
@@ -536,8 +545,12 @@ footer {
         width: 90%;
     }
 
+    .subjects {
+      width: 100%;
+    }
+
     .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
-    .oStudiestart, .oUndervisningsspråk, .oStudieplasser {
+    .oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
     border-top: solid black;
     border-width: 0.01em;
     }
@@ -648,7 +661,6 @@ section {
   margin: auto;
   width: 90vw;
   max-width: 1100px;
-  padding-bottom: 500px;
   min-width: 300px;
 }
 
@@ -656,7 +668,7 @@ section {
   /* Flex container for student stories */
   width: 100%;
   display: flex;
-  background-color: #ffd500;
+  background-color: #e2e2e2;
 }
 
 .stories-text {
@@ -729,4 +741,43 @@ section {
     height: auto;
     max-height: 400px;
   }
+}
+
+#study-year{
+  background-color: rgb(237, 234, 234);
+  margin: 0;
+  max-width: 100%;
+  font-weight: bold;
+}
+.sYear {
+  padding: 10px 15px 10px;
+}
+
+.semester, .semesterGruppe, #study-yearTop {
+  font-size: medium;
+}
+
+.semesterGruppe {
+  font-weight: bold;
+}
+
+.subjects {
+  display: flex;
+  padding-bottom: 30px;
+  font-size:small;
+  margin-left: 0;
+}
+
+
+#study-yearTop {
+  justify-content: end;
+  align-items: end;
+  display: flex;
+}
+
+.s-img {
+  height: 10px;
+  padding-right: 5px;
+  padding-left: 20px;
+  vertical-align: center;
 }
