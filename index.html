@@ -2,16 +2,116 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="wclassth=device-wclassth, initial-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matematisk modellering og datavitenskap – ingeniør - OsloMet</title>
+
+    <link
+      rel="shortcut icon"
+      href="/images/OsloMet-favicon.ico"
+      type="image/x-icon"
     />
-    <link rel="stylesheet" href="/css/main.css" />
-    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-  <body>
+  <body class="margin0">
+    <header class="padding0">
+      <div class="margin0 padding0" id="logoWrapper">
+        <img
+          id="logo"
+          src="assets/imgs/OsloMet_logo_svart_OsloMet.png"
+          alt="OsloMet - Oslo Metropolitan University logo."
+        />
+      </div>
+      <input type="checkbox" id="menu-toggle" hidden />
+      <nav>
+        <ul class="margin0 padding0">
+          <li><a href="index.html">MatMod</a></li>
+          <li><a href="#TBA">Accessibility</a></li>
+          <li><a href="#TBA">GitHub</a></li>
+          <li><a href="#TBA">Activity</a></li>
+        </ul>
+      </nav>
+      <form id="search-container">
+        <label for="search">SØK</label>
+        <input id="search" type="text" />
+        <button type="button">
+          <img
+            id="search-icon"
+            src="assets/imgs/search-icon.svg"
+            alt="Search icon"
+            aria-disabled="true"
+          />
+        </button>
+      </form>
+      <div id="menu-toggle-wrapper">
+        <label for="menu-toggle">
+          <p>MENY</p>
+          <div class="margin0 padding0" id="menu-icon">
+            <span class="margin0"></span>
+            <span class="margin0"></span>
+            <span class="margin0"></span>
+          </div>
+        </label>
+      </div>
+    </header>
+
+    <div id="h1Wrapper">
+      <h1 class="oHeader">
+        Matematisk modellering og datavitenskap&nbsp;&#8209;&nbsp;ingeniør
+      </h1>
+    </div>
+    <p class="oBachelor">Bachelorprogram</p>
+
+    <article class="overview border-bottom">
+      <dl class="oStudiested">
+        <dt class="oHead">Studiested</dt>
+        <dd class="oInfo">Pilestredet i Oslo</dd>
+      </dl>
+
+      <dl class="oVarighet">
+        <dt class="oHead">Varighet</dt>
+        <dd class="oInfo">3 år</dd>
+      </dl>
+
+      <dl class="oOmfang">
+        <dt class="oHead">Omfang</dt>
+        <dd class="oInfo">Heltid</dd>
+      </dl>
+
+      <dl class="oStudiepoeng">
+        <dt class="oHead">Studiepoeng</dt>
+        <dd class="oInfo">180</dd>
+      </dl>
+
+      <dl class="oStudiestart">
+        <dt class="oHead">Studiestart</dt>
+        <dd class="oInfo">August</dd>
+      </dl>
+
+      <dl class="oUndervisningsspråk">
+        <dt class="oHead">Undervisningsspråk</dt>
+        <dd class="oInfo">Norsk</dd>
+        <dd class="oInfo">Engelsk</dd>
+      </dl>
+
+      <dl class="oStudieplasser">
+        <dt class="oHead">Studieplasser</dt>
+        <dd class="oInfo">40</dd>
+      </dl>
+    </article>
+
+    <article class="innsikt border-bottom">
+      <p id="iTekst">
+        Få innsikt i matematiske modeller og datadrevne metoder som kan løse
+        mange praktiske og samfunnsnyttige oppgaver.
+      </p>
+    </article>
+
     <div class="studyinfo">
-      <p class="studyinfo-top border-bottom">Få innsikt i matematiske modeller og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
+      <p class="studyinfo-top border-bottom">
+        Få innsikt i matematiske modeller og datadrevne metoder som kan løse
+        mange praktiske og samfunnsnyttige oppgaver.
+      </p>
       <details class="studyinfo-details border-bottom">
         <summary>Opptakskrav og poeng</summary>
         <div>
@@ -104,7 +204,6 @@
       </details>
       <details class="studyinfo-details border-bottom">
         <summary>Studiets oppbygging</summary>
-
       </details>
       <details class="studyinfo-details border-bottom">
         <summary>Hvordan foregår undervisningen?</summary>
@@ -187,11 +286,11 @@
         </li>
       </details>
     </div>
-    <article class="other-studies">
+    <section class="other-studies">
       <h2>Du er kanskje også interessert i disse?</h2>
       <ul>
         <li class="studies-item">
-          <a href="#">
+          <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi">
             <div>
               <span>Anvendt datateknologi</span>
               <ul>
@@ -204,7 +303,9 @@
           </a>
         </li>
         <li class="studies-item">
-          <a href="#">
+          <a
+            href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior"
+          >
             <div>
               <span>Bioteknologi- og kjemiingeniør</span>
               <ul>
@@ -217,7 +318,7 @@
           </a>
         </li>
         <li class="studies-item">
-          <a href="#">
+          <a href="https://www.oslomet.no/studier/tkd/byggingenior">
             <div>
               <span>Byggingeniør</span>
               <ul>
@@ -230,7 +331,7 @@
           </a>
         </li>
         <li class="studies-item">
-          <a href="#">
+          <a href="https://www.oslomet.no/studier/tkd/dataingenior">
             <div>
               <span>Dataingeniør</span>
               <ul>
@@ -243,7 +344,7 @@
           </a>
         </li>
         <li class="studies-item">
-          <a href="#">
+          <a href="https://www.oslomet.no/studier/tkd/elektronikkingenior">
             <div>
               <span>Elektronikkingeniør</span>
               <ul>
@@ -256,7 +357,7 @@
           </a>
         </li>
         <li class="studies-item">
-          <a href="#">
+          <a href="https://www.oslomet.no/studier/tkd/informasjonsteknologi">
             <div>
               <span>Informasjonsteknologi</span>
               <ul>
@@ -269,7 +370,7 @@
           </a>
         </li>
         <li class="studies-item">
-          <a href="#">
+          <a href="https://www.oslomet.no/studier/tkd/maskiningenior">
             <div>
               <span>Maskiningeniør</span>
               <ul>
@@ -282,7 +383,7 @@
           </a>
         </li>
         <li class="studies-item border-bottom">
-          <a href="#">
+          <a href="https://www.oslomet.no/studier/tkd/tre-termin-ingenior">
             <div>
               <span>Tre-terminsordning til ingeniørutdanning</span>
               <ul>
@@ -295,7 +396,43 @@
           </a>
         </li>
       </ul>
-    </article>
+    </section>
+
+    <!-- Student stories -->
+    <section class="student-stories-main">
+      <h2>Studenthistorier</h2>
+      <div class="student-stories">
+        <div class="stories-text">
+          <a
+            href="https://www.oslomet.no/studier/studenthistorier?student_story=147"
+            class="teknologi"
+            >Teknologi og design</a
+          >
+          <a
+            href="https://www.oslomet.no/studier/studenthistorier/spa-fremtiden-matematikk-datavitenskap"
+            class="no-underline"
+          >
+            <h3>Spå fremtiden med mate&shy;matikk og data&shy;vitenskap</h3>
+            <p>
+              Har du lyst til å finne ut hva som vil skje i fremtiden? Lær å
+              bruke verktøy for å forutsi alt fra været og strømprisene til
+              utviklingen i boligmarkedet.
+            </p>
+          </a>
+        </div>
+        <div class="image-section">
+          <a
+            href="https://www.oslomet.no/studier/studenthistorier/spa-fremtiden-matematikk-datavitenskap"
+            aria-label="Spå fremtiden med matematikk og datavitenskap"
+          >
+            <img
+              src="assets/imgs/smilefjes.webp"
+              alt="Sebastian og André står i en korridor og smiler. Sebastian holder en lap top"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer-top">
         <h2 class="updated">Hold deg oppdatert på hva som skjer på OsloMet.</h2>
@@ -336,7 +473,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/facebook-brands-solid.svg"
+                  src="assets/imgs/facebook-brands-solid.svg"
                 />Facebook</a
               >
             </li>
@@ -344,7 +481,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/square-twitter-brands-solid.svg"
+                  src="assets/imgs/square-twitter-brands-solid.svg"
                 />X (Twitter)</a
               >
             </li>
@@ -352,7 +489,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/linkedin-brands-solid.svg"
+                  src="assets/imgs/linkedin-brands-solid.svg"
                 />LinkedIn</a
               >
             </li>
@@ -360,7 +497,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/instagram-brands-solid.svg"
+                  src="assets/imgs/instagram-brands-solid.svg"
                 />Instagram</a
               >
             </li>
