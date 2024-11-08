@@ -15,14 +15,12 @@
   </head>
   <body class="margin0">
     <header class="padding0">
-      <div class="margin0 padding0" id="logoWrapper">
+      <div class="margin0 padding0 verticalAlign" id="logoWrapper">
         <img
-          id="logo"
           src="assets/imgs/OsloMet_logo_svart_OsloMet.png"
           alt="OsloMet - Oslo Metropolitan University logo."
         />
       </div>
-      <input type="checkbox" id="menu-toggle" hidden />
       <nav>
         <ul class="margin0 padding0">
           <li><a href="index.html">MatMod</a></li>
@@ -34,22 +32,22 @@
       <form id="search-container">
         <label for="search">SØK</label>
         <input id="search" type="text" />
-        <button type="button">
+        <button type="button"> <!--type=button prevents site refresh (because search is dummy)-->
           <img
             id="search-icon"
             src="assets/imgs/search-icon.svg"
             alt="Search icon"
-            aria-disabled="true"
           />
         </button>
       </form>
       <div id="menu-toggle-wrapper">
+        <input id="menu-toggle" type="checkbox" hidden/>
         <label for="menu-toggle">
           <p>MENY</p>
-          <div class="margin0 padding0" id="menu-icon">
-            <span class="margin0"></span>
-            <span class="margin0"></span>
-            <span class="margin0"></span>
+          <div class="margin0 padding0">
+            <span id="menu-icon-span0" class="margin0"></span>
+            <span id="menu-icon-span1" class="margin0"></span>
+            <span id="menu-icon-span2" class="margin0"></span>
           </div>
         </label>
       </div>
