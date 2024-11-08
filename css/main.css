@@ -203,7 +203,7 @@ footer {
 }
 
 .footer-icons {
-  flex: 0.5;
+  flex: 0.6;
 }
 
 .footer-list {
@@ -258,6 +258,9 @@ footer {
     width: 80%;
     margin: 0 auto;
     justify-content: flex-start;
+}
+.subjects {
+  width: 100%;
 }
 
 .overview {
@@ -319,10 +322,6 @@ footer {
     .oHeader, .oBachelor {
         margin-left: 5%;
     }
-
-    #study-yearTop {
-        display: flex;
-    }
     
 }
 
@@ -373,6 +372,8 @@ footer {
 
 #study-yearTop {
     justify-content: end;
+    align-items: end;
+    display: flex;
 }
 
 .s-img {
