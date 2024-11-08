@@ -1,0 +1,771 @@
+.margin0 {
+  margin: 0;
+}
+
+.padding0 {
+  padding: 0;
+}
+
+header {
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 10% auto 1fr auto 10%; /* Navbar takes up available space */
+  justify-items: start; /* Navbar is aligned left in the header */
+  gap: 0;
+
+  background-color: rgb(140, 240, 240);
+}
+
+#logoWrapper {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 2em;
+  object-fit: contain;
+}
+
+nav {
+  grid-column: 3 / 4;
+
+  display: flex;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li > a {
+  display: block;
+
+  padding: 1.2em;
+
+  color: black;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  text-decoration-line: underline;
+}
+
+nav > ul > li > a:active {
+  background-color: rgba(0, 255, 255, 0.315);
+}
+
+#search-container {
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+
+  display: flex;
+  align-items: center;
+}
+
+#search-container label {
+  padding: 0.3em;
+  font-weight: 700;
+}
+
+#search-container input[type="text"] {
+  width: 0;
+  /* 
+   * When closed, preserve vertical padding.
+   * This makes the opening animation look like it's happening in one dimension;
+   * i.e.: The box "slides out" instead of "expanding into existance".
+   */
+  padding: 0.8em 0;
+  opacity: 0;
+  border: 0;
+  outline: none;
+  transition: width 0.3s ease, padding 0.3s ease, opacity;
+}
+
+#search-container button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+}
+
+#search-container:focus-within input[type="text"] {
+  width: 10em;
+  padding: 0.8em;
+  opacity: 1;
+}
+
+#menu-toggle-wrapper {
+  display: none;
+}
+
+#menu-toggle-wrapper > label > p {
+  padding: 0.3em;
+  font-weight: 700;
+}
+
+#menu-icon {
+  position: relative;
+  width: 1.5em;
+  height: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#menu-icon > span {
+  width: 1.5em;
+  height: 0.2em;
+  background-color: black;
+  padding: 0;
+  transition: all 0.5s ease;
+  position: absolute;
+}
+
+#menu-icon > span:nth-child(1) {
+  top: 0;
+}
+
+#menu-icon > span:nth-child(2) {
+  top: 0.4em;
+}
+
+#menu-icon > span:nth-child(3) {
+  top: 0.8em;
+}
+
+@media (max-width: 900px) {
+  header {
+    grid-template-columns: 5% repeat(4, auto) 5%;
+  }
+
+  nav {
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+    height: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #menu-toggle:checked ~ nav {
+    height: auto;
+  }
+
+  #menu-toggle:checked
+    ~ #menu-toggle-wrapper
+    > label
+    > #menu-icon
+    > span:nth-child(1) {
+    top: 0.5em;
+    transform: rotate(-45deg);
+  }
+
+  #menu-toggle:checked
+    ~ #menu-toggle-wrapper
+    > label
+    > #menu-icon
+    > span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked
+    ~ #menu-toggle-wrapper
+    > label
+    > #menu-icon
+    > span:nth-child(3) {
+    top: 0.5em;
+    transform: rotate(45deg);
+  }
+
+  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon {
+    position: relative;
+  }
+
+  #logo {
+    padding: 0.8em 0;
+  }
+
+  nav > ul > li {
+    width: 100vw;
+    text-align: center;
+  }
+
+  #menu-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 5 / 6;
+  }
+
+  #menu-toggle-wrapper > label {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    grid-template-columns: 3% repeat(4, auto) 3%;
+  }
+
+  #search-container:focus-within input[type="text"] {
+    width: 8em;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+/* Root Variables */
+:root {
+  /* Base text color and font family */
+  color: #222222;
+  font-family: Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.studyinfo {
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
+}
+
+.studyinfo-top {
+  font-size: 1.5em;
+  padding: 1.75em;
+  margin: 0;
+  font-weight: lighter;
+}
+
+.studyinfo-details {
+  font-size: 1.15em;
+  margin: 0.5em;
+}
+.studyinfo details summary::before{
+  content: ' + ';
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 1em;
+  border-width: 1px;
+  text-align: center;
+  min-width: 0.6em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  background-color: lightblue;
+}
+.studyinfo details[open] summary::before {
+  content: ' - ';
+}
+
+/* font style for summary */
+.studyinfo summary {
+  padding: 2em;
+  font-weight: 700;
+  font-size: 1.2rem;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+/* styling for  in .studyinfo */
+.studyinfo div {
+  margin-left: 1.5em;
+}
+/* styling for lists in .studyinfo */
+.studyinfo li {
+  margin-top: 1em;
+}
+/* Styling for links in .studyinfo */
+.studyinfo a {
+  color: black;
+  font-weight: 700;
+}
+.studyinfo a:hover {
+  text-decoration: none;
+}
+/* font style for details summary child */
+.studyinfo-sub-details summary {
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+.studyinfo-sub-details p {
+  margin-left: 1.5em;
+}
+/* Headings */
+h2 {
+  font-size: 2rem;
+}
+/* Article Styling */
+.other-studies {
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
+}
+
+/* Other Studies Section */
+.other-studies ul {
+  padding: 0;
+  list-style: none;
+}
+
+.other-studies span {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.other-studies a {
+  border-top: 0.0625rem solid #e2e2e2;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #222;
+  padding: 1.1875rem 1.875rem 1.1875rem 0;
+  background-image: url(/images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center right 50px;
+  transition: 0.1s ease-in-out;
+}
+
+.other-studies a:hover {
+  background-position: center right 43px;
+}
+
+.other-studies ul ul li {
+  display: inline;
+}
+
+.other-studies ul ul > li:not(:last-child)::after {
+  content: "|";
+  padding: 0 8px;
+}
+
+.border-bottom {
+  border-bottom: 0.0625rem solid #e2e2e2;
+}
+
+footer {
+  /* set size and color of footer */
+  background-color: rgb(140, 240, 240);
+  height: 650px;
+  margin-top: 100px;
+}
+
+.footer-top, .footer-bot {
+     /*Set padding left and right of containers, and containers in footer as flex-box */
+     padding-left: 15%;
+     padding-right: 15%;
+     display: flex;
+}
+
+.footer-top {
+  height: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 0.5px solid black;
+}
+
+.footer-bot {
+  padding-top: 75px;
+}
+
+.link:hover,
+.f-icon:hover {
+  text-decoration: underline;
+}
+
+.link,
+.f-icon,
+.oslomet {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  line-height: 30px;
+}
+
+.f-icon,
+.oslomet {
+  line-height: 40px;
+}
+
+.link,
+.oslomet {
+  font-weight: bold;
+}
+
+.subscribe {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.updated {
+  flex: 1;
+}
+
+.footer-contact {
+  flex: 2;
+}
+
+.footer-nav {
+  flex: 1.2;
+}
+
+.footer-icons {
+  flex: 0.6;
+}
+
+.footer-list {
+  list-style-type: none;
+}
+
+.f-img {
+  height: 25px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    background-color: rgb(140, 240, 240);
+    position: relative;
+    height: 1200px;
+    margin-top: -100px;
+  }
+
+  .footer-top {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 200px;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-bottom: 0.5px solid black;
+  }
+
+  .footer-bot {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+  }
+  .footer-contact,
+  .footer-nav,
+  .footer-icons {
+    padding-bottom: 5%;
+  }
+}
+
+*/*{background-color: rgba(255, 0, 0, 0.174);}*/
+
+.overview, .subjects {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+.subjects {
+  width: 100%;
+}
+
+.overview {
+  line-height: 2em;
+}
+
+#h1Wrapper {
+    /*Center h1 in a flexbox */
+    height: 70px;
+    display:flex;
+    align-items: center;
+}
+
+.oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
+.oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
+    border-top: solid black;
+    border-width: 0.01em;
+    padding: 1%;
+    padding-left: 0;
+    margin: 10px 10px 10px 0;
+    flex-basis: calc(22% - 5px);
+}
+
+.oHeader, .oBachelor {
+    margin-left: 10%;
+}
+
+.oBachelor {
+    padding-bottom: 10px;
+}
+
+.oInfo, .oHead {
+    margin-left: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.oHead {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .overview, .subjects {
+        display: flex;
+        flex-direction: column;
+        line-height: 2em;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .subjects {
+      width: 100%;
+    }
+
+    .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
+    .oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
+    border-top: solid black;
+    border-width: 0.01em;
+    }
+    .oHeader, .oBachelor {
+        margin-left: 5%;
+    }
+    
+}
+
+.innsikt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    max-width: 40%;
+    min-width: 600px;
+    margin: 3% auto;
+    padding: 20px;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 600px) {
+    .innsikt {
+        min-width: fit-content;
+    }
+}
+
+
+
+/* ------------------------------------------ */
+
+/* Root Variables */
+:root {
+  /* Base text color and font family */
+  color: #222222;
+  font-family: Futura, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings */
+h2 {
+  /* Font size for h2 headings */
+  font-size: 2rem;
+}
+
+/* Must Delete!!! */
+/* section Styling */
+section {
+  /* Center the article and set max width */
+  margin: auto;
+  padding: 0;
+  width: 80vw;
+}
+
+/* Other Studies Section */
+.other-studies ul {
+  /* Remove padding and list style for unordered lists in .other-studies */
+  padding: 0;
+  list-style: none;
+}
+
+.other-studies span {
+  /* Font weight and size for spans in .other-studies */
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.other-studies a {
+  /* Styling for links in .other-studies */
+  border-top: 0.0625rem solid #e2e2e2;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #222;
+  padding: 1.1875rem 1.875rem 1.1875rem 0;
+  background-image: url(/assets/imgs/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center right 50px;
+  transition: 0.1s ease-in-out;
+}
+
+.other-studies a:hover {
+  /* Change background position on hover for links in .other-studies */
+  background-position: center right 43px;
+}
+
+.other-studies ul ul li {
+  /* Display inline for nested list items in .other-studies */
+  display: inline;
+}
+
+.other-studies ul ul > li:not(:last-child)::after {
+  /* Add a separator for nested list items in .other-studies */
+  content: "|";
+  padding: 0 8px;
+}
+
+.border-bottom {
+  /* Add a bottom border */
+  border-bottom: 0.0625rem solid #e2e2e2;
+}
+
+/* ------------------------ */
+
+/* Student Stories */
+.student-stories-main {
+  /* Center the main container and set width constraints */
+  margin: auto;
+  width: 90vw;
+  max-width: 1100px;
+  padding-bottom: 500px;
+  min-width: 300px;
+}
+
+.student-stories {
+  /* Flex container for student stories */
+  width: 100%;
+  display: flex;
+  background-color: #ffd500;
+}
+
+.stories-text {
+  /* Flex item for text content */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2rem 2rem 5rem;
+  max-width: 50%;
+}
+
+.teknologi {
+  /* Styling for technology link */
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.stories-text a {
+  /* Link styling */
+  color: rgb(34, 34, 34);
+}
+
+.no-underline {
+  /* Remove underline from links */
+  text-decoration: none;
+}
+
+.stories-text h3 {
+  /* Heading styling */
+  font-size: 1.75rem;
+  hyphens: manual;
+}
+
+.stories-text p {
+  /* Paragraph styling */
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.image-section {
+  /* Flex item for image */
+  flex: 1;
+}
+
+.image-section img {
+  /* Image styling */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .student-stories {
+    /* Stack items vertically on small screens */
+    flex-direction: column-reverse;
+  }
+
+  .stories-text {
+    /* Adjust padding and width on small screens */
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .image-section img {
+    /* Adjust image dimensions on small screens */
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+}
+
+#study-year{
+  background-color: rgb(237, 234, 234);
+  margin: 0;
+  max-width: 100%;
+  font-weight: bold;
+}
+.sYear {
+  padding: 10px 15px 10px;
+}
+
+.semester, .semesterGruppe, #study-yearTop {
+  font-size: medium;
+}
+
+.semesterGruppe {
+  font-weight: bold;
+}
+
+.subjects {
+  display: flex;
+  padding-bottom: 30px;
+  font-size:small;
+  margin-left: 0;
+}
+
+#study-yearTop {
+  justify-content: end;
+  align-items: end;
+  display: flex;
+}
+
+.s-img {
+  height: 10px;
+  padding-right: 5px;
+  padding-left: 20px;
+  vertical-align: center;
+}

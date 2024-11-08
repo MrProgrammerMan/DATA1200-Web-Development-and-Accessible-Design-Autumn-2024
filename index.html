@@ -6,15 +6,58 @@
       name="viewport"
       content="wclassth=device-wclassth, initial-scale=1.0"
     />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Document</title>
   </head>
   <body>
+  <body class="margin0">
+    <header class="padding0">
+      <div class="margin0 padding0" id="logoWrapper">
+        <img
+          id="logo"
+          src="assets/imgs/OsloMet_logo_svart_OsloMet.png"
+          alt="OsloMet - Oslo Metropolitan University logo."
+        />
+      </div>
+      <input type="checkbox" id="menu-toggle" hidden />
+      <nav>
+        <ul class="margin0 padding0">
+          <li><a href="index.html">MatMod</a></li>
+          <li><a href="#TBA">Accessibility</a></li>
+          <li><a href="#TBA">GitHub</a></li>
+          <li><a href="#TBA">Activity</a></li>
+        </ul>
+      </nav>
+      <form id="search-container">
+        <label for="search">SØK</label>
+        <input id="search" type="text" />
+        <button type="button">
+          <img
+            id="search-icon"
+            src="./assets/imgs/search-icon.svg"
+            alt="Search icon"
+            aria-disabled="true"
+          />
+        </button>
+      </form>
+      <div id="menu-toggle-wrapper">
+        <label for="menu-toggle">
+          <p>MENY</p>
+          <div class="margin0 padding0" id="menu-icon">
+            <span class="margin0"></span>
+            <span class="margin0"></span>
+            <span class="margin0"></span>
+          </div>
+        </label>
+      </div>
+    </header>
+
     <div id="h1Wrapper">
       <h1 class="oHeader">
         Matematisk modellering og datavitenskap&nbsp;&#8209;&nbsp;ingeniør
       </h1>
     </div>
+      
     <p class="oBachelor">Bachelorprogram</p>
 
     <article class="overview border-bottom">
@@ -53,13 +96,6 @@
         <dt class="oHead">Studieplasser</dt>
         <dd class="oInfo">40</dd>
       </dl>
-    </article>
-
-    <article class="innsikt border-bottom">
-      <p id="iTekst">
-        Få innsikt i matematiske modeller og datadrevne metoder som kan løse
-        mange praktiske og samfunnsnyttige oppgaver.
-      </p>
     </article>
 
     <div class="studyinfo">
@@ -162,11 +198,11 @@
 
         <div id="study-yearTop">
           <span class="s-icon">
-            <img class="s-img" src="/img/star-regular.svg" />
+            <img class="s-img" src="./assets/imgs/star-regular.svg" />
             Valgfritt emne
           </span>
           <span class="s-icon">
-            <img class="s-img" src="/img/forward-solid.svg" />
+            <img class="s-img" src="./assets/imgs/forward-solid.svg" />
             Løper over flere semestre
           </span>
         </div>
@@ -360,7 +396,7 @@
             <dt class="oHead">
               <span>Visualisering</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -372,7 +408,7 @@
             <dt class="oHead">
               <span>Avansert modellering og beregninger</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -469,7 +505,7 @@
             <dt class="oHead">
               <span>Introduksjon til IT-forskning</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -481,7 +517,7 @@
             <dt class="oHead">
               <span>Introduction to Data Science with Scripting</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -493,7 +529,7 @@
             <dt class="oHead">
               <span>Datasikkerhet</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -505,7 +541,7 @@
             <dt class="oHead">
               <span>Simulering og visualisering</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -522,7 +558,7 @@
             <dt class="oHead">
               <span>Testing av programvare</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -534,7 +570,7 @@
             <dt class="oHead">
               <span>Datanettverk og skytjenester</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -546,7 +582,7 @@
             <dt class="oHead">
               <span>Ressurseffektive programmer</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -558,7 +594,7 @@
             <dt class="oHead">
               <span>Avansert modellering og beregninger</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -587,7 +623,7 @@
             <dt class="oHead">
               <span>Introduksjon til IT-forskning</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -599,7 +635,7 @@
             <dt class="oHead">
               <span>Anvendt kunstig intelligens og data science prosjekt</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -611,7 +647,7 @@
             <dt class="oHead">
               <span>Datasikkerhet</span
               ><span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -623,7 +659,7 @@
             <dt class="oHead">
               <span>Simulering og visualisering</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -640,7 +676,7 @@
             <dt class="oHead">
               <span>Testing av programvare</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -652,7 +688,7 @@
             <dt class="oHead">
               <span>Datanettverk og skytjenester</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -664,7 +700,7 @@
             <dt class="oHead">
               <span>Ressurseffektive programmer</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -691,7 +727,7 @@
             <dt class="oHead">
               <span>Introduksjon til IT-forskning</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -703,7 +739,7 @@
             <dt class="oHead">
               <span>Datasikkerhet</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -715,7 +751,7 @@
             <dt class="oHead">
               <span>Lineær algebra og introduksjon til gruppeteori</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -727,7 +763,7 @@
             <dt class="oHead">
               <span>Reell analyse</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -744,7 +780,7 @@
             <dt class="oHead">
               <span>Visualisering</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -757,7 +793,7 @@
             <dt class="oHead">
               <span>Testing av programvare</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -769,7 +805,7 @@
             <dt class="oHead">
               <span>Datanettverk og skytjenester</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -781,7 +817,7 @@
             <dt class="oHead">
               <span>Symmetrier og algebra strukturer</span>
               <span class="s-icon">
-                <img class="s-img" src="/img/star-regular.svg" />
+                <img class="s-img" src="./assets/imgs/star-regular.svg" />
               </span>
             </dt>
             <dd class="oInfo">
@@ -1021,7 +1057,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/facebook-brands-solid.svg"
+                  src="./assets/imgs/facebook-brands-solid.svg"
                 />Facebook</a
               >
             </li>
@@ -1029,7 +1065,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/square-twitter-brands-solid.svg"
+                  src="./assets/imgs/square-twitter-brands-solid.svg"
                 />X (Twitter)</a
               >
             </li>
@@ -1037,7 +1073,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/linkedin-brands-solid.svg"
+                  src="./assets/imgs/linkedin-brands-solid.svg"
                 />LinkedIn</a
               >
             </li>
@@ -1045,7 +1081,7 @@
               <a class="f-icon" href="#"
                 ><img
                   class="f-img"
-                  src="/img/instagram-brands-solid.svg"
+                  src="./assets/imgs/instagram-brands-solid.svg"
                 />Instagram</a
               >
             </li>
