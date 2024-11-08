@@ -2,8 +2,28 @@
   margin: 0;
 }
 
+.border0 {
+  border: 0;
+}
+
 .padding0 {
   padding: 0;
+}
+
+nav,
+#search-container,
+#menu-toggle-wrapper > label,
+#menu-toggle-wrapper > label > div,
+.align-center {
+  display: flex;
+}
+
+/* Skriv en kjapp kommentar om hva du gjør / targeter */
+.align-center,
+#search-container,
+#menu-toggle-wrapper,
+#menu-toggle-wrapper > label {
+  align-items: center;
 }
 
 header {
@@ -21,20 +41,16 @@ header {
 #logoWrapper {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
-
-  display: flex;
-  align-items: center;
 }
 
-#logo {
+#logoWrapper > img {
   height: 2em;
   object-fit: contain;
 }
 
 nav {
+  grid-row: 1 / 2;
   grid-column: 3 / 4;
-
-  display: flex;
 }
 
 nav > ul {
@@ -65,83 +81,105 @@ nav > ul > li > a:active {
 #search-container {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
-
-  display: flex;
-  align-items: center;
 }
 
-#search-container label {
-  padding: 0.3em;
-  font-weight: 700;
-}
-
-#search-container input[type="text"] {
+#search-container > input[type="text"] {
   width: 0;
   /* 
    * When closed, preserve vertical padding.
    * This makes the opening animation look like it's happening in one dimension;
    * i.e.: The box "slides out" instead of "expanding into existance".
    */
-  padding: 0.8em 0;
+  padding: .8em 0;
   opacity: 0;
-  border: 0;
   outline: none;
-  transition: width 0.3s ease, padding 0.3s ease, opacity;
+  transition: width .3s ease, padding .3s ease, opacity;
 }
 
-#search-container button {
+#search-container > label {
+  padding: 0.3em;
+  font-weight: bold;
+}
+
+#search-container > button {
   background-color: rgba(0, 0, 0, 0);
-  border: 0;
 }
 
-#search-container:focus-within input[type="text"] {
+#search-container:focus-within > input[type="text"] {
   width: 10em;
   padding: 0.8em;
   opacity: 1;
 }
 
 #menu-toggle-wrapper {
-  display: none;
+  display: none; /* Hidden by default, flex for mobile */
+
+  justify-content: center;
+  grid-column: 5 / 6;
+}
+
+#menu-toggle-wrapper > label {
+  text-align: center;
 }
 
 #menu-toggle-wrapper > label > p {
   padding: 0.3em;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-#menu-icon {
+#menu-toggle-wrapper > label > div {
   position: relative;
   width: 1.5em;
   height: 1em;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#menu-icon > span {
+#menu-toggle-wrapper > label > div > span {
   width: 1.5em;
   height: 0.2em;
   background-color: black;
-  padding: 0;
   transition: all 0.5s ease;
   position: absolute;
 }
 
-#menu-icon > span:nth-child(1) {
+#menu-toggle-wrapper > label > div > #menu-icon-span0 {
   top: 0;
 }
 
-#menu-icon > span:nth-child(2) {
+#menu-toggle-wrapper > label > div > #menu-icon-span1 {
   top: 0.4em;
 }
 
-#menu-icon > span:nth-child(3) {
+#menu-toggle-wrapper > label > div > #menu-icon-span2 {
   top: 0.8em;
+}
+
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div {
+  position: relative;
+}
+
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span0 {
+  top: 0.5em;
+  transform: rotate(-45deg);
+}
+
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span1 {
+  opacity: 0;
+}
+
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span2 {
+  top: 0.5em;
+  transform: rotate(45deg);
 }
 
 @media (max-width: 900px) {
   header {
     grid-template-columns: 5% repeat(4, auto) 5%;
+  }
+
+  #logoWrapper > img {
+    padding: .8em 0;
   }
 
   nav {
@@ -152,42 +190,8 @@ nav > ul > li > a:active {
     overflow: hidden;
   }
 
-  #menu-toggle:checked ~ nav {
+  header:has(#menu-toggle-wrapper > input[type="checkbox"]:checked) > nav {
     height: auto;
-  }
-
-  #menu-toggle:checked
-    ~ #menu-toggle-wrapper
-    > label
-    > #menu-icon
-    > span:nth-child(1) {
-    top: 0.5em;
-    transform: rotate(-45deg);
-  }
-
-  #menu-toggle:checked
-    ~ #menu-toggle-wrapper
-    > label
-    > #menu-icon
-    > span:nth-child(2) {
-    opacity: 0;
-  }
-
-  #menu-toggle:checked
-    ~ #menu-toggle-wrapper
-    > label
-    > #menu-icon
-    > span:nth-child(3) {
-    top: 0.5em;
-    transform: rotate(45deg);
-  }
-
-  #menu-toggle:checked ~ #menu-toggle-wrapper > label > #menu-icon {
-    position: relative;
-  }
-
-  #logo {
-    padding: 0.8em 0;
   }
 
   nav > ul > li {
@@ -197,15 +201,6 @@ nav > ul > li > a:active {
 
   #menu-toggle-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 5 / 6;
-  }
-
-  #menu-toggle-wrapper > label {
-    display: flex;
-    align-items: center;
-    text-align: center;
   }
 }
 
@@ -214,7 +209,7 @@ nav > ul > li > a:active {
     grid-template-columns: 3% repeat(4, auto) 3%;
   }
 
-  #search-container:focus-within input[type="text"] {
+  #search-container:focus-within > input[type="text"] {
     width: 8em;
   }
 }
