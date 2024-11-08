@@ -2,12 +2,27 @@
   margin: 0;
 }
 
+.border0 {
+  border: 0;
+}
+
 .padding0 {
   padding: 0;
 }
 
-.verticalAlign {
+nav,
+#search-container,
+#menu-toggle-wrapper > label,
+#menu-toggle-wrapper > label > div,
+.align-center {
   display: flex;
+}
+
+/* Skriv en kjapp kommentar om hva du gjør / targeter */
+.align-center,
+#search-container,
+#menu-toggle-wrapper,
+#menu-toggle-wrapper > label {
   align-items: center;
 }
 
@@ -34,9 +49,8 @@ header {
 }
 
 nav {
+  grid-row: 1 / 2;
   grid-column: 3 / 4;
-
-  display: flex;
 }
 
 nav > ul {
@@ -67,9 +81,6 @@ nav > ul > li > a:active {
 #search-container {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
-
-  display: flex;
-  align-items: center;
 }
 
 #search-container > input[type="text"] {
@@ -81,19 +92,17 @@ nav > ul > li > a:active {
    */
   padding: .8em 0;
   opacity: 0;
-  border: 0;
   outline: none;
-  transition: width 0.3s ease, padding 0.3s ease, opacity;
+  transition: width .3s ease, padding .3s ease, opacity;
 }
 
 #search-container > label {
   padding: 0.3em;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 #search-container > button {
   background-color: rgba(0, 0, 0, 0);
-  border: 0;
 }
 
 #search-container:focus-within > input[type="text"] {
@@ -103,19 +112,25 @@ nav > ul > li > a:active {
 }
 
 #menu-toggle-wrapper {
-  display: none;
+  display: none; /* Hidden by default, flex for mobile */
+
+  justify-content: center;
+  grid-column: 5 / 6;
+}
+
+#menu-toggle-wrapper > label {
+  text-align: center;
 }
 
 #menu-toggle-wrapper > label > p {
   padding: 0.3em;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 #menu-toggle-wrapper > label > div {
   position: relative;
   width: 1.5em;
   height: 1em;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -124,7 +139,6 @@ nav > ul > li > a:active {
   width: 1.5em;
   height: 0.2em;
   background-color: black;
-  padding: 0;
   transition: all 0.5s ease;
   position: absolute;
 }
@@ -141,13 +155,31 @@ nav > ul > li > a:active {
   top: 0.8em;
 }
 
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div {
+  position: relative;
+}
+
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span0 {
+  top: 0.5em;
+  transform: rotate(-45deg);
+}
+
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span1 {
+  opacity: 0;
+}
+
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span2 {
+  top: 0.5em;
+  transform: rotate(45deg);
+}
+
 @media (max-width: 900px) {
   header {
     grid-template-columns: 5% repeat(4, auto) 5%;
   }
 
   #logoWrapper > img {
-    padding: 0.8em 0;
+    padding: .8em 0;
   }
 
   nav {
@@ -167,35 +199,8 @@ nav > ul > li > a:active {
     text-align: center;
   }
 
-  #menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span0 {
-    top: 0.5em;
-    transform: rotate(-45deg);
-  }
-
-  #menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span1 {
-    opacity: 0;
-  }
-
-  #menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span2 {
-    top: 0.5em;
-    transform: rotate(45deg);
-  }
-
-  #menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div {
-    position: relative;
-  }
-
   #menu-toggle-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 5 / 6;
-  }
-
-  #menu-toggle-wrapper > label {
-    display: flex;
-    align-items: center;
-    text-align: center;
   }
 }
 
