@@ -243,7 +243,7 @@ body {
   font-size: 1.15em;
   margin: 0.5em;
 }
-.studyinfo details summary::before{
+.studyinfo-details > summary::before{
   content: ' + ';
   display: inline-block;
   font-weight: normal;
@@ -251,13 +251,10 @@ body {
   border-width: 1px;
   text-align: center;
   min-width: 0.6em;
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding: 0.5em 0.6em;
   background-color: lightblue;
 }
-.studyinfo details[open] summary::before {
+.studyinfo details[open] > summary::before {
   content: ' - ';
 }
 
@@ -290,6 +287,21 @@ body {
 .studyinfo-sub-details summary {
   font-size: 1.15rem;
   font-weight: normal;
+  list-style-type: none;
+  padding: 0.5em;
+}
+.studyinfo-sub-details > summary::before{
+  content: ' + ';
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 1em;
+  text-align: center;
+  min-width: 0.6em;
+  padding: 0.2em 0.3em;
+  background-color: lightblue;
+}
+.studyinfo-sub-details details[open] > summary::before {
+  content: ' - ';
 }
 .studyinfo-sub-details p {
   margin-left: 1.5em;
@@ -299,7 +311,7 @@ h2 {
   font-size: 2rem;
 }
 /* Article Styling */
-article {
+.other-studies {
   margin: auto;
   padding: 0;
   max-width: 600px;
@@ -419,7 +431,7 @@ footer {
 }
 
 .footer-icons {
-  flex: 0.5;
+  flex: 0.6;
 }
 
 .footer-list {
@@ -437,7 +449,7 @@ footer {
     background-color: rgb(140, 240, 240);
     position: relative;
     height: 1200px;
-    margin-top: -100px;
+
   }
 
   .footer-top {
@@ -468,13 +480,20 @@ footer {
 
 */*{background-color: rgba(255, 0, 0, 0.174);}*/
 
-.overview {
+.overview, .subjects {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
     justify-content: flex-start;
-    line-height: 2em;
+}
+
+.subjects {
+  width: 100%;
+}
+
+.overview {
+  line-height: 2em;
 }
 
 #h1Wrapper {
@@ -485,10 +504,10 @@ footer {
 }
 
 .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
-.oStudiestart, .oUndervisningsspråk, .oStudieplasser {
+.oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
     border-top: solid black;
     border-width: 0.01em;
-    padding: 2%;
+    padding: 1%;
     padding-left: 0;
     margin: 10px 10px 10px 0;
     flex-basis: calc(22% - 5px);
@@ -502,8 +521,10 @@ footer {
     padding-bottom: 10px;
 }
 
-.oInfo {
+.oInfo, .oHead {
     margin-left: 0%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .oHead {
@@ -511,7 +532,7 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    .overview {
+    .overview, .subjects {
         display: flex;
         flex-direction: column;
         line-height: 2em;
@@ -519,8 +540,12 @@ footer {
         width: 90%;
     }
 
+    .subjects {
+      width: 100%;
+    }
+
     .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
-    .oStudiestart, .oUndervisningsspråk, .oStudieplasser {
+    .oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
     border-top: solid black;
     border-width: 0.01em;
     }
@@ -631,7 +656,6 @@ section {
   margin: auto;
   width: 90vw;
   max-width: 1100px;
-  padding-bottom: 500px;
   min-width: 300px;
 }
 
@@ -639,7 +663,7 @@ section {
   /* Flex container for student stories */
   width: 100%;
   display: flex;
-  background-color: #ffd500;
+  background-color: #e2e2e2;
 }
 
 .stories-text {
@@ -712,4 +736,43 @@ section {
     height: auto;
     max-height: 400px;
   }
+}
+
+#study-year{
+  background-color: rgb(237, 234, 234);
+  margin: 0;
+  max-width: 100%;
+  font-weight: bold;
+}
+.sYear {
+  padding: 10px 15px 10px;
+}
+
+.semester, .semesterGruppe, #study-yearTop {
+  font-size: medium;
+}
+
+.semesterGruppe {
+  font-weight: bold;
+}
+
+.subjects {
+  display: flex;
+  padding-bottom: 30px;
+  font-size:small;
+  margin-left: 0;
+}
+
+
+#study-yearTop {
+  justify-content: end;
+  align-items: end;
+  display: flex;
+}
+
+.s-img {
+  height: 10px;
+  padding-right: 5px;
+  padding-left: 20px;
+  vertical-align: center;
 }
