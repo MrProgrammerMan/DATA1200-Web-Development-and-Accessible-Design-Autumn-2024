@@ -1,3 +1,10 @@
+/* Root Variables */
+:root {
+  /* Base text color and font family */
+  color: #222222;
+  font-family: Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
 .margin0 {
   margin: 0;
 }
@@ -218,13 +225,6 @@ body {
   margin: 0;
 }
 
-/* Root Variables */
-:root {
-  /* Base text color and font family */
-  color: #222222;
-  font-family: Helvetica, Arial, sans-serif;
-  text-rendering: optimizeLegibility;
-}
 
 .studyinfo {
   margin: auto;
