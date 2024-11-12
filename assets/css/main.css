@@ -1,3 +1,5 @@
+/*** GENERIC CLASSES AND VARIABLES ***/
+
 /* Root Variables */
 :root {
   /* Base text color and font family */
@@ -16,6 +18,8 @@
 .padding0 {
   padding: 0;
 }
+
+/*** HEADER SPECIFIC ***/
 
 nav,
 #search-container,
@@ -220,11 +224,6 @@ nav > ul > li > a:active {
     width: 8em;
   }
 }
-
-body {
-  margin: 0;
-}
-
 
 .studyinfo {
   margin: auto;
