@@ -19,6 +19,30 @@
   padding: 0;
 }
 
+.indentLeft1, .indentUni1 {
+  grid-column-start: 2;
+}
+
+.indentLeft2, .indentUni2 {
+  grid-column-start: 3;
+}
+
+.indentLeft3, .indentUni3 {
+  grid-column-start: 4;
+}
+
+.indentRight1, .indentUni1 {
+  grid-column-end: 10;
+}
+
+.indentRight2, .indentUni2 {
+  grid-column-end: 9;
+}
+
+.indentRight3, .indentUni3 {
+  grid-column-end: 8;
+}
+
 /*** HEADER SPECIFIC ***/
 
 nav,
@@ -101,10 +125,10 @@ nav > ul > li > a:active {
    * This makes the opening animation look like it's happening in one dimension;
    * i.e.: The box "slides out" instead of "expanding into existance".
    */
-  padding: .8em 0;
+  padding: 0.8em 0;
   opacity: 0;
   outline: none;
-  transition: width .3s ease, padding .3s ease, opacity;
+  transition: width 0.3s ease, padding 0.3s ease, opacity;
 }
 
 #search-container > label {
@@ -170,16 +194,25 @@ nav > ul > li > a:active {
   position: relative;
 }
 
-#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span0 {
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked)
+  > label
+  > div
+  > #menu-icon-span0 {
   top: 0.5em;
   transform: rotate(-45deg);
 }
 
-#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span1 {
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked)
+  > label
+  > div
+  > #menu-icon-span1 {
   opacity: 0;
 }
 
-#menu-toggle-wrapper:has(input[type="checkbox"]:checked) > label > div > #menu-icon-span2 {
+#menu-toggle-wrapper:has(input[type="checkbox"]:checked)
+  > label
+  > div
+  > #menu-icon-span2 {
   top: 0.5em;
   transform: rotate(45deg);
 }
@@ -190,7 +223,7 @@ nav > ul > li > a:active {
   }
 
   #logoWrapper > img {
-    padding: .8em 0;
+    padding: 0.8em 0;
   }
 
   nav {
@@ -229,23 +262,29 @@ nav > ul > li > a:active {
 
 main {
   display: grid;
-  grid-template-columns: 10% repeat(10, auto) 10%;
+  grid-template-columns: 10% auto 10%;
 }
 
 main > article {
-  grid-column: 2 / 11;
+  grid-column: 2 / 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+}
+
+
+/* Position all elements to fill space by default */
+main > article > * {
+  grid-column: 1 / 11;
 }
 
 .studyinfo {
   margin: auto;
-  padding: 0;
-  max-width: 600px;
 }
 
 .studyinfo-top {
   font-size: 1.5em;
   padding: 1.75em;
-  margin: 0;
   font-weight: lighter;
 }
 
@@ -253,8 +292,8 @@ main > article {
   font-size: 1.15em;
   margin: 0.5em;
 }
-.studyinfo-details > summary::before{
-  content: ' + ';
+.studyinfo-details > summary::before {
+  content: " + ";
   display: inline-block;
   font-weight: normal;
   margin-right: 1em;
@@ -265,7 +304,7 @@ main > article {
   background-color: lightblue;
 }
 .studyinfo details[open] > summary::before {
-  content: ' - ';
+  content: " - ";
 }
 
 /* font style for summary */
@@ -300,8 +339,8 @@ main > article {
   list-style-type: none;
   padding: 0.5em;
 }
-.studyinfo-sub-details > summary::before{
-  content: ' + ';
+.studyinfo-sub-details > summary::before {
+  content: " + ";
   display: inline-block;
   font-weight: normal;
   margin-right: 1em;
@@ -311,7 +350,7 @@ main > article {
   background-color: lightblue;
 }
 .studyinfo-sub-details details[open] > summary::before {
-  content: ' - ';
+  content: " - ";
 }
 .studyinfo-sub-details p {
   margin-left: 1.5em;
@@ -320,16 +359,9 @@ main > article {
 h2 {
   font-size: 2rem;
 }
-/* Article Styling */
-.other-studies {
-  margin: auto;
-  padding: 0;
-  max-width: 600px;
-}
 
 /* Other Studies Section */
 .other-studies ul {
-  padding: 0;
   list-style: none;
 }
 
@@ -339,13 +371,14 @@ h2 {
 }
 
 .other-studies a {
+  /* Styling for links in .other-studies */
   border-top: 0.0625rem solid #e2e2e2;
   display: flex;
   align-items: flex-start;
   text-decoration: none;
   color: #222;
   padding: 1.1875rem 1.875rem 1.1875rem 0;
-  background-image: url(/images/arrow-right.svg);
+  background-image: url(/assets/imgs/arrow-right.svg);
   background-repeat: no-repeat;
   background-position: center right 50px;
   transition: 0.1s ease-in-out;
@@ -375,11 +408,12 @@ footer {
   margin-top: 100px;
 }
 
-.footer-top, .footer-bot {
-     /*Set padding left and right of containers, and containers in footer as flex-box */
-     padding-left: 15%;
-     padding-right: 15%;
-     display: flex;
+.footer-top,
+.footer-bot {
+  /*Set padding left and right of containers, and containers in footer as flex-box */
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
 }
 
 .footer-top {
@@ -459,7 +493,6 @@ footer {
     background-color: rgb(140, 240, 240);
     position: relative;
     height: 1200px;
-
   }
 
   .footer-top {
@@ -491,173 +524,102 @@ footer {
 */*{background-color: rgba(255, 0, 0, 0.174);}*/
 
 .overview, .subjects {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: flex-start;
-}
-
-.subjects {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
 }
 
 .overview {
   line-height: 2em;
+  width: 100%;
 }
 
 #h1Wrapper {
-    /*Center h1 in a flexbox */
-    height: 70px;
-    display:flex;
-    align-items: center;
+  /*Center h1 in a flexbox */
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
-.oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
-.oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
-    border-top: solid black;
-    border-width: 0.01em;
-    padding: 1%;
-    padding-left: 0;
-    margin: 10px 10px 10px 0;
-    flex-basis: calc(22% - 5px);
-}
-
-.oHeader, .oBachelor {
-    margin-left: 10%;
+.oStudiested,
+.oVarighet,
+.oOmfang,
+.oStudiepoeng,
+.oStudiestart,
+.oUndervisningsspråk,
+.oStudieplasser,
+.oSubjects {
+  border-top: solid black;
+  border-width: 0.01em;
+  padding: 1%;
+  padding-left: 0;
+  margin: 10px 10px 10px 0;
+  flex-basis: calc(22% - 5px);
 }
 
 .oBachelor {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
-.oInfo, .oHead {
-    margin-left: 0%;
-    display: flex;
-    justify-content: space-between;
+.oInfo,
+.oHead {
+  margin-left: 0%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .oHead {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
-    .overview, .subjects {
-        display: flex;
-        flex-direction: column;
-        line-height: 2em;
-        margin-left: 5%;
-        width: 90%;
-    }
+  .overview {
+    width: 90%;
+  }
 
-    .subjects {
-      width: 100%;
-    }
+  .overview,
+  .subjects {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+    margin-left: 5%;
+  }
 
-    .oStudiested, .oVarighet, .oOmfang, .oStudiepoeng, 
-    .oStudiestart, .oUndervisningsspråk, .oStudieplasser, .oSubjects {
+  .oStudiested,
+  .oVarighet,
+  .oOmfang,
+  .oStudiepoeng,
+  .oStudiestart,
+  .oUndervisningsspråk,
+  .oStudieplasser,
+  .oSubjects {
     border-top: solid black;
     border-width: 0.01em;
-    }
-    .oHeader, .oBachelor {
-        margin-left: 5%;
-    }
-    
+  }
+  .oHeader,
+  .oBachelor {
+    margin-left: 5%;
+  }
 }
 
 .innsikt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    max-width: 40%;
-    min-width: 600px;
-    margin: 3% auto;
-    padding: 20px;
-    font-size: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  max-width: 40%;
+  min-width: 600px;
+  margin: 3% auto;
+  padding: 20px;
+  font-size: 23px;
 }
 
 @media screen and (max-width: 600px) {
-    .innsikt {
-        min-width: fit-content;
-    }
+  .innsikt {
+    min-width: fit-content;
+  }
 }
-
-
-
-/* ------------------------------------------ */
-
-/* Root Variables */
-:root {
-  /* Base text color and font family */
-  color: #222222;
-  font-family: Futura, Helvetica, sans-serif;
-  text-rendering: optimizeLegibility;
-}
-
-/* Headings */
-h2 {
-  /* Font size for h2 headings */
-  font-size: 2rem;
-}
-
-/* Must Delete!!! */
-/* section Styling */
-section {
-  /* Center the article and set max width */
-  margin: auto;
-  padding: 0;
-  width: 80vw;
-}
-
-/* Other Studies Section */
-.other-studies ul {
-  /* Remove padding and list style for unordered lists in .other-studies */
-  padding: 0;
-  list-style: none;
-}
-
-.other-studies span {
-  /* Font weight and size for spans in .other-studies */
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-
-.other-studies a {
-  /* Styling for links in .other-studies */
-  border-top: 0.0625rem solid #e2e2e2;
-  display: flex;
-  align-items: flex-start;
-  text-decoration: none;
-  color: #222;
-  padding: 1.1875rem 1.875rem 1.1875rem 0;
-  background-image: url(/assets/imgs/arrow-right.svg);
-  background-repeat: no-repeat;
-  background-position: center right 50px;
-  transition: 0.1s ease-in-out;
-}
-
-.other-studies a:hover {
-  /* Change background position on hover for links in .other-studies */
-  background-position: center right 43px;
-}
-
-.other-studies ul ul li {
-  /* Display inline for nested list items in .other-studies */
-  display: inline;
-}
-
-.other-studies ul ul > li:not(:last-child)::after {
-  /* Add a separator for nested list items in .other-studies */
-  content: "|";
-  padding: 0 8px;
-}
-
-.border-bottom {
-  /* Add a bottom border */
-  border-bottom: 0.0625rem solid #e2e2e2;
-}
-
 /* ------------------------ */
 
 /* Student Stories */
@@ -748,9 +710,8 @@ section {
   }
 }
 
-#study-year{
+#study-year {
   background-color: rgb(237, 234, 234);
-  margin: 0;
   max-width: 100%;
   font-weight: bold;
 }
@@ -758,7 +719,9 @@ section {
   padding: 10px 15px 10px;
 }
 
-.semester, .semesterGruppe, #study-yearTop {
+.semester,
+.semesterGruppe,
+#study-yearTop {
   font-size: medium;
 }
 
@@ -767,12 +730,11 @@ section {
 }
 
 .subjects {
-  display: flex;
+  width: 100%;
   padding-bottom: 30px;
-  font-size:small;
+  font-size: small;
   margin-left: 0;
 }
-
 
 #study-yearTop {
   justify-content: end;
