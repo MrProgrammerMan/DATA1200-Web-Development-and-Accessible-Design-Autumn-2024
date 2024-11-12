@@ -265,6 +265,7 @@ main > article {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(10, 10%);
+  padding: 1em 0;
 }
 
 
