@@ -25,27 +25,33 @@
   padding: 0;
 }
 
-.indentLeft1, .indentUni1 {
+.indentLeft1,
+.indentUni1 {
   grid-column-start: 2;
 }
 
-.indentLeft2, .indentUni2 {
+.indentLeft2,
+.indentUni2 {
   grid-column-start: 3;
 }
 
-.indentLeft3, .indentUni3 {
+.indentLeft3,
+.indentUni3 {
   grid-column-start: 4;
 }
 
-.indentRight1, .indentUni1 {
+.indentRight1,
+.indentUni1 {
   grid-column-end: 10;
 }
 
-.indentRight2, .indentUni2 {
+.indentRight2,
+.indentUni2 {
   grid-column-end: 9;
 }
 
-.indentRight3, .indentUni3 {
+.indentRight3,
+.indentUni3 {
   grid-column-end: 8;
 }
 
@@ -267,7 +273,6 @@ main > article {
   grid-template-columns: repeat(10, 10%);
   padding: 1em 0;
 }
-
 
 /* Position all elements to fill space by default */
 main > article > * {
