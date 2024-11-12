@@ -539,13 +539,6 @@ footer {
   width: 100%;
 }
 
-#h1Wrapper {
-  /*Center h1 in a flexbox */
-  height: 70px;
-  display: flex;
-  align-items: center;
-}
-
 .oStudiested,
 .oVarighet,
 .oOmfang,
@@ -577,17 +570,11 @@ footer {
   font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
-  .overview {
-    width: 90%;
-  }
-
-  .overview,
+@media (max-width: 800px) {
   .subjects {
     display: flex;
     flex-direction: column;
     line-height: 2em;
-    margin-left: 5%;
   }
 
   .oStudiested,
@@ -604,6 +591,13 @@ footer {
   .oHeader,
   .oBachelor {
     margin-left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview {
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
 
