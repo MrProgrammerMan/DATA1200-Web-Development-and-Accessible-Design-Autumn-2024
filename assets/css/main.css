@@ -7,6 +7,12 @@
   font-family: Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
 .margin0 {
   margin: 0;
 }
@@ -45,22 +51,7 @@
 
 /*** HEADER SPECIFIC ***/
 /* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
-
-nav,
-#search-container,
-#menu-toggle-wrapper > label,
-#menu-toggle-wrapper > label > div,
-.align-center {
-  display: flex;
-}
-
-/* Skriv en kjapp kommentar om hva du gjør / targeter */
-.align-center,
-#search-container,
-#menu-toggle-wrapper,
-#menu-toggle-wrapper > label {
-  align-items: center;
-}
+/* #menu-toggle-wrapper hidden by default (desktop) */
 
 header {
   width: 100%;
@@ -87,6 +78,8 @@ header {
 nav {
   grid-row: 1 / 2;
   grid-column: 3 / 4;
+
+  display: flex;
 }
 
 nav > ul {
@@ -154,10 +147,6 @@ nav > ul > li > a:active {
   grid-column: 5 / 6;
 }
 
-#menu-toggle-wrapper > label {
-  text-align: center;
-}
-
 #menu-toggle-wrapper > label > p {
   padding: 0.3em;
   font-weight: bold;
@@ -167,6 +156,7 @@ nav > ul > li > a:active {
   position: relative;
   width: 1.5em;
   height: 1em;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -220,7 +210,7 @@ nav > ul > li > a:active {
 
 @media (max-width: 900px) {
   header {
-    grid-template-columns: 5% repeat(4, auto) 5%;
+    grid-template-columns: 5% auto 1fr auto auto 5%;
   }
 
   #logoWrapper > img {
@@ -233,6 +223,10 @@ nav > ul > li > a:active {
     height: 0;
     flex-direction: column;
     overflow: hidden;
+  }
+
+  #search-container {
+    grid-column: 4 / 5;
   }
 
   header:has(#menu-toggle-wrapper > input[type="checkbox"]:checked) > nav {
@@ -251,7 +245,7 @@ nav > ul > li > a:active {
 
 @media (max-width: 480px) {
   header {
-    grid-template-columns: 3% repeat(4, auto) 3%;
+    grid-template-columns: 3% auto 1fr auto auto 3%;
   }
 
   #search-container:focus-within > input[type="text"] {
