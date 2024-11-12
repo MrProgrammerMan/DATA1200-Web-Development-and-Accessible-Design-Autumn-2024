@@ -274,10 +274,6 @@ main > article > * {
   grid-column: 1 / 11;
 }
 
-.studyinfo {
-  margin: auto;
-}
-
 .studyinfo-top {
   font-size: 1.5em;
   padding: 1.75em;
