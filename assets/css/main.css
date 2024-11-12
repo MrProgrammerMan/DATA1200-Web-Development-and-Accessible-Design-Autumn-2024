@@ -232,6 +232,10 @@ main {
   grid-template-columns: 10% repeat(10, auto) 10%;
 }
 
+main > article {
+  grid-column: 2 / 11;
+}
+
 .studyinfo {
   margin: auto;
   padding: 0;
