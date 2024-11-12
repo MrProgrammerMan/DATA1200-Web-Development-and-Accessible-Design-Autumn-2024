@@ -225,6 +225,13 @@ nav > ul > li > a:active {
   }
 }
 
+/**** MAIN CONTENT ****/
+
+main {
+  display: grid;
+  grid-template-columns: 10% repeat(10, auto) 10%;
+}
+
 .studyinfo {
   margin: auto;
   padding: 0;
