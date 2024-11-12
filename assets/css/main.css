@@ -274,6 +274,18 @@ main > article > * {
   grid-column: 1 / 11;
 }
 
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 5% auto 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    grid-template-columns: 3% auto 3%;
+  }
+}
+
 .studyinfo-top {
   font-size: 1.5em;
   padding: 1.75em;
