@@ -760,6 +760,7 @@ footer {
 
 .aIntro {
   display: grid;
+  padding-bottom: 150px;
 }
 
 .introText {
@@ -772,15 +773,18 @@ footer {
 }
 
 .textHead {
-  flex: 1;
+  font-size: 50px;
 }
 
 .textInfo {
   background-color: #22223B;
   border-radius: 10px;
   padding: 20px;
-  color: #F2E9E4;
   line-height: 25px;
+}
+
+.colorChange {
+  color: #F2E9E4;
 }
 
 .imgH {
@@ -788,7 +792,38 @@ footer {
 }
 
 .imgV {
-  grid-row-start: 2;
   grid-column-start:7;
+  grid-row-start: 2;
   height: 500px;
 }
+
+.acitivityHeading {
+  background-color: #22223B;
+  width: 100%;
+  margin: 0%;
+  text-align: center;
+  padding: 10px;
+}
+
+.indoorBouldering {
+  display: grid;
+}
+
+.indoorText {
+  padding-top: 100px;
+  
+}
+
+.textIndoor {
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.imgIndoor {
+  height: 300px;
+  grid-column-start: 5;
+
+}
+
