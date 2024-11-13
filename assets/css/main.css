@@ -123,7 +123,7 @@ nav > ul > li > a:active {
   /* 
    * When closed, preserve vertical padding.
    * This makes the opening animation look like it's happening in one dimension;
-   * i.e.: The box "slides out" instead of "expanding into existance".
+   * i.e.: The box "slides out" instead of "expanding into existence".
    */
   padding: 0.8em 0;
   opacity: 0;
