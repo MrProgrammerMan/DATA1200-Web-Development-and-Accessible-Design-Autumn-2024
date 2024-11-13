@@ -751,3 +751,44 @@ footer {
   padding-left: 20px;
   vertical-align: center;
 }
+
+
+
+#activityBody {
+  background-color: #F2E9E4;
+}
+
+.aIntro {
+  display: grid;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.textHead {
+  flex: 1;
+}
+
+.textInfo {
+  background-color: #22223B;
+  border-radius: 10px;
+  padding: 20px;
+  color: #F2E9E4;
+  line-height: 25px;
+}
+
+.imgH {
+  padding: 5%;
+}
+
+.imgV {
+  grid-row-start: 2;
+  grid-column-start:7;
+  height: 500px;
+}
