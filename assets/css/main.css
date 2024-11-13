@@ -386,10 +386,13 @@ h2 {
   align-items: flex-start;
   text-decoration: none;
   color: #222;
+
   padding: 1.1875rem 1.875rem 1.1875rem 0;
   background-image: url(/assets/imgs/arrow-right.svg);
   background-repeat: no-repeat;
   background-position: center right 50px;
+  background-size: auto, 200%;
+
   transition: 0.1s ease-in-out;
 }
 
@@ -474,7 +477,6 @@ footer {
   font-weight: bold;
   font-size: 1em;
   text-decoration: none;
-  
 }
 
 .updated {
@@ -697,6 +699,24 @@ footer {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.a-stories-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto auto;
+  background-color: red;
+  color: #222222;
+  grid-column-start: 4;
+  grid-column-end: 8;
+  height: 5rem;
+  width: 100%;
+
+  background-image: url(/assets/imgs/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center right 50px;
+  background-size: auto, 200%;
 }
 
 @media screen and (max-width: 800px) {
