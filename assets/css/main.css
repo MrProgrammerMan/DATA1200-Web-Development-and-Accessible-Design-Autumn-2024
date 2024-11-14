@@ -647,12 +647,10 @@ footer {
   width: 100%;
   display: flex;
   background-color: #e2e2e2;
-  overflow: hidden;
 }
 
 .student-stories:hover .image-section img {
   transform: scale(1.02);
-  transition: transform 0.2s ease; /* Smooth transition */
 }
 
 .stories-text {
@@ -698,12 +696,14 @@ footer {
 .image-section {
   /* Flex item for image */
   flex: 1;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .image-section img {
   /* Image styling */
   object-fit: cover;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   transition: transform 0.2s ease; /* Smooth transition */
 }
@@ -725,16 +725,13 @@ footer {
   height: 5rem;
   width: 100%;
 
-  background-image: url(/assets/imgs/arrow-right.svg);
-  background-repeat: no-repeat;
-  background-position: center right 50px;
+  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat, linear-gradient(to left, #e2e2e2 50%, #bebdbda6 50%) right;
   background-size: auto, 200%;
-
-  transition: 0.1s ease-in-out;
+  transition: background-position 0.25s;
 }
 
 .a-stories-button:hover {
-  background-position: center right 43px;
+  background-position: center right 43px, left;
 }
 
 @media screen and (max-width: 800px) {
