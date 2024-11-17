@@ -49,6 +49,7 @@
     <main>
       <article>
         <h1>GitHub Usage</h1>
+        <h2>Foreword</h2>
         <p>
           When working with software development, scripting, markup design or
           other development projects, it's important to use a tool to manage the
@@ -70,13 +71,36 @@
           reverting commits, and mismatching local and remote files.
         </p>
         <p>
-          All things considered, we're very happy with how using git has worked
-          out in this project, and how it has allowed us to simultaneously
-          implement features that modify the same files (relatively) smoothly.
-          Below you can see and read about some of the things we've had to deal
-          with while developing this webpage.
+          Below, you can see some extracts from our git history that show some
+          of the challenges we faced during development of this webpage, as well
+          as how git had been invaluable for cooperative development.
         </p>
-        <h2>Extract 1: Git was invaluable for fixing issues early.</h2>
+        <h2>
+          Extract 1: Using branches to work simultaneously on the same files.
+        </h2>
+        <img src="assets/imgs/git-history-branches.png" alt="" />
+        <p>
+          Above, you can see a picture showing some of our git history. The
+          picture shows how four different people worked on the project at the
+          same time and how git helped us manage the changes. By using
+          branching, all four people created their own copy of the source code
+          to work on, connected in the git repository. For context, where all
+          the branches were created was after a team meeting where some work was
+          divided up. This was an efficient way to handle parts of the project,
+          especially early on. The four different branches were all eventually
+          merged back into main, and changes from all team members are present
+          in the final product. This was done using pull requests and merge
+          commits.
+        </p>
+        <p>
+          Using this system, we were able to divide and conquer the project and
+          implement features in parallel. Sometimes we further divided up
+          features originally assigned to one branch, and used the same
+          branch-implement-merge workflow on that branch before the changes went
+          into main. This way, we could be flexible in quickly assigning part of
+          a workload, and further divide it up as needed.
+        </p>
+        <h2>Extract 2: Git was invaluable for fixing issues early.</h2>
         <img
           src="assets/imgs/git-history-revert.png"
           alt="Git history showing a feature implementation from start to finish, and how git helped us fix issues."
@@ -114,15 +138,20 @@
           Finally, the pull request was approved and the feature branch was
           merged into main and deleted.
         </p>
-
-        <img
-          src="assets/imgs/git-history-vscode-1.png"
-          alt="Git history that shows some of the merges and changes we made during development of this webpage."
-        />
-        <img
-          src="assets/imgs/git-history-vscode-2.png"
-          alt="Git history that shows an example of some challenges we faced with reverting a bad commit."
-        />
+        <h2>Change 1: LOREM ISUM</h2>
+        <img src="" alt="">
+        <p></p>
+        <h2>Change 2: LOREM ISUM</h2>
+        <img src="" alt="">
+        <p></p>
+        <h2>Conclusion</h2>
+        <p>
+          All things considered, we're very happy with how using git has worked
+          out in this project, and how it has allowed us to simultaneously
+          implement features that modify the same files (relatively) smoothly.
+          Below you can see and read about some of the things we've had to deal
+          with while developing this webpage.
+        </p>
       </article>
     </main>
   </body>
