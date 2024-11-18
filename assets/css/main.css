@@ -814,6 +814,7 @@ footer {
   text-align: center;
   padding: 10px;
   grid-column: 1/11;
+  grid-row: 1;
 }
 
 .indoorImgDiv {
@@ -824,23 +825,23 @@ footer {
   grid-row: 2;
 }
 
-.gymsHeading{
+.gymsHeading, .gradingHeading{
   background-color: #22223B;
-  grid-row:3;
   width: 50%;
   text-align: end;
   padding: 10px;
 }
 
-.placeLokka .lokkaImgDiv {
+
+.placeLokka, .lokkaImgDiv {
   grid-row: 4;
 }
 
-.placeOslo .osloImgDiv {
+.placeOslo, .osloImgDiv {
   grid-row: 5;
 }
 
-.placeVulkan .vulkanImgDiv {
+.placeVulkan, .vulkanImgDiv {
   grid-row: 6;
 }
 
@@ -852,10 +853,70 @@ footer {
 
 .textPlacement {
   padding: 50px 50px 0 50px;
-  font-size: large;
-  
 }
 
+.textPlacement, .gradingText {
+  font-size: large;
+}
 
+.gradingText {
+  grid-row: 8;
+  width: 100%;
+  padding: 50px;
+}
 
+.gradingTable {
+  grid-row: 9;
+  width: 100%;
+  border-collapse: separate;
+  table-layout: fixed;
+}
+
+td {
+    height: 50px;
+    text-align: center;
+}
+
+.difficulties {
+  height: 30px;
+}
+
+#gWhite {
+  background-color: white;
+}
+#gGreen {
+  background-color: rgb(29, 168, 29);
+}
+#gBlue {
+  background-color: rgb(0, 153, 255);
+}
+#gYellow {
+  background-color: rgb(255, 218, 51);
+}
+#gRed {
+  background-color: rgb(253, 62, 62);
+}
+#gBlack {
+  background-color: rgb(46, 46, 46);
+}
+
+.equipment > * {
+  padding-top: 100px;
+}
+
+.equipmentText {
+  grid-row: 2;
+}
+
+.shoesText {
+  grid-row: 3;
+}
+
+.crashText {
+  grid-row: 3/4;
+}
+
+.chalkText{
+  grid-row: 4;
+}
 
