@@ -900,11 +900,9 @@ td {
   background-color: rgb(46, 46, 46);
 }
 
-.equipment > {
-  padding-top: 100px;
-}
 
 .equipmentText {
+  padding-top: 50px;
   grid-row: 2;
 }
 
