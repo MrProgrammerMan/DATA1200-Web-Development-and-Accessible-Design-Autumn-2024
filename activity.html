@@ -27,7 +27,7 @@
       </article>
 
       <article class="indoorBouldering">
-        <h2 class="acitivityHeading colorChange">Indoor bouldering</h2>
+        <h2 class="colorChange acitivityHeading">Indoor bouldering</h2>
         <div class="indoorTextDiv columnLeft">
           <p class="textIndoor textPlacement">
             Indoor bouldering is an exploration of crafted stone, where climbers
@@ -41,7 +41,10 @@
           <img class="imgIndoor boulderImg" src="assets/imgs/indoor.jpg" />
         </div>
 
-        <h2 class="gymsHeading colorChange">Gyms in Oslo</h2>
+        <div class="gymsHeadingDiv">
+          <h2 class="gymsHeading colorChange">Gyms in Oslo</h2>
+        </div>
+        
 
         <div class="placeLokka columnLeft textPlacement">
           <h3 class="textPlacement">Klatreverket Løkka</h3>
@@ -53,7 +56,7 @@
             atmosphere.
           </p>
           <p class="textPlacement">
-            Adresse: Thorvald Meyers gate 9, 0555 Oslo
+            Address:<br />Thorvald Meyers gate 9, 0555 Oslo
           </p>
         </div>
         <div class="lokkaImgDiv columnRight">
@@ -74,7 +77,9 @@
             make it a popular destination for both locals and visitors looking
             to enjoy top-tier bouldering in Oslo.
           </p>
-          <p class="textPlacement">Adress: Olaf Helsets vei 5, 0694 Oslo</p>
+          <p class="textPlacement">
+            Address:<br />Olaf Helsets vei 5, 0694 Oslo
+          </p>
         </div>
 
         <div class="placeVulkan columnLeft textPlacement">
@@ -85,42 +90,96 @@
             perfect for climbers seeking both quality and a vibrant, urban
             setting
           </p>
-          <p class="textPlacement">Adresse: Vulkan 13, 0178 Oslo</p>
+          <p class="textPlacement">Address:<br />Vulkan 13, 0178 Oslo</p>
         </div>
         <div class="vulkanImgDiv columnRight">
           <img class="vulkanImg boulderImg" src="assets/imgs/løkka.jpg" />
         </div>
 
-        <h2 class="gradingHeading colorChange">Grading</h2>
+        <div class="gradingHeadingDiv">
+          <h2 class="gradingHeading colorChange">Grading</h2>
+        </div>
+        
 
-        <p class="gradingText indentUni3">
-          A color-coded grading system in bouldering assigns colors to problems
-          based on difficulty, guiding climbers of all levels. Each color
-          represents a range of challenges, from beginner-friendly holds to
-          advanced technical routes. This system simplifies progression
-          tracking, allowing climbers to focus on improving skills within a
-          visually intuitive framework. The bouldering gyms listed above follows
-          this grading system:
+        <p class="gradingText indentUni1">
+          Bouldering grades are used to indicate the difficulty of climbing
+          problems, helping climbers gauge which routes match their skill level
+          and track their progress. These grading systems consider factors like
+          strength, technique, balance, and problem-solving required for a
+          climb. Bouldering uses two main grading systems to indicate
+          difficulty: the Color Grading System and the V-Grading System.
         </p>
+        <div class="colorGradeText columnLeft">
+          <h3>Color grading</h3>
+          <p>
+            In gyms, the Color Grading System often uses tape or holds of
+            specific colors to represent difficulty levels, typically
+            progressing from easy (e.g., white or yellow) to very hard (e.g.,
+            black or red). In Oslo we use the grading system shown in the table
+            below.
+          </p>
+        </div>
+
+        <div class="vGradeText columnRight">
+          <h3>V-grading</h3>
+          <p>
+            This system varies by gym. The V-Grading System is used worldwide,
+            especially outdoors. Starting at V0 for beginners, it increases with
+            difficulty (V1, V2, etc.), with the hardest climbs currently
+            reaching V17. Each "V" grade reflects a notable step up in
+            technical, physical, and mental challenges.
+          </p>
+        </div>
 
         <table class="gradingTable indentUni2">
           <tr>
-            <td id="gWhite"></td>
-            <td id="gGreen"></td>
-            <td id="gBlue"></td>
-            <td id="gYellow"></td>
-            <td id="gRed"></td>
-            <td id="gBlack"></td>
+            <td class="tableHeading">Color grading</td>
           </tr>
           <tr>
-            <td class="difficulties">Beginner</td>
-            <td class="difficulties">Easy</td>
-            <td class="difficulties">Intermediate</td>
-            <td class="difficulties">Hard</td>
-            <td class="difficulties">Advanced</td>
-            <td class="difficulties">Pro</td>
+            <td class="gWhite">Beginner</td>
+            <td class="gGreen">Easy</td>
+            <td class="gBlue">Intermediate</td>
+            <td class="gYellow">Hard</td>
+            <td class="gRed">Advanced</td>
+            <td class="gBlack">Pro</td>
+          </tr>
+          <tr>
+            <td class="tableHeading">V grading</td>
+          </tr>
+          <tr>
+            <td class="gWhite">VB</td>
+            <td class="gGreen">V0+</td>
+            <td class="gBlue">V4</td>
+            <td class="gYellow">V8</td>
+            <td class="gRed">V12</td>
+            <td class="gBlack">V15</td>
+          </tr>
+          <tr>
+            <td class="gWhite">V0-</td>
+            <td class="gGreen">V1</td>
+            <td class="gBlue">V5</td>
+            <td class="gYellow">V9</td>
+            <td class="gRed">V13</td>
+            <td class="gBlack">V16</td>
+          </tr>
+          <tr>
+            <td class="gWhite">V0</td>
+            <td class="gGreen">V2</td>
+            <td class="gBlue">V6</td>
+            <td class="gYellow">V10</td>
+            <td class="gRed">V14</td>
+            <td class="gBlack">V17</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="gUndefined">V3*</td>
+            <td class="gUndefined">V7*</td>
+            <td class="gUndefined">V11*</td>
           </tr>
         </table>
+        <p class="gradingTableInfo indentLeft2">
+          * Grades that would fit inbetween the current and next color grade.
+        </p>
       </article>
 
       <article>
@@ -151,7 +210,7 @@
         </p>
         <div class="shoesText textInfo colorChange columnLeft">
           <h3>Climbing shoes</h3>
-          <img class="boulderImg" src="assets/imgs/shoes.jpg">
+          <img class="boulderImg" src="assets/imgs/shoes.jpg" />
           <p>
             Climbing shoes are essential for providing precise footwork,
             support, and grip on challenging surfaces. They enhance performance,
@@ -161,7 +220,7 @@
         </div>
         <div class="crashText textInfo colorChange columnRight">
           <h3>Crash pads</h3>
-          <img class="boulderImg" src="assets/imgs/crashPad.jpg">
+          <img class="boulderImg" src="assets/imgs/crashPad.jpg" />
           <p>
             Bouldering mats, or crash pads, are crucial for outdoor climbing,
             providing safety by cushioning falls. They protect climbers from
@@ -171,7 +230,7 @@
         </div>
         <div class="chalkText textInfo colorChange columnLeft">
           <h3>Chalk & chalk bag</h3>
-          <img class="boulderImg" src="assets/imgs/chalkbag.jpg">
+          <img class="boulderImg" src="assets/imgs/chalkbag.jpg" />
           <p>
             Chalk and chalk bags are essential for climbers, helping to keep
             hands dry and improve grip. Chalk absorbs sweat, reducing slippage,
