@@ -55,6 +55,22 @@
   grid-column-end: 8;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: .875rem;
+}
+
 /*** HEADER SPECIFIC ***/
 /* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
@@ -363,10 +379,6 @@ main > article > * {
 }
 .studyinfo-sub-details p {
   margin-left: 1.5em;
-}
-/* Headings */
-h2 {
-  font-size: 2rem;
 }
 
 /* Other Studies Section */
