@@ -397,14 +397,6 @@ main > article > * {
 .studyinfo-sub-details p {
   margin-left: 1.5em;
 }
-/* Headings */
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
 
 /* Other Studies Section */
 .other-studies ul {
