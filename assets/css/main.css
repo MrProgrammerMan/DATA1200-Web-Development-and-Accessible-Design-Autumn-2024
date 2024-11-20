@@ -752,155 +752,82 @@ footer {
   vertical-align: center;
 }
 
+
+
+
+
 #activityBody {
   background-color: #F2E9E4;
 }
 
-.boulderImg {
-  object-fit: contain;
-  max-width: 500px;
-  padding: 100px 100px 100px 0px;
+.articleFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.aIntro {
-  padding-bottom: 50px; /*Mulig fjerne disse */
-}
-
-.introText {
+.subFlex {
   display: flex;
   flex-direction: column;
-  grid-column: 1 / 6;
-  grid-row: 1;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.textHead {
-  font-size: 50px;
+.articleFlex > * {
+  width: 40%;
+}
+
+.imgStyler {
+  width: 100%;
+  height: auto;
 }
 
 .textInfo {
   background-color: #22223B;
+  color: #F2E9E4;
   border-radius: 10px;
   padding: 20px;
   line-height: 25px;
 }
 
-.colorChange {
-  color: #F2E9E4;
-}
-
-.columnLeft {
-  grid-column: 1/5;
-}
-
-.columnRight {
-  grid-column: 7/11;
-}
-
-.imgH {
-  grid-row: 2;
-  padding: 5%;
-}
-
-.imgV {
-  grid-row: 1 / 3;
+.headingPosition {
   width: 100%;
+  height: 7em;
+  display: flex;
+  align-items: center;
 }
 
-.activityImg { 
-  width: 100%;
-  object-fit: cover;
-}
-
-.acitivityHeading {
-  background-color: #22223B;
+.headingStyler, .subHeadingStyler {
   position: absolute;
   left: 0;
-  width: 100%;
-  margin: 0%;
-  padding: 5px 0 5px 0;
-  text-align: center;
-  grid-row: 1;
-}
-
-.indoorImgDiv {
-  grid-row: 2;
-}
-
-.indoorTextDiv {
-  grid-row: 2;
-  padding-top: 100px;
-}
-
-.gymsHeadingDiv {
-  grid-row: 3;
-}
-
-.gymsHeadingDiv, .gradingHeadingDiv {
-  position: relative;
-  height: 45px;
-}
-
-.gradingHeadingDiv {
-  grid-row: 7;
-}
-
-.gymsHeading, .gradingHeading{
   background-color: #22223B;
-  position: absolute;
-  left: -14%;
-  text-align: end;
-  width: 64%;
-  padding: 5px 10px 5px 0;
-  margin: 0%;
+  color: #F2E9E4;
+  padding: 5px;
 }
 
-.placeLokka, .lokkaImgDiv {
-  grid-row: 4;
-}
-
-.placeOslo, .osloImgDiv {
-  grid-row: 5;
-}
-
-.placeVulkan, .vulkanImgDiv {
-  grid-row: 6;
-}
-
-.textPlacement {
-  padding: 10px
-}
-
-.textStyler {
-  font-size: large;
-  line-height: 30px;
-  padding: 10px
-}
-
-.textPlacement, .gradingText, .tableHeading, .gradingText, .vGradeText, .colorGradeText, .textInfo, .equipmentText, .shoesText {
-  font-size: large;
-  line-height: 30px;
-  
-}
-
-.gradingText {
-  grid-row: 8;
+.headingStyler {
   width: 100%;
-  padding: 50px;
+  text-align: center;
 }
 
-.vGradeText, .colorGradeText {
-  grid-row: 9;
+.subHeadingStyler {
+  width: 50%;
+  text-align: end;
+}
+
+.gradingInfo, .gradingTable, .gradingTableInfo, .equipmentText {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .gradingTable {
-  grid-row: 10;
   width: 100%;
   border-collapse: separate;
   table-layout: fixed;
   padding-bottom: 40px;
 }
 .gradingTableInfo {
-  grid-row: 11;
   padding-bottom: 50px;
 }
 
@@ -932,25 +859,8 @@ td {
   background-color: rgb(46, 46, 46);
   color: #F2E9E4;
 }
-
 .gUndefined {
-  background-color: rgb(193, 191, 191);
+  background-color: rgb(162, 162, 162);
 }
 
-.equipmentText {
-  padding-top: 50px;
-  grid-row: 2;
-}
-
-.shoesText {
-  grid-row: 3;
-}
-
-.crashText {
-  grid-row: 3/4;
-}
-
-.chalkText{
-  grid-row: 4;
-}
 
