@@ -154,6 +154,10 @@ nav > ul > li > a:active {
   grid-column: 4 / 5;
 }
 
+.search-svg * {
+  stroke: var(--text--bottom-top-color);
+}
+
 #search-text {
   color: var(--text--bottom-top-color);
 }
