@@ -816,7 +816,7 @@ footer {
   text-align: end;
 }
 
-.gradingInfo, .gradingTable, .gradingTableInfo {
+.gradingInfo, .gradingTable, .gradingTableInfo, .equipmentText {
   width: 80%;
   margin: 0 auto;
 }
@@ -862,3 +862,5 @@ td {
 .gUndefined {
   background-color: rgb(162, 162, 162);
 }
+
+
