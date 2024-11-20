@@ -425,7 +425,7 @@ main > article > * {
   border-bottom: 0.0625rem solid #e2e2e2;
 }
 
-footer {
+.footer-index {
   /* set size and color of footer */
   background-color: rgb(140, 240, 240);
   height: 650px;
