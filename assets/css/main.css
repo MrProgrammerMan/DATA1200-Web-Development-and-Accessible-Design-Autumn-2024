@@ -8,6 +8,10 @@
   text-rendering: optimizeLegibility;
 }
 
+img {
+  max-width: 100%;
+}
+
 .align-center {
   display: flex;
   align-items: center;
