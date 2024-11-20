@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Usage</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="margin0">
+    <header class="padding0">
+      <div class="margin0 padding0 align-center" id="logoWrapper">
+        <img
+          src="assets/imgs/OsloMet_logo_svart_OsloMet.png"
+          alt="OsloMet - Oslo Metropolitan University logo."
+        />
+      </div>
+      <nav class="align-center">
+        <ul class="margin0 padding0">
+          <li><a href="index.html">MatMod</a></li>
+          <li><a href="#TBA">Accessibility</a></li>
+          <li><a href="github.html">GitHub</a></li>
+          <li><a href="activity.html">Activity</a></li>
+        </ul>
+      </nav>
+      <form class="align-center" id="search-container">
+        <label for="search">SØK</label>
+        <input class="border0" id="search" type="text" />
+        <button class="border0" type="button">
+          <!--type=button prevents site refresh (because search is dummy)-->
+          <img
+            id="search-icon"
+            src="./assets/imgs/search-icon.svg"
+            alt="Search icon"
+          />
+        </button>
+      </form>
+      <div class="align-center" id="menu-toggle-wrapper">
+        <input id="menu-toggle" type="checkbox" hidden />
+        <label class="align-center" for="menu-toggle">
+          <p>MENY</p>
+          <div class="margin0 padding0">
+            <span id="menu-icon-span0" class="margin0 padding0"></span>
+            <span id="menu-icon-span1" class="margin0 padding0"></span>
+            <span id="menu-icon-span2" class="margin0 padding0"></span>
+          </div>
+        </label>
+      </div>
+    </header>
+    <main>
+      <article class="indentAllChildrenUni1">
+        <h1>GitHub Usage</h1>
+        <h2>Foreword</h2>
+        <p>
+          When working with software development, scripting, markup design or
+          other development projects, it's important to use a tool to manage the
+          cooperation process. Git has for years been, and still is, the
+          industry standard tool for this purpose.
+        </p>
+        <p>
+          We've hosted our source code on GitHub and made heavy use of branching
+          to divide up the work properly.
+        </p>
+        <p>
+          Using Git in a collaborative project is a great way to track changes
+          and manage collaboration, but it also comes with it's fair share of
+          challenges. This is especially true when you're not that used to using
+          git, it can be a bit daunting to learn.
+        </p>
+        <p>
+          Throughout this project, we've had to deal with merge conflicts,
+          reverting commits, and mismatching local and remote files.
+        </p>
+        <p>
+          Below, you can see some extracts from our git history that show some
+          of the challenges we faced during development of this webpage, as well
+          as how git has been invaluable for cooperative development.
+        </p>
+        <h2>
+          Extract 1: Using branches to work simultaneously on the same files
+        </h2>
+        <img src="assets/imgs/git-history-branches.png" alt="" />
+        <p>
+          Above, you can see a picture showing some of our git history. The
+          picture shows how four people worked on the project at the same time,
+          and how git helped us manage the changes. By using branching, all four
+          people created their own copy of the source code to work on, all
+          connected in the git repository. After we divided up the work, we were
+          able to work on the project simultanoeusly, by creating different
+          branches. This was an efficient way to handle parts of the project,
+          especially early on. The four different branches were all eventually
+          merged back into main, and changes from all team members are present
+          in the final product. This was done using pull requests and merge
+          commits.
+        </p>
+        <p>
+          Using this system, we were able to divide and conquer the project and
+          implement features in parallel. Sometimes we further divided up
+          features originally assigned to one branch, and used the same
+          branch-implement-merge workflow on that branch before the changes went
+          into main. This way, we could be flexible in quickly assigning parts
+          of a workload, and further divide it up as needed.
+        </p>
+        <h2>Extract 2: Git was invaluable for fixing issues early</h2>
+        <img
+          src="assets/imgs/git-history-revert.png"
+          alt="Git history showing a feature implementation from start to finish, and how git helped us fix issues."
+        />
+        <p>
+          In the above picture, you can see an extract from our git history. It
+          shows the complete history of a feature branch "studieOppbygging" from
+          start to finish.
+        </p>
+        <p>
+          The branch in question is shown as a yellow line, with a series of
+          commits, including one that has been highlighted with a darker color.
+          At the very bottom of the image you can see where the branch was
+          created(circled in red) from main(the blue line at the left of the
+          image). The creator of the branch made a few commits, and then set up
+          a pull request to merge the branch back into main. This has been our
+          workflow for most changes made to the project. In this case, there
+          were merge conflicts. Therefore, we used the following method:
+        </p>
+        <ol>
+          <li>
+            Implement intermidiary changes made to main into the feature
+            branch(merge main into feature).
+          </li>
+          <li>Ensure functionality of both main and feature is maintained.</li>
+          <li>
+            Merge the feature branch into main, as they are now compatible.
+          </li>
+        </ol>
+        <p>This is commonly referred to as a merge commit.</p>
+        <p>
+          As per policy, several team members review all pull requests to main
+          before they are merged. A reviewer noticed some problems introduced by
+          the merge commit and attempted to fix them in the highlighted commit
+          "Reverted some bad changes" (NOT a git revert). Upon this change, the
+          pull request was reviewed again and a different reviewer discovered
+          that the highlighted commit introduced a different problem. As such,
+          the following commit is a revert that undoes these changes.
+        </p>
+        <p>
+          After this, some minor fix commits where added adressing the original
+          issue in the merge from main to feature. Again, the feature branch
+          received another merge commit from main for some intermidiary changes.
+          Finally, the pull request was approved and the feature branch was
+          merged into main and deleted.
+        </p>
+        <h2>Change 1: A typical feature commit</h2>
+        <img
+          src="assets/imgs/git commit 1.png"
+          alt="A feature commit adding plus/minus icons to some expandable boxes."
+        />
+        <p>
+          Typically, a feature commit would look like the one above. This commit
+          adds a specific, contained feature explained by a short commit
+          message.
+        </p>
+        <h2>Change 2: A simple fix commit to main</h2>
+        <img
+          src="assets/imgs/git commit 2.png"
+          alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
+        />
+        <p>
+          While typically seen as a bad idea, we decided it was okay to commit
+          directly to main if the change was small and very simple. For example
+          ,the above commit shows some hyperlinks were added to replaced
+          previously used placeholders. This type of fix does not affect the
+          site in any meaningful way that would break anything, and doesn't
+          really need it's own pull request in this case. (In a small team with
+          a small change like this, it's not a big deal.)
+        </p>
+        <h2>Conclusion</h2>
+        <p>
+          All things considered, we're very happy with how using git has worked
+          out in this project, and how it has allowed us to simultaneously
+          implement features that modify the same files (relatively) smoothly.
+          Below you can see and read about some of the things we've had to deal
+          with while developing this webpage.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

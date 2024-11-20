@@ -8,6 +8,10 @@
   text-rendering: optimizeLegibility;
 }
 
+img {
+  max-width: 100%;
+}
+
 .align-center {
   display: flex;
   align-items: center;
@@ -23,6 +27,11 @@
 
 .padding0 {
   padding: 0;
+}
+
+.indentAllChildrenUni1 > * {
+  grid-column-start: 2;
+  grid-column-end: 10;
 }
 
 .indentLeft1,
@@ -299,11 +308,19 @@ main > article > * {
   main {
     grid-template-columns: 5% auto 5%;
   }
+
+  main > article {
+    grid-template-columns: repeat(4, 5%) repeat(2, 30%) repeat(4, 5%);
+  }
 }
 
 @media (max-width: 480px) {
   main {
     grid-template-columns: 3% auto 3%;
+  }
+
+  main > article {
+    grid-template-columns: repeat(4, 3%) repeat(2, 38%) repeat(4, 3%);
   }
 }
 
