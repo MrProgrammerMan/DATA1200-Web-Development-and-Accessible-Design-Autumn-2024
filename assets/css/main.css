@@ -125,9 +125,13 @@ header {
   grid-column: 2 / 3;
 }
 
-#logoWrapper > img {
+#logoWrapper > svg {
   height: 2em;
   object-fit: contain;
+}
+
+#logoWrapper > svg > path {
+  fill: red;
 }
 
 nav {
