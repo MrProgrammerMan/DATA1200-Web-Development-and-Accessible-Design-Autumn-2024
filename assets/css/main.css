@@ -100,7 +100,7 @@ h3 {
 }
 
 p {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.3rem;
 }
 
@@ -786,6 +786,12 @@ main > article > * {
   height: 5rem;
   width: 100%;
 
+  /*
+    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
+    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
+    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
+    - The gradient is aligned to the right side of the element.
+  */
   background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
     linear-gradient(
         to left,
