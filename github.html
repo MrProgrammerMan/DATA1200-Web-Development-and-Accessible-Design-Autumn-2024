@@ -53,12 +53,12 @@
         <p>
           When working with software development, scripting, markup design or
           other development projects, it's important to use a tool to manage the
-          cooperation process. Git has for years been, and is still, the
+          cooperation process. Git has for years been, and still is, the
           industry standard tool for this purpose.
         </p>
         <p>
           We've hosted our source code on GitHub and made heavy use of branching
-          to divide up the work properly between.
+          to divide up the work properly.
         </p>
         <p>
           Using Git in a collaborative project is a great way to track changes
@@ -73,20 +73,20 @@
         <p>
           Below, you can see some extracts from our git history that show some
           of the challenges we faced during development of this webpage, as well
-          as how git had been invaluable for cooperative development.
+          as how git has been invaluable for cooperative development.
         </p>
         <h2>
-          Extract 1: Using branches to work simultaneously on the same files.
+          Extract 1: Using branches to work simultaneously on the same files
         </h2>
         <img src="assets/imgs/git-history-branches.png" alt="" />
         <p>
           Above, you can see a picture showing some of our git history. The
-          picture shows how four different people worked on the project at the
-          same time and how git helped us manage the changes. By using
-          branching, all four people created their own copy of the source code
-          to work on, connected in the git repository. For context, where all
-          the branches were created was after a team meeting where some work was
-          divided up. This was an efficient way to handle parts of the project,
+          picture shows how four people worked on the project at the same time,
+          and how git helped us manage the changes. By using branching, all four
+          people created their own copy of the source code to work on, all
+          connected in the git repository. After we divided up the work, we were
+          able to work on the project simultanoeusly, by creating different
+          branches. This was an efficient way to handle parts of the project,
           especially early on. The four different branches were all eventually
           merged back into main, and changes from all team members are present
           in the final product. This was done using pull requests and merge
@@ -97,10 +97,10 @@
           implement features in parallel. Sometimes we further divided up
           features originally assigned to one branch, and used the same
           branch-implement-merge workflow on that branch before the changes went
-          into main. This way, we could be flexible in quickly assigning part of
-          a workload, and further divide it up as needed.
+          into main. This way, we could be flexible in quickly assigning parts
+          of a workload, and further divide it up as needed.
         </p>
-        <h2>Extract 2: Git was invaluable for fixing issues early.</h2>
+        <h2>Extract 2: Git was invaluable for fixing issues early</h2>
         <img
           src="assets/imgs/git-history-revert.png"
           alt="Git history showing a feature implementation from start to finish, and how git helped us fix issues."
@@ -113,15 +113,24 @@
         <p>
           The branch in question is shown as a yellow line, with a series of
           commits, including one that has been highlighted with a darker color.
-          At the very bottom of the image you you can see where the branch was
+          At the very bottom of the image you can see where the branch was
           created(circled in red) from main(the blue line at the left of the
           image). The creator of the branch made a few commits, and then set up
           a pull request to merge the branch back into main. This has been our
-          workflow for most changes made to the project. As there were merge
-          conflicts, the commit immidiately before the highlighted commit shows
-          the merge of main into the feature branch to make it compatible with
-          main.
+          workflow for most changes made to the project. In this case, there
+          were merge conflicts. Therefore, we used the following method:
         </p>
+        <ol>
+          <li>
+            Implement intermidiary changes made to main into the feature
+            branch(merge main into feature).
+          </li>
+          <li>Ensure functionality of both main and feature is maintained.</li>
+          <li>
+            Merge the feature branch into main, as they are now compatible.
+          </li>
+        </ol>
+        <p>This is commonly referred to as a merge commit.</p>
         <p>
           As per policy, several team members review all pull requests to main
           before they are merged. A reviewer noticed some problems introduced by
@@ -138,12 +147,30 @@
           Finally, the pull request was approved and the feature branch was
           merged into main and deleted.
         </p>
-        <h2>Change 1: LOREM ISUM</h2>
-        <img src="" alt="">
-        <p></p>
-        <h2>Change 2: LOREM ISUM</h2>
-        <img src="" alt="">
-        <p></p>
+        <h2>Change 1: A typical feature commit</h2>
+        <img
+          src="assets/imgs/git commit 1.png"
+          alt="A feature commit adding plus/minus icons to some expandable boxes."
+        />
+        <p>
+          Typically, a feature commit would look like the one above. This commit
+          adds a specific, contained feature explained by a short commit
+          message.
+        </p>
+        <h2>Change 2: A simple fix commit to main</h2>
+        <img
+          src="assets/imgs/git commit 2.png"
+          alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
+        />
+        <p>
+          While typically seen as a bad idea, we decided it was okay to commit
+          directly to main if the change was small and very simple. For example
+          ,the above commit shows some hyperlinks were added to replaced
+          previously used placeholders. This type of fix does not affect the
+          site in any meaningful way that would break anything, and doesn't
+          really need it's own pull request in this case. (In a small team with
+          a small change like this, it's not a big deal.)
+        </p>
         <h2>Conclusion</h2>
         <p>
           All things considered, we're very happy with how using git has worked
