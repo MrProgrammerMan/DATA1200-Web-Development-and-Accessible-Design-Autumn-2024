@@ -7,7 +7,7 @@
   text-rendering: optimizeLegibility;
 
   --primary-color: #2c3e50;
-  --secondary-color: #18bc9c;
+  --secondary-color: #add8e6;
   --accent-color: #e74c3c;
   --background-color: #f5f5f5;
   --text-color: #333333;
@@ -21,7 +21,7 @@
 
   --border: #e2e2e2;
   --border-nav-footer-color: black;
-  --button-hover-color: #15a78a;
+  --button-hover-color: #a0c8d6;
 }
 
 .body-index {
@@ -112,13 +112,9 @@ header {
   grid-column: 2 / 3;
 }
 
-#logoWrapper > svg {
+#logoWrapper > img {
   height: 2em;
   object-fit: contain;
-}
-
-#logoWrapper > svg * {
-  
 }
 
 nav {
@@ -517,7 +513,7 @@ main > article > * {
 }
 
 .subscribe {
-  background-color: black;
+  background-color: var(--accent-color);
   color: white;
   border: none;
   padding: 20px 20px;
