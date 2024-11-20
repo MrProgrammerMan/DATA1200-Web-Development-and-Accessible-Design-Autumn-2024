@@ -802,3 +802,9 @@ footer {
   padding-left: 20px;
   vertical-align: center;
 }
+
+/* ACTIVITY CSS */
+
+.header-activity {
+  background-color: lightgray;
+}
