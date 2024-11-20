@@ -24,6 +24,10 @@
   --button-hover-color: #15a78a;
 }
 
+.body-index {
+  background-color: var(--background-color);
+}
+
 .align-center {
   display: flex;
   align-items: center;
