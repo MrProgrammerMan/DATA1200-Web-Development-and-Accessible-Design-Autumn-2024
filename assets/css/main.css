@@ -776,6 +776,7 @@ footer {
 
 .articleFlex > * {
   width: 40%;
+  margin-top: 40px;
 }
 
 .imgStyler {
@@ -814,11 +815,36 @@ footer {
 .subHeadingStyler {
   width: 50%;
   text-align: end;
+  padding-right: 10px;
+  border-radius: 5px;
 }
 
 .gradingInfo, .gradingTable, .gradingTableInfo, .equipmentText {
   width: 80%;
   margin: 0 auto;
+}
+
+.address-hover {
+  text-decoration: underline;
+}
+
+.address-hover:hover {
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
+}
+
+.address-hover-div > iframe {
+  height: 0;
+  transition: height 0.5s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+}
+
+.address-hover-div > iframe:hover, .address-hover-div:has(p:hover) > iframe {
+  height: 300px;
+  
 }
 
 .gradingTable {
