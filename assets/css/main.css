@@ -449,6 +449,8 @@ main > article > * {
   border-bottom: 0.0625rem solid var(--border);
 }
 
+/* footer */
+
 .footer-index {
   /* set size and color of footer */
   background-color: var(--primary-color);
@@ -536,10 +538,11 @@ main > article > * {
   list-style-type: none;
 }
 
-.f-img {
+.footer-icon {
   height: 25px;
   padding-right: 10px;
   vertical-align: middle;
+  fill: var(--text--bottom-top-color);
 }
 
 @media screen and (max-width: 800px) {
