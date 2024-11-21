@@ -22,6 +22,10 @@
   --border: #e2e2e2;
   --border-nav-footer-color: black;
   --button-hover-color: #a0c8d6;
+
+
+  --activity-header-color: #f2e9e4;
+  --activity-text-color: black;
 }
 
 .body-index {
@@ -874,17 +878,21 @@ main > article > * {
 }
 
 /* ACTIVITY CSS */
+.search-svg-activity * {
+  stroke: var(--activity-text-color);
+}
+
 .activity-h1 {
   display: flex;
   justify-content: center;
 }
 
 .header-activity {
-  background-color: #f2e9e4;
+  background-color: var(--activity-header-color);
 }
 
 .header-activity * {
-  color: black;
+  color: var(--activity-text-color);
 }
 
 .activity-content-buttons {
