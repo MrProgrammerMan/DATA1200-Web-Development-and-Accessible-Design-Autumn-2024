@@ -3,9 +3,33 @@
 /* Root Variables */
 :root {
   /* Base text color and font family */
-  color: #222222;
   font-family: Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
+
+  --primary-color: #2c3e50;
+  --secondary-color: #add8e6;
+  --accent-color: #e74c3c;
+  --background-color: #f5f5f5;
+  --text-color: #333333;
+  --text--bottom-top-color: #ededed;
+  --link-color: #3498db;
+  --link-hover-color: #2980b9;
+  --link-active-color: #405a75;
+
+  --hover-background-color: #1abc9c;
+  --nav-buttons: #333333;
+
+  --border: #e2e2e2;
+  --border-nav-footer-color: black;
+  --button-hover-color: #a0c8d6;
+}
+
+.body-index {
+  background-color: var(--background-color);
+}
+
+img {
+  max-width: 100%;
 }
 
 .align-center {
@@ -23,6 +47,11 @@
 
 .padding0 {
   padding: 0;
+}
+
+.indentAllChildrenUni1 > * {
+  grid-column-start: 2;
+  grid-column-end: 10;
 }
 
 .indentLeft1,
@@ -55,6 +84,26 @@
   grid-column-end: 8;
 }
 
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+}
+
 /*** HEADER SPECIFIC ***/
 /* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
@@ -68,7 +117,7 @@ header {
   justify-items: start; /* Navbar is aligned left in the header */
   gap: 0;
 
-  background-color: rgb(140, 240, 240);
+  background-color: var(--primary-color);
 }
 
 #logoWrapper {
@@ -76,7 +125,7 @@ header {
   grid-column: 2 / 3;
 }
 
-#logoWrapper > img {
+#logoWrapper > svg, img {
   height: 2em;
   object-fit: contain;
 }
@@ -101,7 +150,7 @@ nav > ul > li > a {
 
   padding: 1.2em;
 
-  color: black;
+  color: var(--text--bottom-top-color);
   text-decoration: none;
 }
 
@@ -110,7 +159,7 @@ nav > ul > li > a:hover {
 }
 
 nav > ul > li > a:active {
-  background-color: rgba(0, 255, 255, 0.315);
+  background-color: var(--link-active-color);
 }
 
 #search-container {
@@ -118,12 +167,20 @@ nav > ul > li > a:active {
   grid-column: 4 / 5;
 }
 
+.search-svg * {
+  stroke: var(--text--bottom-top-color);
+}
+
+#search-text {
+  color: var(--text--bottom-top-color);
+}
+
 #search-container > input[type="text"] {
   width: 0;
   /* 
    * When closed, preserve vertical padding.
    * This makes the opening animation look like it's happening in one dimension;
-   * i.e.: The box "slides out" instead of "expanding into existance".
+   * i.e.: The box "slides out" instead of "expanding into existence".
    */
   padding: 0.8em 0;
   opacity: 0;
@@ -151,6 +208,8 @@ nav > ul > li > a:active {
 
   justify-content: center;
   grid-column: 5 / 6;
+
+  color: var(--text--bottom-top-color);
 }
 
 #menu-toggle-wrapper > label > p {
@@ -170,7 +229,7 @@ nav > ul > li > a:active {
 #menu-toggle-wrapper > label > div > span {
   width: 1.5em;
   height: 0.2em;
-  background-color: black;
+  background-color: var(--text--bottom-top-color);
   transition: all 0.5s ease;
   position: absolute;
 }
@@ -283,11 +342,19 @@ main > article > * {
   main {
     grid-template-columns: 5% auto 5%;
   }
+
+  main > article {
+    grid-template-columns: repeat(4, 5%) repeat(2, 30%) repeat(4, 5%);
+  }
 }
 
 @media (max-width: 480px) {
   main {
     grid-template-columns: 3% auto 3%;
+  }
+
+  main > article {
+    grid-template-columns: repeat(4, 3%) repeat(2, 38%) repeat(4, 3%);
   }
 }
 
@@ -310,7 +377,7 @@ main > article > * {
   text-align: center;
   min-width: 0.6em;
   padding: 0.5em 0.6em;
-  background-color: lightblue;
+  background-color: var(--secondary-color);
 }
 .studyinfo details[open] > summary::before {
   content: " - ";
@@ -335,7 +402,7 @@ main > article > * {
 }
 /* Styling for links in .studyinfo */
 .studyinfo a {
-  color: black;
+  color: var(--text-color);
   font-weight: 700;
 }
 .studyinfo a:hover {
@@ -356,7 +423,7 @@ main > article > * {
   text-align: center;
   min-width: 0.6em;
   padding: 0.2em 0.3em;
-  background-color: lightblue;
+  background-color: var(--secondary-color);
 }
 .studyinfo-sub-details details[open] > summary::before {
   content: " - ";
@@ -364,9 +431,9 @@ main > article > * {
 .studyinfo-sub-details p {
   margin-left: 1.5em;
 }
-/* Headings */
-h2 {
-  font-size: 2rem;
+.small-other-studies > ul > li ul li{
+  font-size: 1em;
+  font-weight: 100;
 }
 
 /* Other Studies Section */
@@ -385,11 +452,14 @@ h2 {
   display: flex;
   align-items: flex-start;
   text-decoration: none;
-  color: #222;
+  color: var(--text-color);
+
   padding: 1.1875rem 1.875rem 1.1875rem 0;
   background-image: url(/assets/imgs/arrow-right.svg);
   background-repeat: no-repeat;
   background-position: center right 50px;
+  background-size: auto, 200%;
+
   transition: 0.1s ease-in-out;
 }
 
@@ -407,12 +477,15 @@ h2 {
 }
 
 .border-bottom {
-  border-bottom: 0.0625rem solid #e2e2e2;
+  border-bottom: 0.0625rem solid var(--border);
 }
 
-footer {
+/* footer */
+
+.footer-index {
   /* set size and color of footer */
-  background-color: rgb(140, 240, 240);
+  background-color: var(--primary-color);
+  color: var(--text--bottom-top-color);
   height: 650px;
   margin-top: 100px;
 }
@@ -429,7 +502,7 @@ footer {
   height: 150px;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid var(--border-nav-footer-color);
 }
 
 .footer-bot {
@@ -445,7 +518,7 @@ footer {
 .f-icon,
 .oslomet {
   text-decoration: none;
-  color: black;
+  color: var(--text--bottom-top-color);
 }
 
 .link {
@@ -462,13 +535,18 @@ footer {
   font-weight: bold;
 }
 
+.subscribe:hover {
+  cursor: pointer;
+}
+
 .subscribe {
-  background-color: black;
+  background-color: var(--accent-color);
   color: white;
   border: none;
   padding: 20px 20px;
   font-weight: bold;
   font-size: 1em;
+  text-decoration: none;
 }
 
 .updated {
@@ -491,15 +569,15 @@ footer {
   list-style-type: none;
 }
 
-.f-img {
+.footer-icon {
   height: 25px;
   padding-right: 10px;
   vertical-align: middle;
+  fill: var(--text--bottom-top-color);
 }
 
 @media screen and (max-width: 800px) {
   footer {
-    background-color: rgb(140, 240, 240);
     position: relative;
     height: 1200px;
   }
@@ -530,9 +608,8 @@ footer {
   }
 }
 
-*/*{background-color: rgba(255, 0, 0, 0.174);}*/
-
-.overview, .subjects {
+.overview,
+.subjects {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -638,7 +715,11 @@ footer {
   /* Flex container for student stories */
   width: 100%;
   display: flex;
-  background-color: #e2e2e2;
+  background-color: var(--secondary-color);
+}
+
+.student-stories:hover .image-section img {
+  transform: scale(1.02);
 }
 
 .stories-text {
@@ -660,7 +741,7 @@ footer {
 
 .stories-text a {
   /* Link styling */
-  color: rgb(34, 34, 34);
+  color: var(--text-color);
 }
 
 .no-underline {
@@ -684,13 +765,52 @@ footer {
 .image-section {
   /* Flex item for image */
   flex: 1;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .image-section img {
   /* Image styling */
   object-fit: cover;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+
+.a-stories-button {
+  display: flex;
+  align-items: center;
+  margin: 50px auto auto;
+  box-sizing: border-box;
+  padding-left: 3rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  color: var(--text-color);
+  grid-column-start: 4;
+  grid-column-end: 8;
+  height: 5rem;
+  width: 100%;
+
+  /*
+    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
+    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
+    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
+    - The gradient is aligned to the right side of the element.
+  */
+  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
+    linear-gradient(
+        to left,
+        var(--secondary-color) 50%,
+        var(--button-hover-color) 50%
+      )
+      right;
+  background-size: auto, 200%;
+  transition: background-position 0.25s;
+}
+
+.a-stories-button:hover {
+  background-position: center right 43px, left;
 }
 
 @media screen and (max-width: 800px) {
@@ -750,6 +870,66 @@ footer {
   padding-right: 5px;
   padding-left: 20px;
   vertical-align: center;
+}
+
+/* ACTIVITY CSS */
+.activity-h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.header-activity {
+  background-color: #f2e9e4;
+}
+
+.activity-content-buttons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #f2e9e4;
+  border-radius: 5px;
+}
+
+.activity-content-buttons a {
+  background-color: #f2e9e4;
+  width: 20%;
+  height: 3.5em;
+  margin: 2%;
+  border: none;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  text-decoration: none;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.activity-content-buttons a:hover {
+  border: white;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+  .activity-content-buttons {
+    padding: 0.5em 0 0.5em;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .activity-content-buttons a {
+    width: 80%;
+  }
 }
 
 
