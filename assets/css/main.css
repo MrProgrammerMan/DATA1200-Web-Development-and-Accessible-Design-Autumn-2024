@@ -498,7 +498,6 @@ main > article > * {
   height: 150px;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 0.5px solid var(--border-nav-footer-color);
 }
 
 .footer-bot {
@@ -587,7 +586,6 @@ main > article > * {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    border-bottom: 0.5px solid black;
   }
 
   .footer-bot {
@@ -604,7 +602,7 @@ main > article > * {
   }
 }
 
-.overview,
+.studyOverview,
 .subjects {
   display: flex;
   flex-wrap: wrap;
@@ -612,19 +610,12 @@ main > article > * {
   justify-content: flex-start;
 }
 
-.overview {
+.studyOverview {
   line-height: 2em;
   width: 100%;
 }
 
-.oStudiested,
-.oVarighet,
-.oOmfang,
-.oStudiepoeng,
-.oStudiestart,
-.oUndervisningsspråk,
-.oStudieplasser,
-.oSubjects {
+.studyOverview > dl {
   border-top: solid black;
   border-width: 0.01em;
   padding: 1%;
@@ -633,18 +624,13 @@ main > article > * {
   flex-basis: calc(22% - 5px);
 }
 
-.oBachelor {
-  padding-bottom: 10px;
-}
-
-.oInfo,
-.oHead {
+.studyOverview > dl > * {
   margin-left: 0%;
   display: flex;
   justify-content: space-between;
 }
 
-.oHead {
+.studyOverview > dl > dt {
   font-weight: bold;
 }
 
@@ -655,25 +641,14 @@ main > article > * {
     line-height: 2em;
   }
 
-  .oStudiested,
-  .oVarighet,
-  .oOmfang,
-  .oStudiepoeng,
-  .oStudiestart,
-  .oUndervisningsspråk,
-  .oStudieplasser,
-  .oSubjects {
+  .studyOverview > dl {
     border-top: solid black;
     border-width: 0.01em;
-  }
-  .oHeader,
-  .oBachelor {
-    margin-left: 5%;
   }
 }
 
 @media (max-width: 480px) {
-  .overview {
+  .studyOverview {
     flex-direction: column;
     flex-wrap: nowrap;
   }
