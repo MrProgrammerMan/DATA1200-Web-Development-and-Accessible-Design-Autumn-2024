@@ -125,7 +125,8 @@ header {
   grid-column: 2 / 3;
 }
 
-#logoWrapper > svg, img {
+#logoWrapper > svg,
+img {
   height: 2em;
   object-fit: contain;
 }
@@ -431,7 +432,7 @@ main > article > * {
 .studyinfo-sub-details p {
   margin-left: 1.5em;
 }
-.small-other-studies > ul > li ul li{
+.small-other-studies > ul > li ul li {
   font-size: 1em;
   font-weight: 100;
 }
@@ -882,6 +883,10 @@ main > article > * {
   background-color: #f2e9e4;
 }
 
+.header-activity * {
+  color: black;
+}
+
 .activity-content-buttons {
   list-style-type: none;
   padding: 0;
@@ -932,12 +937,8 @@ main > article > * {
   }
 }
 
-
-
-
-
 #activity-body {
-  background-color: #F2E9E4;
+  background-color: #f2e9e4;
 }
 
 .article-flex {
@@ -968,8 +969,8 @@ main > article > * {
 }
 
 .info-box {
-  background-color: #22223B;
-  color: #F2E9E4;
+  background-color: #22223b;
+  color: #f2e9e4;
   padding: 20px;
   border-radius: 5px;
 }
@@ -981,11 +982,12 @@ main > article > * {
   align-items: center;
 }
 
-.heading-styler, .sub-heading-styler {
+.heading-styler,
+.sub-heading-styler {
   position: absolute;
   left: 0;
-  background-color: #22223B;
-  color: #F2E9E4;
+  background-color: #22223b;
+  color: #f2e9e4;
   padding: 5px 0;
 }
 
@@ -1001,14 +1003,15 @@ main > article > * {
   border-radius: 5px;
 }
 
-.grading-info, .grading-table, .grading-table-info {
+.grading-info,
+.grading-table,
+.grading-table-info {
   width: 80%;
   margin: 0 auto;
 }
 
 .address-hover {
-  color: #22223B;
-
+  color: #22223b;
 }
 
 .address-hover:hover {
@@ -1025,7 +1028,8 @@ main > article > * {
   width: 600px;
 }
 
-.address-hover-div > iframe:hover, .address-hover-div:has(a:hover) > iframe {
+.address-hover-div > iframe:hover,
+.address-hover-div:has(a:hover) > iframe {
   height: 300px;
 }
 
@@ -1043,8 +1047,8 @@ main > article > * {
 }
 
 td {
-    height: 50px;
-    text-align: center;
+  height: 50px;
+  text-align: center;
 }
 
 .g-white {
@@ -1064,7 +1068,7 @@ td {
 }
 .g-black {
   background-color: rgb(46, 46, 46);
-  color: #F2E9E4;
+  color: #f2e9e4;
 }
 .g-undefined {
   background-color: rgb(162, 162, 162);
@@ -1077,4 +1081,3 @@ td {
 .sub-flex-margin-big {
   margin-top: 300px;
 }
-
