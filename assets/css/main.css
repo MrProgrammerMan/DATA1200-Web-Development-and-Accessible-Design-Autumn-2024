@@ -428,23 +428,7 @@ main > article > * {
 }
 
 .studyInfo > details {
-  font-size: 1.15em;
   margin: 0.5em;
-}
-.studyInfo > details > summary::before {
-  content: " + ";
-  display: inline-block;
-  font-weight: normal;
-  margin-right: 1em;
-  border-width: 1px;
-  text-align: center;
-  min-width: 0.6em;
-  padding: 0.5em 0.6em;
-  background-color: var(--secondary-color);
-}
-
-.studyInfo details[open] > summary::before {
-  content: " - ";
 }
 
 /* font style for summary */
@@ -457,10 +441,34 @@ main > article > * {
   margin-left: 0;
 }
 
-/* styling for  in .studyInfo */
-.studyInfo > * {
+.studyInfo summary::before {
+  margin-right: 1em;
+  text-align: center;
+  width: 0.6em;
+  padding: 0.5em 0.6em;
+  background-color: var(--secondary-color);
+  content: " + ";
+  display: inline-block;
+}
+
+.studyInfo details[open] > summary::before {
+  content: " - ";
+}
+
+/* font style for details summary child */
+.studyinfo-sub-details summary {
+  font-weight: normal;
+  padding: 0.5em;
+}
+.studyinfo-sub-details > summary::before {
+  font-weight: normal;
+  padding: 0.2em 0.3em;
+}
+
+.studyinfo-sub-details p {
   margin-left: 1.5em;
 }
+
 /* styling for lists in .studyInfo */
 .studyInfo li {
   margin-top: 1em;
@@ -472,29 +480,6 @@ main > article > * {
 }
 .studyInfo a:hover {
   text-decoration: none;
-}
-/* font style for details summary child */
-.studyinfo-sub-details summary {
-  font-size: 1.15rem;
-  font-weight: normal;
-  list-style-type: none;
-  padding: 0.5em;
-}
-.studyinfo-sub-details > summary::before {
-  content: " + ";
-  display: inline-block;
-  font-weight: normal;
-  margin-right: 1em;
-  text-align: center;
-  min-width: 0.6em;
-  padding: 0.2em 0.3em;
-  background-color: var(--secondary-color);
-}
-.studyinfo-sub-details details[open] > summary::before {
-  content: " - ";
-}
-.studyinfo-sub-details p {
-  margin-left: 1.5em;
 }
 
 /* Other Studies Section */
