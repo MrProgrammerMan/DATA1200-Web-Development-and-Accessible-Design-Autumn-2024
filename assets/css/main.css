@@ -825,7 +825,8 @@ footer {
 }
 
 .address-hover {
-  text-decoration: underline;
+  color: #22223B;
+
 }
 
 .address-hover:hover {
@@ -842,13 +843,11 @@ footer {
   width: 600px;
 }
 
-.address-hover-div > iframe:hover, .address-hover-div:has(p:hover) > iframe {
+.address-hover-div > iframe:hover, .address-hover-div:has(a:hover) > iframe {
   height: 300px;
-  
 }
 
 .gradingTable {
-  width: 100%;
   border-collapse: separate;
   table-layout: fixed;
   padding-bottom: 40px;
