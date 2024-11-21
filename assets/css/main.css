@@ -358,6 +358,47 @@ main > article > * {
   }
 }
 
+.studyOverview,
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.studyOverview {
+  line-height: 2em;
+}
+
+.studyOverview > dl {
+  border-top: 1px solid black;
+  padding: .4em;
+  margin: 8px;
+  flex-basis: 21%;
+}
+
+.studyOverview > dl > * {
+  margin-left: 0%;
+}
+
+.studyOverview > dl > dt {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .subjects {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .studyOverview {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
 .studyinfo-top {
   font-size: 1.5em;
   padding: 1.75em;
@@ -379,12 +420,13 @@ main > article > * {
   padding: 0.5em 0.6em;
   background-color: var(--secondary-color);
 }
-.studyinfo details[open] > summary::before {
+
+.studyInfo details[open] > summary::before {
   content: " - ";
 }
 
 /* font style for summary */
-.studyinfo summary {
+.studyInfo summary {
   padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
@@ -392,20 +434,20 @@ main > article > * {
   cursor: pointer;
 }
 
-/* styling for  in .studyinfo */
-.studyinfo div {
+/* styling for  in .studyInfo */
+.studyInfo div {
   margin-left: 1.5em;
 }
-/* styling for lists in .studyinfo */
-.studyinfo li {
+/* styling for lists in .studyInfo */
+.studyInfo li {
   margin-top: 1em;
 }
-/* Styling for links in .studyinfo */
-.studyinfo a {
+/* Styling for links in .studyInfo */
+.studyInfo a {
   color: var(--text-color);
   font-weight: 700;
 }
-.studyinfo a:hover {
+.studyInfo a:hover {
   text-decoration: none;
 }
 /* font style for details summary child */
@@ -599,58 +641,6 @@ main > article > * {
   .footer-nav,
   .footer-icons {
     padding-bottom: 5%;
-  }
-}
-
-.studyOverview,
-.subjects {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: flex-start;
-}
-
-.studyOverview {
-  line-height: 2em;
-  width: 100%;
-}
-
-.studyOverview > dl {
-  border-top: solid black;
-  border-width: 0.01em;
-  padding: 1%;
-  padding-left: 0;
-  margin: 10px 10px 10px 0;
-  flex-basis: calc(22% - 5px);
-}
-
-.studyOverview > dl > * {
-  margin-left: 0%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.studyOverview > dl > dt {
-  font-weight: bold;
-}
-
-@media (max-width: 800px) {
-  .subjects {
-    display: flex;
-    flex-direction: column;
-    line-height: 2em;
-  }
-
-  .studyOverview > dl {
-    border-top: solid black;
-    border-width: 0.01em;
-  }
-}
-
-@media (max-width: 480px) {
-  .studyOverview {
-    flex-direction: column;
-    flex-wrap: nowrap;
   }
 }
 
