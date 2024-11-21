@@ -431,6 +431,10 @@ main > article > * {
 .studyinfo-sub-details p {
   margin-left: 1.5em;
 }
+.small-other-studies > ul > li ul li{
+  font-size: 1em;
+  font-weight: 100;
+}
 
 /* Other Studies Section */
 .other-studies ul {
