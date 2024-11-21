@@ -363,21 +363,43 @@ main > article > * {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
-
-.studyOverview {
   line-height: 2em;
 }
 
-.studyOverview > dl {
+.subjects {
+  width: 100%;
+  padding-bottom: 30px;
+  font-size: small;
+  margin-left: 0;
+}
+
+.studyOverview > dl,
+.subjects > dl {
   border-top: 1px solid black;
-  padding: .4em;
   margin: 8px;
+  padding: .4em;
+}
+
+.subjects > dl {
+  flex-basis: 25%;
+}
+
+.subjects > dl > * {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subjects img {
+  margin: px;
+}
+
+.studyOverview > dl {
   flex-basis: 21%;
 }
 
-.studyOverview > dl > * {
-  margin-left: 0%;
+.studyOverview > dl > *,
+.subjects > dl > * {
+  margin-left: 0;
 }
 
 .studyOverview > dl > dt {
@@ -399,17 +421,17 @@ main > article > * {
   }
 }
 
-.studyinfo-top {
+.studyInfo > p {
   font-size: 1.5em;
   padding: 1.75em;
   font-weight: lighter;
 }
 
-.studyinfo-details {
+.studyInfo > details {
   font-size: 1.15em;
   margin: 0.5em;
 }
-.studyinfo-details > summary::before {
+.studyInfo > details > summary::before {
   content: " + ";
   display: inline-block;
   font-weight: normal;
@@ -432,10 +454,11 @@ main > article > * {
   font-size: 1.2rem;
   list-style-type: none;
   cursor: pointer;
+  margin-left: 0;
 }
 
 /* styling for  in .studyInfo */
-.studyInfo div {
+.studyInfo > * {
   margin-left: 1.5em;
 }
 /* styling for lists in .studyInfo */
@@ -811,13 +834,6 @@ main > article > * {
 
 .semesterGruppe {
   font-weight: bold;
-}
-
-.subjects {
-  width: 100%;
-  padding-bottom: 30px;
-  font-size: small;
-  margin-left: 0;
 }
 
 #study-yearTop {
