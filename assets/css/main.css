@@ -780,7 +780,9 @@ footer {
 }
 
 .img-styler {
+  object-fit: cover;
   width: 100%;
+  max-height: 550px;
   height: auto;
   border-radius: 5px;
 }
@@ -819,7 +821,7 @@ footer {
   border-radius: 5px;
 }
 
-.grading-info, .grading-table, .grading-table-info, .equipment-text {
+.grading-info, .grading-table, .grading-table-info {
   width: 80%;
   margin: 0 auto;
 }
@@ -888,4 +890,11 @@ td {
   background-color: rgb(162, 162, 162);
 }
 
+.sub-flex-margin-small {
+  margin-bottom: 30px;
+}
+
+.sub-flex-margin-big {
+  margin-top: 300px;
+}
 
