@@ -125,7 +125,7 @@ header {
   grid-column: 2 / 3;
 }
 
-#logoWrapper > img {
+#logoWrapper > svg, img {
   height: 2em;
   object-fit: contain;
 }
