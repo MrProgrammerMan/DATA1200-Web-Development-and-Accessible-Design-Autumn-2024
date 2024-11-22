@@ -104,7 +104,7 @@ p {
   line-height: 1.3rem;
 }
 
-/*** HEADER SPECIFIC ***/
+/*** HEADER ***/
 /* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
 
@@ -358,7 +358,11 @@ main > article > * {
   }
 }
 
-.studyOverview,
+/* Study info */
+/* Composed of study-overview, study-info */
+/* study-info contains study-year-top, study-year, semester and subjects */
+
+.study-overview,
 .subjects {
   display: flex;
   flex-wrap: wrap;
@@ -366,18 +370,31 @@ main > article > * {
   line-height: 2em;
 }
 
+.study-overview > dl {
+  flex-basis: 21%;
+}
+
+.study-overview > dl,
+.subjects > dl {
+  border-top: 1px solid black;
+  margin: 8px;
+  padding: .4em;
+}
+
+.study-overview > dl > dt {
+  font-weight: bold;
+}
+
+.study-overview > dl > *,
+.subjects > dl > * {
+  margin-left: 0;
+}
+
 .subjects {
   width: 100%;
   padding-bottom: 30px;
   font-size: small;
   margin-left: 0;
-}
-
-.studyOverview > dl,
-.subjects > dl {
-  border-top: 1px solid black;
-  margin: 8px;
-  padding: .4em;
 }
 
 .subjects > dl {
@@ -393,46 +410,23 @@ main > article > * {
   margin: px;
 }
 
-.studyOverview > dl {
-  flex-basis: 21%;
+.subjects > dl > dt > img {
+  height: 10px;
+  width: 10px;
 }
 
-.studyOverview > dl > *,
-.subjects > dl > * {
-  margin-left: 0;
-}
-
-.studyOverview > dl > dt {
-  font-weight: bold;
-}
-
-@media (max-width: 800px) {
-  .subjects {
-    display: flex;
-    flex-direction: column;
-    line-height: 2em;
-  }
-}
-
-@media (max-width: 480px) {
-  .studyOverview {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-}
-
-.studyInfo > p {
+.study-info > p {
   font-size: 1.5em;
   padding: 1.75em;
   font-weight: lighter;
 }
 
-.studyInfo > details {
+.study-info > details {
   margin: 0.5em;
 }
 
 /* font style for summary */
-.studyInfo summary {
+.study-info summary {
   padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
@@ -441,7 +435,7 @@ main > article > * {
   margin-left: 0;
 }
 
-.studyInfo summary::before {
+.study-info summary::before {
   margin-right: 1em;
   text-align: center;
   width: 0.6em;
@@ -451,35 +445,82 @@ main > article > * {
   display: inline-block;
 }
 
-.studyInfo details[open] > summary::before {
+.study-info details[open] > summary::before {
   content: " - ";
 }
 
 /* font style for details summary child */
-.studyinfo-sub-details summary {
+.study-info details details summary {
   font-weight: normal;
   padding: 0.5em;
 }
-.studyinfo-sub-details > summary::before {
+.study-info details details > summary::before {
   font-weight: normal;
   padding: 0.2em 0.3em;
 }
 
-.studyinfo-sub-details p {
+.study-info details details p {
   margin-left: 1.5em;
 }
 
-/* styling for lists in .studyInfo */
-.studyInfo li {
+/* styling for lists in .study-info */
+.study-info li {
   margin-top: 1em;
 }
-/* Styling for links in .studyInfo */
-.studyInfo a {
+/* Styling for links in .study-info */
+.study-info a {
   color: var(--text-color);
   font-weight: 700;
 }
-.studyInfo a:hover {
+.study-info a:hover {
   text-decoration: none;
+}
+
+.study-year-top {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.study-year-top > img {
+  height: 15px;
+  width: 15px;
+  margin: 3px 5px;
+}
+
+.study-year {
+  background-color: rgb(237, 234, 234);
+  max-width: 100%;
+  font-weight: bold;
+}
+
+.study-year p {
+  padding: 10px 15px 10px;
+}
+
+.study-year-top,
+.semester-group,
+.semester {
+  font-size: medium;
+}
+
+.semester-group {
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .study-overview {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .subjects {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+  }
 }
 
 /* Other Studies Section */
@@ -800,38 +841,6 @@ main > article > * {
     height: auto;
     max-height: 400px;
   }
-}
-
-#study-year {
-  background-color: rgb(237, 234, 234);
-  max-width: 100%;
-  font-weight: bold;
-}
-.sYear {
-  padding: 10px 15px 10px;
-}
-
-.semester,
-.semesterGruppe,
-#study-yearTop {
-  font-size: medium;
-}
-
-.semesterGruppe {
-  font-weight: bold;
-}
-
-#study-yearTop {
-  justify-content: end;
-  align-items: end;
-  display: flex;
-}
-
-.s-img {
-  height: 10px;
-  padding-right: 5px;
-  padding-left: 20px;
-  vertical-align: center;
 }
 
 /* ACTIVITY CSS */
