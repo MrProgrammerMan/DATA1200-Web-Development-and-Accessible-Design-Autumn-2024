@@ -329,6 +329,7 @@ nav > ul > li > a:active {
   }
 }
 
+/*ADD A COMMENT:D*/
 @media (max-width: 380px) {
   #search-container:focus-within > input[type="text"] {
     width: 20vw;
@@ -361,7 +362,7 @@ main > article > * {
   grid-column: 1 / 11;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   main {
     grid-template-columns: 5% auto 5%;
   }
@@ -371,7 +372,7 @@ main > article > * {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   main {
     grid-template-columns: 3% auto 3%;
   }
