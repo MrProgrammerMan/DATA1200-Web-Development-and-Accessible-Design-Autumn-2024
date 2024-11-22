@@ -127,7 +127,9 @@ header {
 
 #logoWrapper > svg,
 #logoWrapper > img {
-  height: 2em;
+  height: 2.5em;
+  width: 2.5em;
+  padding: .5em;
   object-fit: contain;
 }
 
