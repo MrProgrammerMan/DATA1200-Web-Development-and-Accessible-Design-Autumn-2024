@@ -979,7 +979,7 @@ main > article > * {
 
 .address-hover {
   color: #22223b;
-  display: block; /*Change the a tag to a block elemnt so it breaks to a new line */
+  display: block; /*Change the a tag to a block element so it breaks to a new line */
 }
 
 .address-hover:hover {
