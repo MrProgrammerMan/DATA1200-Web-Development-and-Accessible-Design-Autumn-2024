@@ -806,7 +806,7 @@ footer * {
   background-color: var(--activity-text-color) !important;
 }
 
-.activity-h1 {
+#activity-main h1 {
   display: flex;
   justify-content: center;
 }
