@@ -151,6 +151,18 @@ nav > ul > li > a {
 
   font-size: 1.2em;
   padding: .9em;
+  line-height: 1.2em;
+
+  color: var(--text--bottom-top-color);
+  text-decoration: none;
+}
+
+nav > ul > li > a {
+  display: block;
+
+  font-size: 1.2em;
+  padding: .9em;
+  line-height: 1.2em;
 
   color: var(--text--bottom-top-color);
   text-decoration: none;
@@ -945,11 +957,11 @@ main > article > * {
 
 
 
-#activity-body {
+#activity-main {
   background-color: #F2E9E4;
 }
 
-#activity-body p, #activity-body a {
+#activity-main p, #activity-main a {
   font-size: large;
   line-height: 30px;
 }
