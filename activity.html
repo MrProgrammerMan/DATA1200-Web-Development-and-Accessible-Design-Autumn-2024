@@ -4,55 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
-<body class="margin0">
+  <body class="margin0" id="activity-body">
+    <div id="top"></div>
     <header class="header-activity padding0">
-        <div class="margin0 padding0 align-center" id="logoWrapper">
-            <img src="assets/imgs/boulderingIcon_transparent.png" alt="Boulder logo." />
-        </div>
-        <nav class="align-center">
-            <ul class="margin0 padding0">
-                <li><a href="index.html">MatMod</a></li>
-                <li><a href="#TBA">Accessibility</a></li>
-                <li><a href="github.html">GitHub</a></li>
-                <li><a href="activity.html">Activity</a></li>
-            </ul>
-        </nav>
-        <for class="align-center" id="search-container">
-            <label for="search">SØK</label>
-            <input class="border0" id="search" type="text" />
-            <button class="border0" type="button">
-                <!--type=button prevents site refresh (because search is dummy)-->
-                <img id="search-icon" src="./assets/imgs/search-icon.svg" alt="Search icon" />
-            </button>
-            </form>
-            <div class="align-center" id="menu-toggle-wrapper">
-                <input id="menu-toggle" type="checkbox" hidden />
-                <label class="align-center" for="menu-toggle">
-                    <p>MENY</p>
-                    <div class="margin0 padding0">
-                        <span id="menu-icon-span0" class="margin0 padding0"></span>
-                        <span id="menu-icon-span1" class="margin0 padding0"></span>
-                        <span id="menu-icon-span2" class="margin0 padding0"></span>
-                    </div>
-                </label>
-            </div>
+      <div class="margin0 padding0 align-center" id="logoWrapper">
+        <img
+          src="assets/imgs/boulderingIcon_transparent.png"
+          alt="Bouldering icon"
+        />
+      </div>
+      <nav class="align-center">
+        <ul class="margin0 padding0">
+          <li><a href="index.html">MatMod</a></li>
+          <li><a href="#TBA">Accessibility</a></li>
+          <li><a href="github.html">GitHub</a></li>
+          <li><a href="activity.html">Activity</a></li>
+        </ul>
+      </nav>
+      <form class="align-center" id="search-container">
+        <label id="activity-search-text" for="search">SØK</label>
+        <input class="border0" id="search" type="text" />
+        <button class="border0" type="button">
+          <!--type=button prevents site refresh (because search is dummy)-->
+          <svg
+            class="search-svg-activity"
+            width="20px"
+            height="20px"
+            viewBox="0 0 20 20"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <title>Search Icon</title>
+            <g
+              id="Designsystem"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                id="oppslagsside_studiepresentasjon"
+                transform="translate(-1117.000000, -32.000000)"
+                stroke="#151515"
+                stroke-width="2"
+              >
+                <g id="HEADER">
+                  <g
+                    id="search_desktop"
+                    transform="translate(1075.000000, 31.000000)"
+                  >
+                    <g id="Group-2">
+                      <path
+                        d="M61,20 L55,14 L61,20 Z M50,16 C46.1340068,16 43,12.8659932 43,9 C43,5.13400675 46.1340068,2 50,2 C53.8659932,2 57,5.13400675 57,9 C57,12.8659932 53.8659932,16 50,16 Z"
+                        id="Combined-Shape"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </form>
+      <div class="align-center" id="menu-toggle-wrapper">
+        <input id="menu-toggle" type="checkbox" hidden />
+        <label class="align-center" for="menu-toggle">
+          <p>MENY</p>
+          <div class="margin0 padding0">
+            <span
+              id="menu-icon-span0"
+              class="activity-menu-span margin0 padding0"
+            ></span>
+            <span
+              id="menu-icon-span1"
+              class="activity-menu-span margin0 padding0"
+            ></span>
+            <span
+              id="menu-icon-span2"
+              class="activity-menu-span margin0 padding0"
+            ></span>
+          </div>
+        </label>
+      </div>
     </header>
     <h1 class="activity-h1">Bouldering Oslo</h1>
     <main>
-        <article  class="activity-content-buttons">
-            <a href="#indoor-bouldering">Indoor bouldering</a>
-            <a href="#outdoor-bouldering">Outdoor bouldering</a>
-            <a href="#grading">Grading</a>
-            <a href="#equipment">Equipment</a>
-        </article>
-    </main>
-</body>
-  </head>
-  <body class="margin0" id="activity-body">
-    <main>
+      <article class="activity-content-buttons">
+        <a href="#indoor-bouldering">Indoor bouldering</a>
+        <a href="#outdoor-bouldering">Outdoor bouldering</a>
+        <a href="#grading">Grading</a>
+        <a href="#equipment">Equipment</a>
+      </article>
       <article class="article-flex">
         <div class="sub-flex">
           <p class="info-box">
@@ -63,17 +109,25 @@
             journey that's both physical and profoundly meditative.
           </p>
           <div id="img-vertical">
-            <img class="img-styler activity-margin-top" src="assets/imgs/introHorizontal.jpg" />
+            <img
+              class="img-styler activity-margin-top"
+              src="assets/imgs/introHorizontal.jpg"
+            />
           </div>
         </div>
         <div>
-          <img class="img-styler img-vertical " src="assets/imgs/introVertical.jpg" />
+          <img
+            class="img-styler img-vertical"
+            src="assets/imgs/introVertical.jpg"
+          />
         </div>
       </article>
 
       <article class="article-flex">
         <div class="heading-position">
-          <h2 class="heading-styler" id="indoor-bouldering">Indoor bouldering</h2>
+          <h2 class="heading-styler" id="indoor-bouldering">
+            Indoor bouldering
+          </h2>
         </div>
 
         <p>
@@ -128,10 +182,10 @@
           <div>
             <h3>Oslo klatresenter</h3>
             <p>
-            The biggest climbing gym in Oslo, located just a short distance from
-            the city center. The gym's central location and vibrant atmosphere
-            make it a popular destination for both locals and visitors looking
-            to enjoy top-tier bouldering in Oslo.
+              The biggest climbing gym in Oslo, located just a short distance
+              from the city center. The gym's central location and vibrant
+              atmosphere make it a popular destination for both locals and
+              visitors looking to enjoy top-tier bouldering in Oslo.
             </p>
           </div>
           <div class="address-hover-div">
@@ -181,7 +235,9 @@
 
       <article class="article-flex">
         <div class="heading-position">
-          <h2 class="heading-styler" id="outdoor-bouldering">Outdoor bouldering</h2>
+          <h2 class="heading-styler" id="outdoor-bouldering">
+            Outdoor bouldering
+          </h2>
         </div>
 
         <p>
@@ -292,14 +348,17 @@
         <div class="sub-flex">
           <p class="equipment-text">
             Proper equipment is crucial in bouldering, enhancing both safety and
-            performance. It supports climbers in maintaining grip, stability, and
-            confidence on challenging routes, allowing them to focus fully on
-            technique and progression. Quality gear minimizes risks and maximizes
-            the enjoyment and freedom of each climb.
+            performance. It supports climbers in maintaining grip, stability,
+            and confidence on challenging routes, allowing them to focus fully
+            on technique and progression. Quality gear minimizes risks and
+            maximizes the enjoyment and freedom of each climb.
           </p>
           <div class="info-box activity-margin-top">
             <h3>Crash pads</h3>
-            <img class="img-styler img-vertical" src="assets/imgs/crashPad.jpg" />
+            <img
+              class="img-styler img-vertical"
+              src="assets/imgs/crashPad.jpg"
+            />
             <p>
               Bouldering mats, or crash pads, are crucial for outdoor climbing,
               providing safety by cushioning falls. They protect climbers from
@@ -308,7 +367,6 @@
             </p>
           </div>
         </div>
-        
 
         <div class="sub-flex">
           <div class="info-box">
@@ -334,8 +392,9 @@
         </div>
       </article>
     </main>
-    <footer>
-      
-    </footer>
+    <a href="#top" id="to-the-top-button"
+      ><img src="./assets/imgs/arrow-right.svg" />
+      <p>back to top</p></a
+    >
   </body>
 </html>
