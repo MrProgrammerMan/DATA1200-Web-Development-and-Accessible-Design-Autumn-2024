@@ -1116,4 +1116,10 @@ td {
     height: 0;
     visibility: hidden;
   }
+  
+  .g-white, .g-green, .g-blue, .g-yellow, .g-red, .g-black, .g-undefined {
+    font-size: small;
+  }
+
+
 }
