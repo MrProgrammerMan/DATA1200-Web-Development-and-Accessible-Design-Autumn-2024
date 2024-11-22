@@ -1018,7 +1018,6 @@ main > article > * {
 .address-hover {
   color: #22223B;
   display: block; /*Change the a tag to a block elemnt so it breaks to a new line */
-
 }
 
 .address-hover:hover {
@@ -1049,7 +1048,7 @@ main > article > * {
   font-weight: bold;
 }
 
-td {
+td, th {
     height: 50px;
     text-align: center;
 }
@@ -1080,6 +1079,8 @@ td {
 .activity-margin-top {
   margin-top: 60px;
 }
+
+
 
 @media only screen and (max-width: 800px) {
   .article-flex {
@@ -1116,4 +1117,10 @@ td {
     height: 0;
     visibility: hidden;
   }
+  
+  .g-white, .g-green, .g-blue, .g-yellow, .g-red, .g-black, .g-undefined {
+    font-size: small;
+  }
+
+
 }
