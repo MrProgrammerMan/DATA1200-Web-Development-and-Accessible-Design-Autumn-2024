@@ -695,8 +695,8 @@ main > article > * {
   /* set size and color of footer */
   background-color: var(--primary-color);
   color: var(--text--bottom-top-color);
-  height: 650px;
   margin-top: 100px;
+  max-width: 100%;
 }
 
 .footer-top,
@@ -784,10 +784,9 @@ main > article > * {
   fill: var(--text--bottom-top-color);
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   footer {
     position: relative;
-    height: 1200px;
   }
 
   .footer-top {
