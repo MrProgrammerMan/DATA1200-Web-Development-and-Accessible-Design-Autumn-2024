@@ -843,6 +843,10 @@ main > article > * {
   stroke: var(--activity-text-color);
 }
 
+.activity-menu-span {
+  background-color: var(--activity-text-color) !important;
+}
+
 .activity-h1 {
   display: flex;
   justify-content: center;
