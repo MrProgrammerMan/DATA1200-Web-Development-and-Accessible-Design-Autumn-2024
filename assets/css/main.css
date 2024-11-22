@@ -126,8 +126,9 @@ header {
 }
 
 #logoWrapper > svg, img {
-  height: 2em;
-  object-fit: contain;
+  height: 3em;
+  width: 3em;
+  margin: 4px;
 }
 
 nav {
@@ -148,7 +149,8 @@ nav > ul > li {
 nav > ul > li > a {
   display: block;
 
-  padding: 1.2em;
+  font-size: 1.2em;
+  padding: .9em;
 
   color: var(--text--bottom-top-color);
   text-decoration: none;
@@ -273,15 +275,10 @@ nav > ul > li > a:active {
   transform: rotate(45deg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   header {
     grid-template-columns: 5% auto 1fr auto auto 5%;
   }
-
-  #logoWrapper > img {
-    padding: 0.8em 0;
-  }
-
   nav {
     grid-column: 1 / 7;
     grid-row: 2 / 3;
@@ -314,7 +311,19 @@ nav > ul > li > a:active {
   }
 
   #search-container:focus-within > input[type="text"] {
-    width: 8em;
+    width: 30vw;
+  }
+}
+
+@media (max-width: 380px) {
+  #search-container:focus-within > input[type="text"] {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 330px) {
+  #search-container:focus-within > input[type="text"] {
+    width: 10vw;
   }
 }
 
