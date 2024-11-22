@@ -28,10 +28,6 @@
   --activity-text-color: black;
 }
 
-.body-index {
-  background-color: var(--background-color);
-}
-
 img {
   max-width: 100%;
 }
