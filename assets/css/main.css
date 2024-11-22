@@ -108,7 +108,7 @@ p {
   line-height: 1.3rem;
 }
 
-/*** HEADER SPECIFIC ***/
+/*** HEADER ***/
 /* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
 
@@ -363,82 +363,169 @@ main > article > * {
   }
 }
 
-.studyinfo-top {
+/* Study info */
+/* Composed of study-overview, study-info */
+/* study-info contains study-year-top, study-year, semester and subjects */
+
+.study-overview,
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  line-height: 2em;
+}
+
+.study-overview > dl {
+  flex-basis: 21%;
+}
+
+.study-overview > dl,
+.subjects > dl {
+  border-top: 1px solid black;
+  margin: 8px;
+  padding: 0.4em;
+}
+
+.study-overview > dl > dt {
+  font-weight: bold;
+}
+
+.study-overview > dl > *,
+.subjects > dl > * {
+  margin-left: 0;
+}
+
+.subjects {
+  width: 100%;
+  padding-bottom: 30px;
+  font-size: small;
+  margin-left: 0;
+}
+
+.subjects > dl {
+  flex-basis: 25%;
+}
+
+.subjects > dl > * {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subjects img {
+  margin: px;
+}
+
+.subjects > dl > dt > img {
+  height: 10px;
+  width: 10px;
+}
+
+.study-info > p {
   font-size: 1.5em;
   padding: 1.75em;
   font-weight: lighter;
 }
 
-.studyinfo-details {
-  font-size: 1.15em;
+.study-info > details {
   margin: 0.5em;
-}
-.studyinfo-details > summary::before {
-  content: " + ";
-  display: inline-block;
-  font-weight: normal;
-  margin-right: 1em;
-  border-width: 1px;
-  text-align: center;
-  min-width: 0.6em;
-  padding: 0.5em 0.6em;
-  background-color: var(--secondary-color);
-}
-.studyinfo details[open] > summary::before {
-  content: " - ";
 }
 
 /* font style for summary */
-.studyinfo summary {
+.study-info summary {
   padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
   list-style-type: none;
   cursor: pointer;
+  margin-left: 0;
 }
 
-/* styling for  in .studyinfo */
-.studyinfo div {
+.study-info summary::before {
+  margin-right: 1em;
+  text-align: center;
+  width: 0.6em;
+  padding: 0.5em 0.6em;
+  background-color: var(--secondary-color);
+  content: " + ";
+  display: inline-block;
+}
+
+.study-info details[open] > summary::before {
+  content: " - ";
+}
+
+/* font style for details summary child */
+.study-info details details summary {
+  font-weight: normal;
+  padding: 0.5em;
+}
+.study-info details details > summary::before {
+  font-weight: normal;
+  padding: 0.2em 0.3em;
+}
+
+.study-info details details p {
   margin-left: 1.5em;
 }
-/* styling for lists in .studyinfo */
-.studyinfo li {
+
+/* styling for lists in .study-info */
+.study-info li {
   margin-top: 1em;
 }
-/* Styling for links in .studyinfo */
-.studyinfo a {
+/* Styling for links in .study-info */
+.study-info a {
   color: var(--text-color);
   font-weight: 700;
 }
-.studyinfo a:hover {
+.study-info a:hover {
   text-decoration: none;
 }
-/* font style for details summary child */
-.studyinfo-sub-details summary {
-  font-size: 1.15rem;
-  font-weight: normal;
-  list-style-type: none;
-  padding: 0.5em;
+
+.study-year-top {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
-.studyinfo-sub-details > summary::before {
-  content: " + ";
-  display: inline-block;
-  font-weight: normal;
-  margin-right: 1em;
-  text-align: center;
-  min-width: 0.6em;
-  padding: 0.2em 0.3em;
-  background-color: var(--secondary-color);
+
+.study-year-top > img {
+  height: 15px;
+  width: 15px;
+  margin: 3px 5px;
 }
-.studyinfo-sub-details details[open] > summary::before {
-  content: " - ";
+
+.study-year {
+  background-color: rgb(237, 234, 234);
+  max-width: 100%;
+  font-weight: bold;
 }
-.studyinfo-sub-details p {
-  margin-left: 1.5em;
+
+.study-year p {
+  padding: 10px 15px 10px;
 }
-.small-other-studies > ul > li ul li {
-  font-size: 1em;
-  font-weight: 100;
+
+.study-year-top,
+.semester-group,
+.semester {
+  font-size: medium;
+}
+
+.semester-group {
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .study-overview {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .subjects {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+  }
 }
 
 /* Other Studies Section */
@@ -482,7 +569,128 @@ main > article > * {
 }
 
 .border-bottom {
-  border-bottom: 0.0625rem solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Student Stories */
+.student-stories {
+  /* Flex container for student stories */
+  width: 100%;
+  display: flex;
+  background-color: var(--secondary-color);
+}
+
+.student-stories:hover .stories-img img {
+  transform: scale(1.02);
+}
+
+.student-stories > div {
+  flex: 1;
+}
+
+.stories-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2rem 2rem 5rem;
+}
+
+.stories-img {
+  overflow: hidden;
+}
+
+.teknologi {
+  /* Styling for technology link */
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.stories-text a {
+  /* Link styling */
+  color: var(--text-color);
+}
+
+.no-underline {
+  /* Remove underline from links */
+  text-decoration: none;
+}
+
+.stories-text h3 {
+  /* Heading styling */
+  font-size: 1.75rem;
+  hyphens: manual;
+}
+
+.stories-text p {
+  /* Paragraph styling */
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.stories-img img {
+  /* Image styling */
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+
+.a-stories-button {
+  display: flex;
+  align-items: center;
+  margin: 50px auto auto;
+  box-sizing: border-box;
+  padding-left: 3rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  color: var(--text-color);
+  grid-column-start: 4;
+  grid-column-end: 8;
+  height: 5rem;
+  width: 100%;
+
+  /*
+    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
+    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
+    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
+    - The gradient is aligned to the right side of the element.
+  */
+  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
+    linear-gradient(
+        to left,
+        var(--secondary-color) 50%,
+        var(--button-hover-color) 50%
+      )
+      right;
+  background-size: auto, 200%;
+  transition: background-position 0.25s;
+}
+
+.a-stories-button:hover {
+  background-position: center right 43px, left;
+}
+
+@media screen and (max-width: 800px) {
+  .student-stories {
+    /* Stack items vertically on small screens */
+    flex-direction: column-reverse;
+  }
+
+  .stories-text {
+    /* Adjust padding and width on small screens */
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .stories-img img {
+    /* Adjust image dimensions on small screens */
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
 }
 
 /* footer */
@@ -507,7 +715,6 @@ main > article > * {
   height: 150px;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 0.5px solid var(--border-nav-footer-color);
 }
 
 .footer-bot {
@@ -596,7 +803,6 @@ main > article > * {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    border-bottom: 0.5px solid black;
   }
 
   .footer-bot {
@@ -613,81 +819,6 @@ main > article > * {
   }
 }
 
-.overview,
-.subjects {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: flex-start;
-}
-
-.overview {
-  line-height: 2em;
-  width: 100%;
-}
-
-.oStudiested,
-.oVarighet,
-.oOmfang,
-.oStudiepoeng,
-.oStudiestart,
-.oUndervisningsspråk,
-.oStudieplasser,
-.oSubjects {
-  border-top: solid black;
-  border-width: 0.01em;
-  padding: 1%;
-  padding-left: 0;
-  margin: 10px 10px 10px 0;
-  flex-basis: calc(22% - 5px);
-}
-
-.oBachelor {
-  padding-bottom: 10px;
-}
-
-.oInfo,
-.oHead {
-  margin-left: 0%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.oHead {
-  font-weight: bold;
-}
-
-@media (max-width: 800px) {
-  .subjects {
-    display: flex;
-    flex-direction: column;
-    line-height: 2em;
-  }
-
-  .oStudiested,
-  .oVarighet,
-  .oOmfang,
-  .oStudiepoeng,
-  .oStudiestart,
-  .oUndervisningsspråk,
-  .oStudieplasser,
-  .oSubjects {
-    border-top: solid black;
-    border-width: 0.01em;
-  }
-  .oHeader,
-  .oBachelor {
-    margin-left: 5%;
-  }
-}
-
-@media (max-width: 480px) {
-  .overview {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-}
-
 .innsikt {
   display: flex;
   justify-content: center;
@@ -700,182 +831,12 @@ main > article > * {
   font-size: 23px;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .innsikt {
     min-width: fit-content;
   }
 }
 /* ------------------------ */
-
-/* Student Stories */
-.student-stories-main {
-  /* Center the main container and set width constraints */
-  margin: auto;
-  width: 90vw;
-  max-width: 1100px;
-  min-width: 300px;
-}
-
-.student-stories {
-  /* Flex container for student stories */
-  width: 100%;
-  display: flex;
-  background-color: var(--secondary-color);
-}
-
-.student-stories:hover .image-section img {
-  transform: scale(1.02);
-}
-
-.stories-text {
-  /* Flex item for text content */
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 2rem 2rem 5rem;
-  max-width: 50%;
-}
-
-.teknologi {
-  /* Styling for technology link */
-  font-weight: 700;
-  font-size: 1em;
-}
-
-.stories-text a {
-  /* Link styling */
-  color: var(--text-color);
-}
-
-.no-underline {
-  /* Remove underline from links */
-  text-decoration: none;
-}
-
-.stories-text h3 {
-  /* Heading styling */
-  font-size: 1.75rem;
-  hyphens: manual;
-}
-
-.stories-text p {
-  /* Paragraph styling */
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-}
-
-.image-section {
-  /* Flex item for image */
-  flex: 1;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.image-section img {
-  /* Image styling */
-  object-fit: cover;
-  max-width: 100%;
-  height: 100%;
-  transition: transform 0.2s ease; /* Smooth transition */
-}
-
-.a-stories-button {
-  display: flex;
-  align-items: center;
-  margin: 50px auto auto;
-  box-sizing: border-box;
-  padding-left: 3rem;
-  font-size: 1.75rem;
-  font-weight: 700;
-
-  color: var(--text-color);
-  grid-column-start: 4;
-  grid-column-end: 8;
-  height: 5rem;
-  width: 100%;
-
-  /*
-    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
-    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
-    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
-    - The gradient is aligned to the right side of the element.
-  */
-  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
-    linear-gradient(
-        to left,
-        var(--secondary-color) 50%,
-        var(--button-hover-color) 50%
-      )
-      right;
-  background-size: auto, 200%;
-  transition: background-position 0.25s;
-}
-
-.a-stories-button:hover {
-  background-position: center right 43px, left;
-}
-
-@media screen and (max-width: 800px) {
-  .student-stories {
-    /* Stack items vertically on small screens */
-    flex-direction: column-reverse;
-  }
-
-  .stories-text {
-    /* Adjust padding and width on small screens */
-    padding: 2rem 1rem;
-    max-width: 100%;
-  }
-
-  .image-section img {
-    /* Adjust image dimensions on small screens */
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-  }
-}
-
-#study-year {
-  background-color: rgb(237, 234, 234);
-  max-width: 100%;
-  font-weight: bold;
-}
-.sYear {
-  padding: 10px 15px 10px;
-}
-
-.semester,
-.semesterGruppe,
-#study-yearTop {
-  font-size: medium;
-}
-
-.semesterGruppe {
-  font-weight: bold;
-}
-
-.subjects {
-  width: 100%;
-  padding-bottom: 30px;
-  font-size: small;
-  margin-left: 0;
-}
-
-#study-yearTop {
-  justify-content: end;
-  align-items: end;
-  display: flex;
-}
-
-.s-img {
-  height: 10px;
-  padding-right: 5px;
-  padding-left: 20px;
-  vertical-align: center;
-}
 
 /* ACTIVITY CSS */
 .search-svg-activity * {
@@ -949,6 +910,12 @@ main > article > * {
   background-color: #f2e9e4;
 }
 
+#activity-body p,
+#activity-body a {
+  font-size: large;
+  line-height: 30px;
+}
+
 .article-flex {
   display: flex;
   flex-wrap: wrap;
@@ -971,9 +938,13 @@ main > article > * {
 .img-styler {
   object-fit: cover;
   width: 100%;
-  max-height: 550px;
+  max-height: 300px;
   height: auto;
   border-radius: 5px;
+}
+
+.img-vertical {
+  max-height: 600px;
 }
 
 .info-box {
@@ -1020,6 +991,7 @@ main > article > * {
 
 .address-hover {
   color: #22223b;
+  display: block; /*Change the a tag to a block element so it breaks to a new line */
 }
 
 .address-hover:hover {
@@ -1046,15 +1018,13 @@ main > article > * {
   table-layout: fixed;
   padding-bottom: 40px;
 }
-.grading-table-info {
-  padding-bottom: 50px;
-}
 
 .table-heading {
   font-weight: bold;
 }
 
-td {
+td,
+th {
   height: 50px;
   text-align: center;
 }
@@ -1082,10 +1052,53 @@ td {
   background-color: rgb(162, 162, 162);
 }
 
-.sub-flex-margin-small {
-  margin-bottom: 30px;
+.activity-margin-top {
+  margin-top: 60px;
 }
 
-.sub-flex-margin-big {
-  margin-top: 300px;
+@media (max-width: 800px) {
+  .article-flex {
+    flex-direction: column;
+  }
+
+  .article-flex > * {
+    width: 80%;
+    margin-top: 40px;
+  }
+  .grading-table {
+    width: 100%;
+  }
+
+  .activity-margin-top {
+    margin-top: 40px;
+  }
+
+  #oslo-klatresenter-image-div {
+    order: 7;
+  }
+
+  #oslo-klatresenter-div {
+    order: 6;
+  }
+
+  .img-styler {
+    width: 80%;
+    padding-left: 10%;
+    max-height: 250px;
+  }
+
+  #img-vertical {
+    height: 0;
+    visibility: hidden;
+  }
+
+  .g-white,
+  .g-green,
+  .g-blue,
+  .g-yellow,
+  .g-red,
+  .g-black,
+  .g-undefined {
+    font-size: small;
+  }
 }
