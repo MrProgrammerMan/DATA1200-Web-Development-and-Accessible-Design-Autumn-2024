@@ -567,6 +567,127 @@ main > article > * {
   border-bottom: 1px solid var(--border);
 }
 
+/* Student Stories */
+.student-stories {
+  /* Flex container for student stories */
+  width: 100%;
+  display: flex;
+  background-color: var(--secondary-color);
+}
+
+.student-stories:hover .stories-img img {
+  transform: scale(1.02);
+}
+
+.student-stories > div {
+  flex: 1;
+}
+
+.stories-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2rem 2rem 5rem;
+}
+
+.stories-img {
+  overflow: hidden;
+}
+
+.teknologi {
+  /* Styling for technology link */
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.stories-text a {
+  /* Link styling */
+  color: var(--text-color);
+}
+
+.no-underline {
+  /* Remove underline from links */
+  text-decoration: none;
+}
+
+.stories-text h3 {
+  /* Heading styling */
+  font-size: 1.75rem;
+  hyphens: manual;
+}
+
+.stories-text p {
+  /* Paragraph styling */
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.stories-img img {
+  /* Image styling */
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+
+.a-stories-button {
+  display: flex;
+  align-items: center;
+  margin: 50px auto auto;
+  box-sizing: border-box;
+  padding-left: 3rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  color: var(--text-color);
+  grid-column-start: 4;
+  grid-column-end: 8;
+  height: 5rem;
+  width: 100%;
+
+  /*
+    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
+    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
+    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
+    - The gradient is aligned to the right side of the element.
+  */
+  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
+    linear-gradient(
+        to left,
+        var(--secondary-color) 50%,
+        var(--button-hover-color) 50%
+      )
+      right;
+  background-size: auto, 200%;
+  transition: background-position 0.25s;
+}
+
+.a-stories-button:hover {
+  background-position: center right 43px, left;
+}
+
+@media screen and (max-width: 800px) {
+  .student-stories {
+    /* Stack items vertically on small screens */
+    flex-direction: column-reverse;
+  }
+
+  .stories-text {
+    /* Adjust padding and width on small screens */
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .stories-img img {
+    /* Adjust image dimensions on small screens */
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+}
+
 /* footer */
 
 .footer-index {
@@ -711,137 +832,6 @@ main > article > * {
   }
 }
 /* ------------------------ */
-
-/* Student Stories */
-.student-stories-main {
-  /* Center the main container and set width constraints */
-  margin: auto;
-  width: 90vw;
-  max-width: 1100px;
-  min-width: 300px;
-}
-
-.student-stories {
-  /* Flex container for student stories */
-  width: 100%;
-  display: flex;
-  background-color: var(--secondary-color);
-}
-
-.student-stories:hover .image-section img {
-  transform: scale(1.02);
-}
-
-.stories-text {
-  /* Flex item for text content */
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 2rem 2rem 5rem;
-  max-width: 50%;
-}
-
-.teknologi {
-  /* Styling for technology link */
-  font-weight: 700;
-  font-size: 1em;
-}
-
-.stories-text a {
-  /* Link styling */
-  color: var(--text-color);
-}
-
-.no-underline {
-  /* Remove underline from links */
-  text-decoration: none;
-}
-
-.stories-text h3 {
-  /* Heading styling */
-  font-size: 1.75rem;
-  hyphens: manual;
-}
-
-.stories-text p {
-  /* Paragraph styling */
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-}
-
-.image-section {
-  /* Flex item for image */
-  flex: 1;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.image-section img {
-  /* Image styling */
-  object-fit: cover;
-  max-width: 100%;
-  height: 100%;
-  transition: transform 0.2s ease; /* Smooth transition */
-}
-
-.a-stories-button {
-  display: flex;
-  align-items: center;
-  margin: 50px auto auto;
-  box-sizing: border-box;
-  padding-left: 3rem;
-  font-size: 1.75rem;
-  font-weight: 700;
-
-  color: var(--text-color);
-  grid-column-start: 4;
-  grid-column-end: 8;
-  height: 5rem;
-  width: 100%;
-
-  /*
-    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
-    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
-    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
-    - The gradient is aligned to the right side of the element.
-  */
-  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
-    linear-gradient(
-        to left,
-        var(--secondary-color) 50%,
-        var(--button-hover-color) 50%
-      )
-      right;
-  background-size: auto, 200%;
-  transition: background-position 0.25s;
-}
-
-.a-stories-button:hover {
-  background-position: center right 43px, left;
-}
-
-@media screen and (max-width: 800px) {
-  .student-stories {
-    /* Stack items vertically on small screens */
-    flex-direction: column-reverse;
-  }
-
-  .stories-text {
-    /* Adjust padding and width on small screens */
-    padding: 2rem 1rem;
-    max-width: 100%;
-  }
-
-  .image-section img {
-    /* Adjust image dimensions on small screens */
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-  }
-}
 
 /* ACTIVITY CSS */
 .activity-h1 {
