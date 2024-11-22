@@ -564,7 +564,7 @@ main > article > * {
 }
 
 .border-bottom {
-  border-bottom: 0.0625rem solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 /* footer */
