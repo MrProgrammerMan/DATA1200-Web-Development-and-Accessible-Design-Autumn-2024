@@ -720,16 +720,6 @@ footer {
   background-color: var(--primary-color);
 }
 
-.footer-activity {
-  min-height: 400px;
-  background-color: #22223b;
-}
-
-.footer-activity-flex li {
-  margin: 10px;
-  font-size: large;
-}
-
 footer * {
   color: white;
   fill: white;
@@ -740,31 +730,6 @@ footer * {
   padding: 0 10%;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-activity-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-}
-
-.social-icon img{
-  height: 50px;
-  margin: 2rem;
-  filter: invert(1);
-}
-
-.social-icon img:hover {
-  transition: 0.2s ease-in-out;
-  transform: scale(125%);
-}
-
-.footer-activity a:hover,
-.footer-activity li:hover {
-  color: #1abc9c;
-  transition: 0.2s ease-in-out;
-  transform: scale(125%);
 }
 
 .footer-content {
@@ -806,6 +771,56 @@ footer li {
   height: 30px;
 }
 
+.footer-activity {
+  min-height: 500px;
+  background-color: #22223b;
+}
+
+.footer-activity-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.footer-activity-text {
+  padding: 0 10%;
+}
+
+.footer-activity-flex li {
+  margin: 10px;
+  font-size: large;
+}
+
+.social-icon {
+  display: flex;
+}
+
+.social-icon svg{
+  height: 50px;
+  margin: 2rem;
+  transition: 0.2s ease-in-out;
+}
+
+.footer-activity-flex .social-icon svg:hover {
+  transform: scale(125%);
+}
+
+.footer-activity-flex .social-icon svg:hover path {
+  fill: #1abc9c;
+}
+ 
+.footer-activity a,
+.footer-activity li{
+  transition: 0.2s ease-in-out;
+}
+
+.footer-activity a:hover,
+.footer-activity li:hover {
+  color: #1abc9c;
+  transform: scale(125%);
+}
+
 @media (max-width: 1000px) {
   .footer-flex {
     flex-direction: column;
@@ -830,6 +845,14 @@ footer li {
     min-height: 1300px;
   }
 }
+
+@media (max-width: 500px) {
+  .social-icon {
+    flex-direction: column;
+  }
+}
+
+
 /* ------------------------ */
 
 /* ACTIVITY CSS */
