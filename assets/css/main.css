@@ -675,6 +675,14 @@ main > article > * {
 
   text-align: center;
 
+  /*
+    This CSS code snippet sets a background with a linear gradient.
+    - The gradient transitions from the `--secondary-color` to the `--button-hover-color`.
+    - The transition occurs at the 50% mark of the gradient.
+    - The gradient direction is from right to left.
+    - The background is positioned to the right.
+    - The background size is set to 200%, which means it is twice the size of the element it is applied to.
+  */
   background: linear-gradient(
       to left,
       var(--secondary-color) 50%,
