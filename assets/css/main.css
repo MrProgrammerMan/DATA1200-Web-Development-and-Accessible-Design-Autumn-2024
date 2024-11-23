@@ -37,7 +37,7 @@ img {
     width: 100%;
     overflow: scroll;
   }
-  
+
   .scrollable-img img {
     width: 800px;
     max-width: none;
@@ -47,14 +47,23 @@ img {
     content: "SWIPE TO SEE CHANGES -->";
     font-size: 18px;
     padding: 8px;
-    animation: flash 1.5s ease-in-out 2;
+    /* Animation could be played on scroll reveal,
+       but this is impractical and clunky to do without JS
+       As an alternative, it runs slowly with a subtle colour infinitely */
+    animation: flash 3s ease-in-out infinite;
   }
 }
 
 @keyframes flash {
-  0% {background-color: transparent;}
-  50% {background-color: red;}
-  100% {background-color: transparent;}
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--hover-background-color);
+  }
+  100% {
+    background-color: transparent;
+  }
 }
 
 .align-center {
