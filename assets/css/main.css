@@ -614,7 +614,6 @@ main > article > * {
   box-sizing: border-box;
   padding: 2rem 2rem 5rem;
   max-width: 50%;
-
 }
 
 .stories-img {
@@ -661,37 +660,40 @@ main > article > * {
 .a-stories-button {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 1.75rem;
   margin: 50px auto auto;
   box-sizing: border-box;
-  padding-left: 3rem;
-  font-size: 1.75rem;
   font-weight: 700;
-
   color: var(--text-color);
   grid-column-start: 4;
   grid-column-end: 8;
   height: 5rem;
   width: 100%;
 
-  /*
-    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
-    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
-    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
-    - The gradient is aligned to the right side of the element.
-  */
-  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
-    linear-gradient(
-        to left,
-        var(--secondary-color) 50%,
-        var(--button-hover-color) 50%
-      )
-      right;
-  background-size: auto, 200%;
-  transition: background-position 0.25s;
+  text-align: center;
+
+  background: linear-gradient(
+      to left,
+      var(--secondary-color) 50%,
+      var(--button-hover-color) 50%
+    )
+    right;
+  background-size: 200%;
+  transition: background-position 0.3s ease;
 }
 
+.arrow-icon {
+  margin-left: 1rem;
+  transition: transform 0.25s;
+}
 .a-stories-button:hover {
-  background-position: center right 43px, left;
+  background-position: left;
+}
+
+.a-stories-button:hover .arrow-icon {
+  transform: translateX(5px); /* Optional animation for hover */
 }
 
 @media (max-width: 800px) {
