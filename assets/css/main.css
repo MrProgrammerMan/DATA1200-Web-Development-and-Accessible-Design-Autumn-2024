@@ -32,6 +32,16 @@ img {
   max-width: 100%;
 }
 
+.scrollable-img {
+  width: 100%;
+  overflow: scroll;
+}
+
+.scrollable-img img {
+  width: 800px;
+  max-width: none;
+}
+
 .align-center {
   display: flex;
   align-items: center;
