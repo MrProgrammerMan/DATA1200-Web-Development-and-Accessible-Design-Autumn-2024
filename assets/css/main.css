@@ -32,14 +32,29 @@ img {
   max-width: 100%;
 }
 
-.scrollable-img {
-  width: 100%;
-  overflow: scroll;
+@media (max-width: 480px) {
+  .scrollable-img {
+    width: 100%;
+    overflow: scroll;
+  }
+  
+  .scrollable-img img {
+    width: 800px;
+    max-width: none;
+  }
+
+  .scrollable-img::before {
+    content: "SWIPE TO SEE CHANGES -->";
+    font-size: 18px;
+    padding: 8px;
+    animation: flash 1.5s ease-in-out 2;
+  }
 }
 
-.scrollable-img img {
-  width: 800px;
-  max-width: none;
+@keyframes flash {
+  0% {background-color: transparent;}
+  50% {background-color: red;}
+  100% {background-color: transparent;}
 }
 
 .align-center {
