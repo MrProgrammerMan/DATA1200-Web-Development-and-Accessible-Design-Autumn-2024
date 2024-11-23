@@ -3,7 +3,7 @@
 /* Root Variables */
 :root {
   /* Base text color and font family */
-  font-family: Helvetica,Arial,sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 
@@ -560,6 +560,12 @@ main > article > * {
 }
 
 /* Other Studies Section */
+
+.other-studies {
+  max-width: 900px;
+  margin: auto;
+}
+
 .other-studies ul {
   list-style: none;
 }
