@@ -878,10 +878,14 @@ footer * {
 
 .header-activity {
   background-color: var(--activity-header-color);
+  border-bottom: 1px solid var(--activity-text-color);
 }
 
 .header-activity * {
   color: var(--activity-text-color);
+}
+
+.header-activity {
 }
 
 .activity-content-buttons {
@@ -897,7 +901,7 @@ footer * {
 }
 
 .activity-content-buttons a {
-  background-color: #f2e9e4;
+  background-color: var(--activity-header-color);
   width: 20%;
   height: 3.5em;
   margin: 2%;
@@ -905,7 +909,7 @@ footer * {
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: white;
+  border-color: var(--text-color);
   text-decoration: none;
   color: #222222;
   font-size: 1rem;
@@ -922,7 +926,7 @@ footer * {
   box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .activity-content-buttons {
     padding: 0.5em 0 0.5em;
     flex-direction: column;
@@ -1164,7 +1168,7 @@ th {
   width: 40px;
   transform: rotate(-90deg);
 }
-@media (min-width:1201px) {
+@media (min-width: 1201px) {
   #to-the-top-button:hover {
     color: var(--background-color);
     background: var(--hover-background-color);
