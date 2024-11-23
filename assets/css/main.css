@@ -3,7 +3,7 @@
 /* Root Variables */
 :root {
   /* Base text color and font family */
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 
@@ -87,6 +87,7 @@ img {
 h1 {
   font-size: 2.5rem;
   line-height: 3.2rem;
+  text-align: center;
 }
 
 h2 {
@@ -385,6 +386,10 @@ main > article > * {
 /* STUDY INFORMATION */
 /* Composed of study-overview, study-info */
 /* study-info contains study-year-top, study-year, semester and subjects */
+.bachelor {
+  font-weight: 100;
+  font-size: 1.25rem;
+}
 
 .study-overview,
 .subjects {
@@ -555,11 +560,6 @@ main > article > * {
 }
 
 /* Other Studies Section */
-.other-studies {
-  max-width: 800px;
-  margin: auto;
-}
-
 .other-studies ul {
   list-style: none;
 }
@@ -837,11 +837,6 @@ footer * {
 
 .activity-menu-span {
   background-color: var(--activity-text-color) !important;
-}
-
-#activity-main h1 {
-  display: flex;
-  justify-content: center;
 }
 
 .header-activity {
