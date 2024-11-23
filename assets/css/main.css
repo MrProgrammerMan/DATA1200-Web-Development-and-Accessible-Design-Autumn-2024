@@ -454,7 +454,7 @@ main > article > * {
   padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
-  list-style-type: none;
+  list-style-type: none !important;
   cursor: pointer;
   margin-left: 0;
 }
