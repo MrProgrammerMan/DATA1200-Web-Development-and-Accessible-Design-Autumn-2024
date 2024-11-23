@@ -667,10 +667,11 @@ main > article > * {
   box-sizing: border-box;
   font-weight: 700;
   color: var(--text-color);
-  grid-column-start: 4;
-  grid-column-end: 8;
+  /* grid-column-start: 4;
+  grid-column-end: 8; */
   height: 5rem;
   width: 100%;
+  max-width: 400px;
 
   text-align: center;
 
@@ -713,6 +714,10 @@ main > article > * {
     width: 100%;
     height: auto;
     max-height: 400px;
+  }
+
+  .a-stories-button {
+    font-size: 1.5em;
   }
 }
 
