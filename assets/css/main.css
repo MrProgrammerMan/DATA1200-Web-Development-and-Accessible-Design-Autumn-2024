@@ -555,6 +555,11 @@ main > article > * {
 }
 
 /* Other Studies Section */
+.other-studies {
+  max-width: 800px;
+  margin: auto;
+}
+
 .other-studies ul {
   list-style: none;
 }
