@@ -713,12 +713,22 @@ main > article > * {
 }
 
 /* footer */
-.footer-index {
+footer {
   margin-top: 100px;
-  min-height: 600px;
   size: 100%;
+}
+
+.footer-index {
+  min-height: 600px;
   background-color: var(--primary-color);
 }
+
+.footer-activity {
+  min-height: 300px;
+  background-color: #22223b;
+}
+
+
 
 footer * {
   color: white;
@@ -869,7 +879,7 @@ footer * {
   }
 }
 
-#activity-main {
+#activity-body {
   background-color: #f2e9e4;
 }
 
