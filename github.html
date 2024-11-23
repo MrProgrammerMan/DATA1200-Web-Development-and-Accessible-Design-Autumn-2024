@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Usage</title>
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/OsloMet-favicon.ico"
+      type="image/x-icon"
+    /> 
   </head>
   <body class="margin0">
     <header class="padding0">
@@ -123,10 +128,20 @@
         <h2>
           Extract 1: Using branches to work simultaneously on the same files
         </h2>
-        <img
-          src="assets/imgs/git-history-branches.png"
-          alt="Git extract of branches."
-        />
+        <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="./assets/imgs/git-history-branches-mobile.png"
+          />
+          <source
+            media="(min-width: 481px)"
+            srcset="./assets/imgs/git-history-branches.png"
+          />
+          <img
+            src="./assets/imgs/git-history-branches.png"
+            alt="Git extract of branches."
+          />
+        </picture>
         <p>
           Above, you can see a picture showing some of our git history. The
           picture shows how four people worked on the project at the same time,
@@ -149,10 +164,20 @@
           of a workload, and further divide it up as needed.
         </p>
         <h2>Extract 2: Git was invaluable for fixing issues early</h2>
-        <img
-          src="assets/imgs/git-history-revert.png"
-          alt="Git history showing a feature implementation from start to finish, and how git helped us fix issues."
-        />
+        <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="./assets/imgs/git-history-revert-mobile.png"
+          />
+          <source
+            media="(min-width: 481px)"
+            srcset="./assets/imgs/git-history-revert.png"
+          />
+          <img
+            src="./assets/imgs/git-history-revert.png"
+            alt="Git history showing a feature implementation from start to finish, and how git helped us fix issues."
+          />
+        </picture>
         <p>
           In the above picture, you can see an extract from our git history. It
           shows the complete history of a feature branch "studieOppbygging" from
@@ -170,7 +195,7 @@
         </p>
         <ol>
           <li>
-            Implement intermidiary changes made to main into the feature
+            Implement intermediary changes made to main into the feature
             branch(merge main into feature).
           </li>
           <li>Ensure functionality of both main and feature is maintained.</li>
@@ -189,27 +214,31 @@
           the following commit is a revert that undoes these changes.
         </p>
         <p>
-          After this, some minor fix commits where added adressing the original
+          After this, some minor fix commits where added addressing the original
           issue in the merge from main to feature. Again, the feature branch
-          received another merge commit from main for some intermidiary changes.
+          received another merge commit from main for some intermediary changes.
           Finally, the pull request was approved and the feature branch was
           merged into main and deleted.
         </p>
         <h2>Change 1: A typical feature commit</h2>
-        <img
-          src="assets/imgs/git commit 1.png"
-          alt="A feature commit adding plus/minus icons to some expandable boxes."
-        />
+        <div class="scrollable-img">
+          <img
+            src="assets/imgs/git commit 1.png"
+            alt="A feature commit adding plus/minus icons to some expandable boxes."
+          />
+        </div>
         <p>
           Typically, a feature commit would look like the one above. This commit
           adds a specific, contained feature explained by a short commit
           message.
         </p>
         <h2>Change 2: A simple fix commit to main</h2>
-        <img
-          src="assets/imgs/git commit 2.png"
-          alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
-        />
+        <div class="scrollable-img">
+          <img
+            src="assets/imgs/git commit 2.png"
+            alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
+          />
+        </div>
         <p>
           While typically seen as a bad idea, we decided it was okay to commit
           directly to main if the change was small and very simple. For example
