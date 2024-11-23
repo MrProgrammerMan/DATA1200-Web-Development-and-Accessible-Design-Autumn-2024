@@ -595,7 +595,7 @@ main > article > * {
 
 .other-studies a {
   /* Styling for links in .other-studies */
-  border-top: 0.0625rem solid #e2e2e2;
+  border-top: 0.0625rem solid var(--border);
   display: flex;
   align-items: flex-start;
   text-decoration: none;
@@ -863,12 +863,12 @@ footer * {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: #f2e9e4;
+  background-color: var(--activity-header-color);
   border-radius: 5px;
 }
 
 .activity-content-buttons a {
-  background-color: #f2e9e4;
+  background-color: var(--activity-header-color);
   width: 20%;
   height: 3.5em;
   margin: 2%;
@@ -878,7 +878,7 @@ footer * {
   border-style: solid;
   border-color: white;
   text-decoration: none;
-  color: #222222;
+  color: var(--text-color);
   font-size: 1rem;
   font-weight: lighter;
   display: flex;
@@ -906,7 +906,7 @@ footer * {
 }
 
 #activity-main {
-  background-color: #f2e9e4;
+  background-color: var(--activity-header-color);
 }
 
 #activity-main p,
@@ -947,8 +947,8 @@ footer * {
 }
 
 .info-box {
-  background-color: #22223b;
-  color: #f2e9e4;
+  background-color: var(--text-color);
+  color: var(--activity-header-color);
   padding: 20px;
   border-radius: 5px;
 }
@@ -964,8 +964,8 @@ footer * {
 .sub-heading-styler {
   position: absolute;
   left: 0;
-  background-color: #22223b;
-  color: #f2e9e4;
+  background-color: var(--text-color);
+  color: var(--activity-header-color);
   padding: 5px 0;
 }
 
@@ -989,13 +989,13 @@ footer * {
 }
 
 .address-hover {
-  color: #22223b;
+  color: var(--text-color);
   display: block; /*Change the a tag to a block element so it breaks to a new line */
 }
 
 .address-hover:hover {
   text-decoration: none;
-  color: gray;
+  color: var(--border);
   cursor: pointer;
 }
 
@@ -1045,7 +1045,7 @@ th {
 }
 .g-black {
   background-color: rgb(46, 46, 46);
-  color: #f2e9e4;
+  color: var(--activity-header-color);
 }
 .g-undefined {
   background-color: rgb(162, 162, 162);
