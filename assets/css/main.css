@@ -232,7 +232,9 @@ nav > ul > li > a:active {
   display: none; /* Hidden by default, flex for mobile */
 
   justify-content: center;
+  grid-row: 1 / 2;
   grid-column: 5 / 6;
+  margin: 0 .5em;
 
   color: var(--text--bottom-top-color);
 }
@@ -240,6 +242,7 @@ nav > ul > li > a:active {
 #menu-toggle-wrapper > label > p {
   padding: 0.3em;
   font-weight: bold;
+  color: var(--text--bottom-top-color);
 }
 
 #menu-toggle-wrapper > label > div {
@@ -306,6 +309,7 @@ nav > ul > li > a:active {
 #dark-mode-label-wrapper label {
   width: 3em;
   height: 3em;
+  margin: 0 .5em;
   background-image: url(../imgs/light-mode.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -316,12 +320,13 @@ nav > ul > li > a:active {
   background-image: url(../imgs/dark-mode.png);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   header {
-    grid-template-columns: 5% auto 1fr auto auto 5%;
+    grid-template-columns: 5% auto 1fr auto auto auto 5%;
   }
+
   nav {
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
     grid-row: 2 / 3;
     height: 0;
     flex-direction: column;
@@ -344,11 +349,15 @@ nav > ul > li > a:active {
   #menu-toggle-wrapper {
     display: flex;
   }
+
+  #dark-mode-label-wrapper {
+    grid-column: 6 / 7;
+  }
 }
 
 @media (max-width: 480px) {
   header {
-    grid-template-columns: 3% auto 1fr auto auto 3%;
+    grid-template-columns: 3% auto 1fr auto auto auto 3%;
   }
 
   #search-container:focus-within > input[type="text"] {
