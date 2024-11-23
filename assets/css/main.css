@@ -32,6 +32,40 @@ img {
   max-width: 100%;
 }
 
+@media (max-width: 480px) {
+  .scrollable-img {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .scrollable-img img {
+    width: 800px;
+    max-width: none;
+  }
+
+  .scrollable-img::before {
+    content: "SWIPE TO SEE CHANGES -->";
+    font-size: 18px;
+    padding: 8px;
+    /* Animation could be played on scroll reveal,
+       but this is impractical and clunky to do without JS
+       As an alternative, it runs slowly with a subtle colour infinitely */
+    animation: flash 3s ease-in-out infinite;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--hover-background-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 .align-center {
   display: flex;
   align-items: center;
