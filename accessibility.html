@@ -9,7 +9,7 @@
       rel="shortcut icon"
       href="./assets/imgs/OsloMet-favicon.ico"
       type="image/x-icon"
-    /> 
+    />
   </head>
   <body class="margin0">
     <header class="padding0">
@@ -98,163 +98,79 @@
     </header>
     <main>
       <article class="indentAllChildrenUni1">
-        <h1>GitHub Usage</h1>
-        <h2>Foreword</h2>
+        <h1>Accessibility</h1>
+        <h2>Lighthouse Testing Results</h2>
         <p>
-          When working with software development, scripting, markup design or
-          other development projects, it's important to use a tool to manage the
-          cooperation process. Git has for years been, and still is, the
-          industry standard tool for this purpose.
+          The Lighthouse audit scored <b>index.html</b> 96/100 for
+          accessibility, highlighting both strengths and a few areas of
+          improvement. The tool identified several specific issues:
         </p>
+        <img
+          src="./assets/imgs/lighthouse-score-index.png"
+          alt="Lighthouse audit scores: Performance 100, Accessibility 96, Best Practices 100, and SEO 82."
+        />
+        <h3>Low Contrast Between Text and Background</h3>
         <p>
-          We've hosted our source code on GitHub and made heavy use of branching
-          to divide up the work properly.
+          One issue involved insufficient contrast on buttons, such as the
+          "subscribe" button. Low contrast makes it difficult for users with
+          visual impairments to read text. I adjusted the color palette to
+          ensure all text met the Web Content Accessibility Guidelines (WCAG)
+          for contrast ratios.
         </p>
+        <img
+          src="./assets/imgs/accessibility-contrast.PNG"
+          alt="Screenshot of an accessibility audit scoring 92/100. Issues identified include insufficient color contrast for a 'subscribe' button and inadequate size or spacing for touch targets on links labeled 'teknologi' and 'no-underline."
+        />
+        <h3>Touch Targets Too Small or Close Together</h3>
         <p>
-          Using Git in a collaborative project is a great way to track changes
-          and manage collaboration, but it also comes with it's fair share of
-          challenges. This is especially true when you're not that used to using
-          git, it can be a bit daunting to learn.
+          Certain clickable elements, such as navigation links, were flagged for
+          insufficient size and spacing. This could make them difficult to use
+          on touch devices, especially for users with motor impairments. I
+          updated the CSS to increase padding and margins around touch targets.
         </p>
+        <img
+          src="./assets/imgs/accessibility-touch-targets.PNG"
+          alt="Screenshot of an accessibility audit scoring 92/100. Issues identified include insufficient color contrast for a 'subscribe' button and inadequate size or spacing for touch targets on links labeled 'teknologi' and 'no-underline."
+        />
+        <p></p>
+        <h2>Activity.html accessibility</h2>
+        <h3>Missing [alt] Attributes for Images</h3>
+        <img
+          src="assets/imgs/accessibility-activity-min.webp"
+          alt="Screenshot of an accessibility audit scoring 86/100. Issues identified include elements missing [alt] attributes and <frame> or <iframe> elements lacking a title. Recommendations highlight the importance of improving semantic controls for better support with assistive technologies like screen readers."
+        />
         <p>
-          Throughout this project, we've had to deal with merge conflicts,
-          reverting commits, and mismatching local and remote files.
+          Several images on the site were flagged for lacking [alt] attributes,
+          which are essential for screen readers to describe the content of an
+          image. For example, images with classes like img-styler and
+          img-vertical did not include descriptive alternate text. To resolve
+          this, I ensured that informative images received appropriate [alt]
+          attributes.
         </p>
+        <h3>aria-label</h3>
+        <img
+          src="./assets/imgs/accessibility-activity-link-name.PNG"
+          alt="Lack of [alt] attributes, and some links lack discernible names, such as a 'to-the-top-button.' Recommends adding descriptive [alt] text and meaningful link names for screen reader accessibility."
+        />
         <p>
-          Below, you can see some extracts from our git history that show some
-          of the challenges we faced during development of this webpage, as well
-          as how git has been invaluable for cooperative development.
+          Some interactive elements, like the "to-the-top-button," lacked
+          meaningful names, making them inaccessible to screen readers. I added
+          descriptive aria-label attributes and ensured all links had clear,
+          visible text where possible.
         </p>
-        <h2>
-          Extract 1: Using branches to work simultaneously on the same files
-        </h2>
-        <picture>
-          <source
-            media="(max-width: 480px)"
-            srcset="./assets/imgs/git-history-branches-mobile.png"
-          />
-          <source
-            media="(min-width: 481px)"
-            srcset="./assets/imgs/git-history-branches.png"
-          />
-          <img
-            src="./assets/imgs/git-history-branches.png"
-            alt="Git extract of branches."
-          />
-        </picture>
+        <h2>SonarLint</h2>
+        <img
+          src="./assets/imgs/sonarLint.png"
+          alt="SonarLint extension for VSCode"
+        />
         <p>
-          Above, you can see a picture showing some of our git history. The
-          picture shows how four people worked on the project at the same time,
-          and how git helped us manage the changes. By using branching, all four
-          people created their own copy of the source code to work on, all
-          connected in the git repository. After we divided up the work, we were
-          able to work on the project simultaneously as a group, by creating
-          different branches. This was an efficient way to handle parts of the
-          project, especially early on. The four different branches were all
-          eventually merged back into main, and changes from all team members
-          are present in the final product. This was done using pull requests
-          and merge commits.
-        </p>
-        <p>
-          Using this system, we were able to divide and conquer the project and
-          implement features in parallel. Sometimes we further divided up
-          features originally assigned to one branch, and used the same
-          branch-implement-merge workflow on that branch before the changes went
-          into main. This way, we could be flexible in quickly assigning parts
-          of a workload, and further divide it up as needed.
-        </p>
-        <h2>Extract 2: Git was invaluable for fixing issues early</h2>
-        <picture>
-          <source
-            media="(max-width: 480px)"
-            srcset="./assets/imgs/git-history-revert-mobile.png"
-          />
-          <source
-            media="(min-width: 481px)"
-            srcset="./assets/imgs/git-history-revert.png"
-          />
-          <img
-            src="./assets/imgs/git-history-revert.png"
-            alt="Git history showing a feature implementation from start to finish, and how git helped us fix issues."
-          />
-        </picture>
-        <p>
-          In the above picture, you can see an extract from our git history. It
-          shows the complete history of a feature branch "studieOppbygging" from
-          start to finish.
-        </p>
-        <p>
-          The branch in question is shown as a yellow line, with a series of
-          commits, including one that has been highlighted with a darker color.
-          At the very bottom of the image you can see where the branch was
-          created(circled in red) from main(the blue line at the left of the
-          image). The creator of the branch made a few commits, and then set up
-          a pull request to merge the branch back into main. This has been our
-          workflow for most changes made to the project. In this case, there
-          were merge conflicts. Therefore, we used the following method:
-        </p>
-        <ol>
-          <li>
-            Implement intermediary changes made to main into the feature
-            branch(merge main into feature).
-          </li>
-          <li>Ensure functionality of both main and feature is maintained.</li>
-          <li>
-            Merge the feature branch into main, as they are now compatible.
-          </li>
-        </ol>
-        <p>This is commonly referred to as a merge commit.</p>
-        <p>
-          As per policy, several team members review all pull requests to main
-          before they are merged. A reviewer noticed some problems introduced by
-          the merge commit and attempted to fix them in the highlighted commit
-          "Reverted some bad changes" (NOT a git revert). Upon this change, the
-          pull request was reviewed again and a different reviewer discovered
-          that the highlighted commit introduced a different problem. As such,
-          the following commit is a revert that undoes these changes.
-        </p>
-        <p>
-          After this, some minor fix commits where added addressing the original
-          issue in the merge from main to feature. Again, the feature branch
-          received another merge commit from main for some intermediary changes.
-          Finally, the pull request was approved and the feature branch was
-          merged into main and deleted.
-        </p>
-        <h2>Change 1: A typical feature commit</h2>
-        <div class="scrollable-img">
-          <img
-            src="assets/imgs/git commit 1.png"
-            alt="A feature commit adding plus/minus icons to some expandable boxes."
-          />
-        </div>
-        <p>
-          Typically, a feature commit would look like the one above. This commit
-          adds a specific, contained feature explained by a short commit
-          message.
-        </p>
-        <h2>Change 2: A simple fix commit to main</h2>
-        <div class="scrollable-img">
-          <img
-            src="assets/imgs/git commit 2.png"
-            alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
-          />
-        </div>
-        <p>
-          While typically seen as a bad idea, we decided it was okay to commit
-          directly to main if the change was small and very simple. For example
-          ,the above commit shows some hyperlinks were added to replaced
-          previously used placeholders. This type of fix does not affect the
-          site in any meaningful way that would break anything, and doesn't
-          really need it's own pull request in this case. (In a small team with
-          a small change like this, it's not a big deal.)
-        </p>
-        <h2>Conclusion</h2>
-        <p>
-          All things considered, we're very happy with how using git has worked
-          out in this project, and how it has allowed us to simultaneously
-          implement features that modify the same files (relatively) smoothly.
-          Below you can see and read about some of the things we've had to deal
-          with while developing this webpage.
+          Throughout the project, we used SonarLint to ensure our code adhered
+          to WCAG accessibility standards. SonarLint provided real-time feedback
+          during development, highlighting potential issues such as missing
+          [alt] attributes, insufficient color contrast, and improper semantic
+          structures. By addressing these warnings early, we maintained high
+          code quality and ensured the website met accessibility best practices
+          efficiently.
         </p>
       </article>
     </main>
