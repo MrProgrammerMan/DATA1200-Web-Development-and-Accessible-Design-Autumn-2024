@@ -1045,9 +1045,10 @@ th {
   }
 
   .img-styler {
+    display: block;
     width: 80%;
-    padding-left: 10%;
     max-height: 250px;
+    margin: auto;
   }
 
   #img-vertical {
