@@ -454,7 +454,8 @@ main > article > * {
   padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
-  list-style-type: none !important;
+  list-style-type: none;
+  appearance: none;
   cursor: pointer;
   margin-left: 0;
 }
@@ -483,7 +484,7 @@ main > article > * {
   padding: 0.2em 0.3em;
 }
 
-.study-info details details p {
+.study-info details p {
   margin-left: 1.5em;
 }
 
