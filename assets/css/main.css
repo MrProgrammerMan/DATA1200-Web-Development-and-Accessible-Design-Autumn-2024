@@ -387,7 +387,7 @@ main > article > * {
 /* Composed of study-overview, study-info */
 /* study-info contains study-year-top, study-year, semester and subjects */
 .bachelor {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.25rem;
 }
 
