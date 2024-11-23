@@ -613,6 +613,8 @@ main > article > * {
   justify-content: center;
   box-sizing: border-box;
   padding: 2rem 2rem 5rem;
+  max-width: 50%;
+
 }
 
 .stories-img {
