@@ -570,6 +570,19 @@ main > article > * {
   list-style: none;
 }
 
+.other-studies ul ul {
+  padding: 0;
+}
+
+.other-studies ul ul li {
+  display: inline-block;
+}
+
+.other-studies ul ul > li:not(:last-child)::after {
+  content: "|";
+  padding: 0 8px;
+}
+
 .other-studies span {
   font-weight: 700;
   font-size: 1.25rem;
@@ -579,34 +592,22 @@ main > article > * {
   /* Styling for links in .other-studies */
   border-top: 0.0625rem solid #e2e2e2;
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
+
   text-decoration: none;
   color: var(--text-color);
 
   padding: 1.1875rem 1.875rem 1.1875rem 0;
-  background-image: url(../imgs/arrow-right.svg);
-  background-repeat: no-repeat;
-  background-position: center right 50px;
-  background-size: auto, 200%;
-
   transition: 0.1s ease-in-out;
 }
 
-.other-studies a:hover {
-  background-position: center right 43px;
+.arrow-icon {
+  margin-left: 1rem;
+  transition: transform 0.25s;
 }
 
-.other-studies ul ul {
-  padding: 0;
-}
-
-.other-studies ul ul li {
-  display: inline;
-}
-
-.other-studies ul ul > li:not(:last-child)::after {
-  content: "|";
-  padding: 0 8px;
+.other-studies li:hover .arrow-icon {
+  transform: translateX(5px); /* Optional animation for hover */
 }
 
 .border-bottom {
@@ -715,10 +716,6 @@ main > article > * {
   transition: background-position 0.3s ease;
 }
 
-.arrow-icon {
-  margin-left: 1rem;
-  transition: transform 0.25s;
-}
 .a-stories-button:hover {
   background-position: left;
 }
