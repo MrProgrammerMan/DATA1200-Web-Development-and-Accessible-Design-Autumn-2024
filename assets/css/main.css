@@ -451,13 +451,19 @@ main > article > * {
 
 /* font style for summary */
 .study-info summary {
+  appearance: none;
+  -moz-appearance: none;
+  list-style-type: none;
   padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
-  list-style-type: none;
   appearance: none;
   cursor: pointer;
   margin-left: 0;
+}
+
+.study-info summary::-webkit-details-marker {
+  display: none;
 }
 
 .study-info summary::before {
