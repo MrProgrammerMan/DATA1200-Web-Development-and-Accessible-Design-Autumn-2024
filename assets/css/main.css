@@ -938,9 +938,6 @@ footer li {
   color: var(--activity-text-color);
 }
 
-.header-activity {
-}
-
 .activity-content-buttons {
   list-style-type: none;
   padding: 0;
