@@ -374,14 +374,14 @@ nav > ul > li > a:active {
   width: 3em;
   height: 3em;
   margin: 0 .5em;
-  background-image: url(../imgs/light-mode.png);
+  background-image: url(../imgs/light-mode.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 :root:has(#dark-mode:checked) #dark-mode-label-wrapper label {
-  background-image: url(../imgs/dark-mode.png);
+  background-image: url(../imgs/dark-mode.webp);
 }
 
 @media (max-width: 1200px) {
