@@ -16,6 +16,7 @@
   --link-color: #3498db;
   --link-hover-color: #2980b9;
   --link-active-color: #405a75;
+  --activity-elem-color: #22223b;
 
   --hover-background-color: #1abc9c;
   --nav-buttons: #333333;
@@ -632,7 +633,7 @@ main > article > * {
 .study-year-top > img {
   height: 15px;
   width: 15px;
-  margin: 3px 5px;
+  padding-left: 30px;
 }
 
 .study-year {
@@ -1067,7 +1068,7 @@ footer li {
   }
 }
 
-#activity-main {
+body:has(#activity-main) {
   background-color: var(--activity-header-color);
 }
 
@@ -1106,8 +1107,8 @@ footer li {
   max-height: 600px;
 }
 
-.info-box {
-  background-color: var(--text-color);
+.info-box, .info-box p, .info-box h3 {
+  background-color: var(--activity-elem-color);
   color: var(--activity-header-color);
   padding: 20px;
   border-radius: 5px;
@@ -1124,7 +1125,7 @@ footer li {
 .sub-heading-styler {
   position: absolute;
   left: 0;
-  background-color: var(--text-color);
+  background-color: var(--activity-elem-color);
   color: var(--activity-header-color);
   padding: 5px 0;
 }
