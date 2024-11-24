@@ -99,11 +99,24 @@
     <main>
       <article class="indentAllChildrenUni1">
         <h1>Accessibility</h1>
+        <p>
+          Accessibility ensures that websites are usable by everyone, including
+          people with disabilities, making it a critical aspect of web design.
+          For this project, we focused on aligning with the Web Content
+          Accessibility Guidelines (WCAG). Using automated tools like Lighthouse
+          and SonarLint, we identified areas to improve, such as low contrast,
+          missing [alt] attributes, and touch target sizing. However,
+          accessibility goes beyond automated checks. Through manual testing and
+          thoughtful coding, we implemented features like semantic HTML and ARIA
+          attributes. This page highlights the key improvements, coding choices,
+          and tools used to achieve our accessibility goals.
+        </p>
         <h2>Lighthouse Testing Results</h2>
         <p>
-          The Lighthouse audit scored <b>index.html</b> 96/100 for
-          accessibility, highlighting both strengths and a few areas of
-          improvement. The tool identified several specific issues:
+          The Lighthouse audit provided a snapshot of the site’s performance
+          across various metrics. While the accessibility score of 96 indicates
+          strong adherence to best practices, the audit highlighted a few issues
+          that needed to be addressed.
         </p>
         <img
           src="./assets/imgs/lighthouse-score-index.png"
@@ -119,8 +132,9 @@
         </p>
         <img
           src="./assets/imgs/accessibility-contrast.PNG"
-          alt="Screenshot of an accessibility audit scoring 92/100. Issues identified include insufficient color contrast for a 'subscribe' button and inadequate size or spacing for touch targets on links labeled 'teknologi' and 'no-underline."
+          alt="Accessibility audit screenshot highlighting insufficient color contrast and small touch targets."
         />
+        <!-- !ImplementCode snippets before and after -->
         <h3>Touch Targets Too Small or Close Together</h3>
         <p>
           Certain clickable elements, such as navigation links, were flagged for
@@ -171,6 +185,19 @@
           structures. By addressing these warnings early, we maintained high
           code quality and ensured the website met accessibility best practices
           efficiently.
+        </p>
+        <!-- The SonarLint section is concise but could benefit from a screenshot showing how it flagged an issue in your code.  -->
+        <h2>Conclusion</h2>
+        <p>
+          Accessibility is not just a technical requirement but a vital aspect
+          of creating an inclusive digital experience for all users. By
+          leveraging tools like Lighthouse and SonarLint and applying thoughtful
+          manual fixes, we addressed key issues and improved the usability of
+          the site. While automated testing provided valuable insights, manual
+          testing ensured that all users, regardless of ability, can access and
+          interact with the content effectively. Accessibility is an ongoing
+          commitment, and these steps are part of a broader effort to build
+          universally usable websites.
         </p>
       </article>
     </main>
