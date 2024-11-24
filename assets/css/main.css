@@ -945,7 +945,7 @@ footer li {
 
 .social-icon svg{
   height: 50px;
-  margin: 2rem;
+  margin: 2rem 2rem 0rem 2rem;
 }
 
 .social-icon svg:hover { 
@@ -958,12 +958,14 @@ footer li {
  
 .footer-activity a,
 .footer-activity li,
-.social-icon svg{
+.social-icon svg,
+.footer-activity p{ 
   transition: 0.2s ease-in-out;
 }
 
 .footer-activity li a:hover,
-.footer-activity li:hover {
+.footer-activity li:hover,
+.footer-activity p:hover {
   color: #1abc9c;
   transform: scale(125%);
   fill: #1abc9c;
