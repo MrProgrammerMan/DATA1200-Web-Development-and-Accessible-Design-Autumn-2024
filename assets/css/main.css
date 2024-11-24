@@ -379,6 +379,17 @@ nav > ul > li > a:active {
   background-position: center;
 }
 
+#dark-mode-label-wrapper label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+#dark-mode-label-wrapper label:focus-within {
+  outline: auto;
+}
+
 :root:has(#dark-mode:checked) #dark-mode-label-wrapper label {
   background-image: url(../imgs/dark-mode.webp);
 }
