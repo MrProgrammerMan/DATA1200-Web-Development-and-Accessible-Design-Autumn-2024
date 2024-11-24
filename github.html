@@ -137,6 +137,16 @@
         <picture>
           <source
             media="(max-width: 480px)"
+            srcset="./assets/imgs/git-history-branches-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 481px)"
+            srcset="./assets/imgs/git-history-branches.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 480px)"
             srcset="./assets/imgs/git-history-branches-mobile.png"
           />
           <source
@@ -172,6 +182,16 @@
         </p>
         <h2>Extract 2: Git was invaluable for fixing issues early</h2>
         <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="./assets/imgs/git-history-revert-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 481px)"
+            srcset="./assets/imgs/git-history-revert.webp"
+            type="image/webp"
+          />
           <source
             media="(max-width: 480px)"
             srcset="./assets/imgs/git-history-revert-mobile.png"
@@ -230,11 +250,17 @@
         </p>
         <h2>Change 1: A typical feature commit</h2>
         <div class="scrollable-img">
-          <img
-            class="color-invertible"
-            src="assets/imgs/git commit 1.png"
-            alt="A feature commit adding plus/minus icons to some expandable boxes."
-          />
+          <picture>
+            <source
+              srcset="./assets/imgs/git-commit-1.webp"
+              type="image/webp"
+            />
+            <img
+              class="color-invertible"
+              src="./assets/imgs/git-commit-1.png"
+              alt="A feature commit adding plus/minus icons to some expandable boxes."
+            />
+          </picture>
         </div>
         <p>
           Typically, a feature commit would look like the one above. This commit
@@ -243,11 +269,17 @@
         </p>
         <h2>Change 2: A simple fix commit to main</h2>
         <div class="scrollable-img">
-          <img
-            class="color-invertible"
-            src="assets/imgs/git commit 2.png"
-            alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
-          />
+          <picture>
+            <source
+              srcset="./assets/imgs/git-commit-2.webp"
+              type="image/webp"
+            />
+            <img
+              class="color-invertible"
+              src="./assets/imgs/git-commit-2.png"
+              alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
+            />
+          </picture>          
         </div>
         <p>
           While typically seen as a bad idea, we decided it was okay to commit
