@@ -1070,7 +1070,7 @@ footer li {
 .activity-content-buttons {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   margin-top: 1em;
   display: flex;
   flex-wrap: wrap;
