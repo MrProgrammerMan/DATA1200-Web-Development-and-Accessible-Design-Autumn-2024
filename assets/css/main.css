@@ -45,7 +45,7 @@
   --banner-background: #1111117e;
 }
 
-:root:has(#dark-mode:checked) .color-invertable {
+:root:has(#dark-mode:checked) .color-invertible {
   filter: invert(1);
 }
 
