@@ -959,13 +959,13 @@ footer li {
 .footer-activity a,
 .footer-activity li,
 .social-icon svg,
-.footer-activity p{ 
+.social-icon p{ 
   transition: 0.2s ease-in-out;
 }
 
 .footer-activity li a:hover,
 .footer-activity li:hover,
-.footer-activity p:hover {
+.social-icon p:hover {
   color: #1abc9c;
   transform: scale(125%);
   fill: #1abc9c;
