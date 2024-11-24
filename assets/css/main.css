@@ -412,26 +412,35 @@ nav > ul > li > a:active {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   header {
     grid-template-columns: 3% auto 1fr auto auto auto 3%;
   }
 
   #search-container:focus-within > input[type="text"] {
-    width: 30vw;
-  }
-}
-
-/*ADD A COMMENT:D*/
-@media (max-width: 380px) {
-  #search-container:focus-within > input[type="text"] {
     width: 20vw;
   }
 }
 
-@media (max-width: 330px) {
+/*ADD A COMMENT:D*/
+@media (max-width: 440px) {
+  header {
+    grid-template-columns: 1% auto 1fr auto auto auto 1%;
+  }
+
   #search-container:focus-within > input[type="text"] {
-    width: 10vw;
+    width: 15vw;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    grid-template-columns: 2px auto 1fr auto auto auto 2px;
+  }
+
+  #search-container > label,
+  #menu-toggle-wrapper > label > p {
+    display: none;
   }
 }
 
@@ -539,7 +548,7 @@ main > article > * {
 .study-info > p {
   font-size: 1.5em;
   padding: 1.75em;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .study-info > details {
@@ -552,11 +561,12 @@ main > article > * {
   -moz-appearance: none;
   list-style-type: none;
   padding: 2em;
-  font-weight: 700;
+  align-items: center;
+  font-weight: bold;
   font-size: 1.2rem;
-  appearance: none;
   cursor: pointer;
   margin-left: 0;
+  display: flex;
 }
 
 .study-info summary::-webkit-details-marker {
@@ -602,6 +612,16 @@ main > article > * {
 }
 .study-info a:hover {
   text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .study-info summary {
+    padding: 1em 0;
+  }
+
+  #study-info-top {
+    padding: 1em 0.5em;
+  }
 }
 
 .study-year-top {
