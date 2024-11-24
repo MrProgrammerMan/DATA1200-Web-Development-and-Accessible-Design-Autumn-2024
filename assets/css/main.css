@@ -21,16 +21,28 @@
   --nav-buttons: #333333;
 
   --border: #e2e2e2;
+  --border-high-contrast: #000;
   --border-nav-footer-color: black;
   --button-hover-color: #a0c8d6;
 
   --activity-header-color: #f2e9e4;
   --activity-text-color: black;
+
+  --banner-background: #8a8a8a7e;
+
+  background-color: var(--background-color);
 }
 
 :root:has(#dark-mode:checked) {
   /* Dark Mode Theme */
   /* TODO: Add dark mode colors */
+  --text-color: #fff;
+  --background-color: #292929;
+  --border-high-contrast: #fff;
+  --primary-color: #3b3b3b;
+  --secondary-color: #004964;
+  --button-hover-color: #004057;
+  --banner-background: #1111117e;
 }
 
 :root:has(#dark-mode:checked) .color-invertable {
@@ -93,7 +105,7 @@ img {
   grid-column-end: 8;
 }
 
-h1, h2, h3, p, a, summary, li {
+h1, h2, h3, p, a, summary, li, dd, dt {
   color: var(--text-color);
 }
 
@@ -440,7 +452,7 @@ main > article > * {
 
 .study-overview > dl,
 .subjects > dl {
-  border-top: 1px solid black;
+  border-top: 1px solid var(--border-high-contrast);
   margin: 8px;
   padding: 0.4em;
 }
@@ -553,7 +565,7 @@ main > article > * {
 }
 
 .study-year {
-  background-color: rgb(237, 234, 234);
+  background-color: var(--banner-background);
   max-width: 100%;
   font-weight: bold;
 }
@@ -799,7 +811,7 @@ footer * {
   text-decoration: underline;
 }
 
-.footer-index svg {
+.footer-index img {
   height: 30px;
   padding-right: 15px;
 }
