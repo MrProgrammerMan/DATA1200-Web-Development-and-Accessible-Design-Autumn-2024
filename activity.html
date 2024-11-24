@@ -18,6 +18,7 @@
         <img
           src="assets/imgs/boulderingIcon_transparent.webp"
           alt="Bouldering icon"
+          aria-label="Bouldering icon"
         />
       </div>
       <nav class="align-center">
@@ -31,7 +32,7 @@
       <form class="align-center" id="search-container">
         <label id="activity-search-text" for="search">SØK</label>
         <input class="border0" id="search" type="text" />
-        <button class="border0" type="button">
+        <button class="border0" type="button" aria-label="Search">
           <!--type=button prevents site refresh (because search is dummy)-->
           <svg
             class="search-svg-activity"
@@ -76,7 +77,7 @@
       </form>
       <div class="align-center" id="menu-toggle-wrapper">
         <input id="menu-toggle" type="checkbox" hidden />
-        <label class="align-center" for="menu-toggle">
+        <label class="align-center" for="menu-toggle" aria-label="Menu toggle">
           <p>MENY</p>
           <div class="margin0 padding0">
             <span
@@ -96,16 +97,16 @@
       </div>
     </header>
     <main id="activity-main">
-      <article class="activity-content-buttons">
+      <article class="activity-content-buttons" aria-label="Buttons Scroll Navigation">
         <a href="#indoor-bouldering">Indoor bouldering</a>
         <a href="#outdoor-bouldering">Outdoor bouldering</a>
         <a href="#grading">Grading</a>
         <a href="#equipment">Equipment</a>
       </article>
-      <article>
+      <article aria-label="Bouldering Oslo Introduction">
         <h1>Bouldering Oslo</h1>
       </article>
-      <article class="article-flex">
+      <article class="article-flex" aria-label="Bouldering">
         <div class="sub-flex">
           <p class="info-box">
             Bouldering is the purest form of climbing-a captivating blend of
@@ -140,7 +141,7 @@
           </picture>
         </div>
       </article>
-      <article class="article-flex">
+      <article class="article-flex" aria-label="Indoor Bouldering">
         <div class="heading-position">
           <h2 class="heading-styler" id="indoor-bouldering">
             Indoor bouldering
@@ -275,7 +276,7 @@
           </picture>
         </div>
       </article>
-      <article class="article-flex">
+      <article class="article-flex" aria-label="Outdoor Bouldering">
         <div class="heading-position">
           <h2 class="heading-styler" id="outdoor-bouldering">
             Outdoor bouldering
@@ -299,7 +300,7 @@
           </picture>
         </div>
       </article>
-      <article class="article-flex">
+      <article class="article-flex" aria-label="Grading Information">
         <div class="heading-position">
           <h2 class="heading-styler activity-margin-bottom" id="grading">
             Grading
@@ -383,7 +384,7 @@
           * Grades that would fit in-between the current and next color grade.
         </p>
       </article>
-      <article class="article-flex">
+      <article class="article-flex" aria-label="Equipment Information">
         <div class="heading-position">
           <h2 class="heading-styler" id="equipment">Equipment</h2>
         </div>
@@ -542,8 +543,8 @@
         <p class="footer-activity-text">CopyRight &copy; 2024 eksamensgruppe</p>
       </section>
     </footer>
-    <a href="#top" id="to-the-top-button" aria-label="press arrow to go top"
-      ><img
+    <a href="#top" id="to-the-top-button" aria-label="Press arrow to go top">
+      <img
         alt="arrow that brings you back to the top"
         src="./assets/imgs/arrow-right.svg"
       />

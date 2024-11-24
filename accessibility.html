@@ -14,7 +14,7 @@
   <body class="margin0">
     <header class="padding0">
       <div class="margin0 padding0 align-center" id="logo-wrapper">
-        <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." />
+        <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." aria-label="OsloMet logo" />
       </div>
       <nav class="align-center">
         <ul class="margin0 padding0">
@@ -27,14 +27,14 @@
       <form class="align-center" id="search-container">
         <label id="search-text" for="search">SØK</label>
         <input class="border0" id="search" type="text" />
-        <button class="border0" type="button">
+        <button class="border0" type="button" aria-label="Search">
           <!--type=button prevents site refresh (because search is dummy)-->
           <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
         </button>
       </form>
       <div class="align-center" id="menu-toggle-wrapper">
         <input id="menu-toggle" type="checkbox" hidden />
-        <label class="align-center" for="menu-toggle">
+        <label class="align-center" for="menu-toggle" aria-label="Menu toggle">
           <p>MENY</p>
           <div class="margin0 padding0">
             <span id="menu-icon-span0" class="margin0 padding0"></span>
@@ -44,13 +44,13 @@
         </label>
       </div>
       <div class="align-center" id="dark-mode-label-wrapper">
-        <label for="dark-mode">
+        <label for="dark-mode" aria-label="Toggle dark mode">
           <input id="dark-mode" type="checkbox" />
         </label>
       </div>
     </header>
     <main>
-      <article class="indentAllChildrenUni1">
+      <article class="indentAllChildrenUni1" aria-label="Accessibility Information">
         <h1>Accessibility</h1>
         <p>
           Accessibility ensures that websites are usable by everyone, including

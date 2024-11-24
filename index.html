@@ -15,7 +15,7 @@
     <div class="margin0 header-wrapper">
       <header class="padding0">
         <div class="margin0 padding0 align-center" id="logo-wrapper">
-          <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." />
+          <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." aria-label="OsloMet logo" />
         </div>
         <nav class="align-center">
           <ul class="margin0 padding0">
@@ -28,14 +28,14 @@
         <form class="align-center" id="search-container">
           <label id="search-text" for="search">SØK</label>
           <input class="border0" id="search" type="text" />
-          <button class="border0" type="button">
+          <button class="border0" type="button" aria-label="Search">
             <!--type=button prevents site refresh (because search is dummy)-->
             <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
           </button>
         </form>
         <div class="align-center" id="menu-toggle-wrapper">
           <input id="menu-toggle" type="checkbox" hidden />
-          <label class="align-center" for="menu-toggle">
+          <label class="align-center" for="menu-toggle" aria-label="Menu toggle">
             <p>MENY</p>
             <div class="margin0 padding0">
               <span id="menu-icon-span0" class="margin0 padding0"></span>
@@ -45,7 +45,7 @@
           </label>
         </div>
         <div class="align-center" id="dark-mode-label-wrapper">
-          <label for="dark-mode">
+          <label for="dark-mode" aria-label="Toggle dark mode">
             <input id="dark-mode" type="checkbox" />
           </label>
         </div>
@@ -53,7 +53,7 @@
     </div>
     <main>
       <!-- Start of study info -->
-      <article>
+      <article aria-label="Study Information">
         <h1>Matematisk modellering og datavitenskap - ingeniør</h1>
         <p class="bachelor indentUni1">Bachelorprogram</p>
         <section class="indentUni1 study-overview margin0 border-bottom">
@@ -949,7 +949,7 @@
       </article>
       <!-- End of main study info -->
       <!-- Start of other studies -->
-      <article class="other-studies">
+      <article class="other-studies" aria-label="Other Studies">
         <h2 class="indentUni1">Du er kanskje også interessert i disse?</h2>
         <ul class="indentUni1 padding0">
           <li>
@@ -1102,7 +1102,7 @@
       </article>
       <!-- End of other studies -->
       <!-- Start of student stories -->
-      <article class="indentAllChildrenUni1">
+      <article class="indentAllChildrenUni1" aria-label="Student Stories">
         <h2>Studenthistorier</h2>
         <section class="student-stories">
           <div class="stories-text">
