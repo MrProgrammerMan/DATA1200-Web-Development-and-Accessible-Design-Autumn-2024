@@ -167,6 +167,11 @@ p, li {
   line-height: 1.5rem;
 }
 
+.full-bachelor-program p, 
+.full-bachelor-program li {
+  font-size: small;
+}
+
 /*** HEADER ***/
 /* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
@@ -902,6 +907,7 @@ footer a,
 footer li {
   text-decoration: none;
   list-style: none;
+  margin-top: 10px;
 }
 
 .footer-index a:hover {
