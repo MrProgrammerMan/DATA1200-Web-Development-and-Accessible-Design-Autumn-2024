@@ -947,7 +947,7 @@ footer li {
 }
 
 .social-icon, 
-.social-icon-group { /*Group two and two icons together so i can make two colums next to eachother */
+.social-icon-group { /*Group two and two icons together so i can make two columns next to each-other */
   display: flex;
 }
 
