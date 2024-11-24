@@ -13,8 +13,8 @@
   </head>
   <body class="margin0">
     <header class="padding0">
-      <div class="margin0 padding0 align-center" id="logoWrapper">
-          <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." />
+      <div class="margin0 padding0 align-center" id="logo-wrapper">
+        <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." />
       </div>
       <nav class="align-center">
         <ul class="margin0 padding0">
@@ -43,9 +43,10 @@
           </div>
         </label>
       </div>
-      <input id="dark-mode" type="checkbox" hidden />
       <div class="align-center" id="dark-mode-label-wrapper">
-        <label for="dark-mode"></label>
+        <label for="dark-mode">
+          <input id="dark-mode" type="checkbox" />
+        </label>
       </div>
     </header>
     <main>
@@ -225,7 +226,7 @@
               src="./assets/imgs/git-commit-2.png"
               alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
             />
-          </picture>          
+          </picture>
         </div>
         <p>
           While typically seen as a bad idea, we decided it was okay to commit
