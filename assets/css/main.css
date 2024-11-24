@@ -33,6 +33,10 @@
   /* TODO: Add dark mode colors */
 }
 
+:root:has(#dark-mode:checked) .color-invertable {
+  filter: invert(1);
+}
+
 img {
   max-width: 100%;
 }
@@ -89,7 +93,7 @@ img {
   grid-column-end: 8;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a, summary, li {
   color: var(--text-color);
 }
 
