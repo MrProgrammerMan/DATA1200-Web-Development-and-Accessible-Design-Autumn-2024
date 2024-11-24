@@ -12,45 +12,58 @@
     />
   </head>
   <body class="margin0">
-    <header class="padding0">
-      <div class="margin0 padding0 align-center" id="logo-wrapper">
-        <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." aria-label="OsloMet logo" />
-      </div>
-      <nav class="align-center">
-        <ul class="margin0 padding0">
-          <li><a href="index.html">MATMOD</a></li>
-          <li><a href="accessibility.html">ACCESSIBILITY</a></li>
-          <li><a href="github.html">GITHUB</a></li>
-          <li><a href="activity.html">ACTIVITY</a></li>
-        </ul>
-      </nav>
-      <form class="align-center" id="search-container">
-        <label id="search-text" for="search">SØK</label>
-        <input class="border0" id="search" type="text" />
-        <button class="border0" type="button" aria-label="Search">
-          <!--type=button prevents site refresh (because search is dummy)-->
-          <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
-        </button>
-      </form>
-      <div class="align-center" id="menu-toggle-wrapper">
-        <input id="menu-toggle" type="checkbox" hidden />
-        <label class="align-center" for="menu-toggle" aria-label="Menu toggle">
-          <p>MENY</p>
-          <div class="margin0 padding0">
-            <span id="menu-icon-span0" class="margin0 padding0"></span>
-            <span id="menu-icon-span1" class="margin0 padding0"></span>
-            <span id="menu-icon-span2" class="margin0 padding0"></span>
-          </div>
-        </label>
-      </div>
-      <div class="align-center" id="dark-mode-label-wrapper">
-        <label for="dark-mode" aria-label="Toggle dark mode">
-          <input id="dark-mode" type="checkbox" />
-        </label>
-      </div>
-    </header>
+    <div class="margin0 header-wrapper">
+      <header class="padding0">
+        <div class="margin0 padding0 align-center" id="logo-wrapper">
+          <img
+            src="./assets/imgs/OsloMet-logo.svg"
+            alt="OsloMet logo."
+            aria-label="OsloMet logo"
+          />
+        </div>
+        <nav class="align-center">
+          <ul class="margin0 padding0">
+            <li><a href="index.html">MATMOD</a></li>
+            <li><a href="accessibility.html">ACCESSIBILITY</a></li>
+            <li><a href="github.html">GITHUB</a></li>
+            <li><a href="activity.html">ACTIVITY</a></li>
+          </ul>
+        </nav>
+        <form class="align-center" id="search-container">
+          <label id="search-text" for="search">SØK</label>
+          <input class="border0" id="search" type="text" />
+          <button class="border0" type="button" aria-label="Search">
+            <!--type=button prevents site refresh (because search is dummy)-->
+            <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
+          </button>
+        </form>
+        <div class="align-center" id="menu-toggle-wrapper">
+          <input id="menu-toggle" type="checkbox" hidden />
+          <label
+            class="align-center"
+            for="menu-toggle"
+            aria-label="Menu toggle"
+          >
+            <p>MENY</p>
+            <div class="margin0 padding0">
+              <span id="menu-icon-span0" class="margin0 padding0"></span>
+              <span id="menu-icon-span1" class="margin0 padding0"></span>
+              <span id="menu-icon-span2" class="margin0 padding0"></span>
+            </div>
+          </label>
+        </div>
+        <div class="align-center" id="dark-mode-label-wrapper">
+          <label for="dark-mode" aria-label="Toggle dark mode">
+            <input id="dark-mode" type="checkbox" />
+          </label>
+        </div>
+      </header>
+    </div>
     <main>
-      <article class="indentAllChildrenUni1" aria-label="GitHub Usage Information">
+      <article
+        class="indentAllChildrenUni1"
+        aria-label="GitHub Usage Information"
+      >
         <h1>GitHub Usage</h1>
         <h2>Foreword</h2>
         <p>
@@ -234,8 +247,8 @@
           the above commit shows some hyperlinks were added to replace
           previously used placeholders. This type of fix does not affect the
           site in any meaningful way that would break anything, and doesn't
-          really need its own pull request in this case. (In a small team with
-          a small change like this, it's not a big deal.)
+          really need its own pull request in this case. (In a small team with a
+          small change like this, it's not a big deal.)
         </p>
         <h2>Conclusion</h2>
         <p>
