@@ -78,8 +78,8 @@ img {
   }
 }
 
+/* Animation to flash background color slowly infinately. Could be replaced with running set number of times after scroll reveal with javascript. */
 @keyframes flash {
-  /* Keyframes for the flashing animation */
   0% {
     background-color: transparent;
   }
@@ -143,7 +143,15 @@ img {
   grid-column-end: 8;
 }
 
-h1, h2, h3, p, a, summary, li, dd, dt {
+h1,
+h2,
+h3,
+p,
+a,
+summary,
+li,
+dd,
+dt {
   color: var(--text-color);
 }
 
@@ -163,18 +171,19 @@ h3 {
   line-height: 2rem;
 }
 
-p, li {
+p,
+li {
   font-size: 1.1rem;
   line-height: 1.5rem;
 }
 
-.full-bachelor-program p, 
+.full-bachelor-program p,
 .full-bachelor-program li {
   font-size: small;
 }
 
 /*** HEADER ***/
-/* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
+/* Header is composed of #logo-wrapper, nav, #search-container, #menu-toggle-wrapper, #dark-mode-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
 
 header {
@@ -189,15 +198,16 @@ header {
   background-color: var(--primary-color);
 }
 
-#logoWrapper {
+#logo-wrapper {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
 }
 
-#logoWrapper > svg,
-#logoWrapper > img {
-  height: 2.8em;
-  padding: 1em;
+#logo-wrapper > svg,
+#logo-wrapper > img {
+  height: 2.5em;
+  width: 2.5em;
+  padding: 0.5em;
   object-fit: contain;
 }
 
@@ -255,7 +265,8 @@ nav > ul > li > a:active {
   color: var(--text--bottom-top-color);
 }
 
-#search-text:hover, .search-svg:hover {
+#search-text:hover,
+.search-svg:hover {
   cursor: pointer;
 }
 
@@ -293,7 +304,7 @@ nav > ul > li > a:active {
   justify-content: center;
   grid-row: 1 / 2;
   grid-column: 5 / 6;
-  margin: 0 .5em;
+  margin: 0 0.5em;
 
   color: var(--text--bottom-top-color);
 }
@@ -368,11 +379,22 @@ nav > ul > li > a:active {
 #dark-mode-label-wrapper label {
   width: 3em;
   height: 3em;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   background-image: url(../imgs/light-mode.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#dark-mode-label-wrapper label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+#dark-mode-label-wrapper label:focus-within {
+  outline: auto;
 }
 
 :root:has(#dark-mode:checked) #dark-mode-label-wrapper label {
@@ -875,7 +897,8 @@ footer * {
   fill: white;
 }
 
-.footer-flex, .footer-activity-flex {
+.footer-flex,
+.footer-activity-flex {
   display: flex;
   padding: 0 10%;
   justify-content: space-between;
@@ -941,28 +964,29 @@ footer li {
   font-size: large;
 }
 
-.social-icon, 
-.social-icon-group { /*Group two and two icons together so i can make two columns next to each-other */
+.social-icon,
+.social-icon-group {
+  /*Group two and two icons together so i can make two colums next to eachother */
   display: flex;
 }
 
-.social-icon svg{
+.social-icon svg {
   height: 50px;
   margin: 2rem 2rem 0rem 2rem;
 }
 
-.social-icon svg:hover { 
+.social-icon svg:hover {
   transform: scale(125%);
 }
 
 .social-icon svg:hover path {
   fill: #1abc9c;
 }
- 
+
 .footer-activity a,
 .footer-activity li,
 .social-icon svg,
-.social-icon p{ 
+.social-icon p {
   transition: 0.2s ease-in-out; /* Smooth transition for hover effects */
 }
 
@@ -975,7 +999,8 @@ footer li {
 }
 
 @media (max-width: 1000px) {
-  .footer-flex { /*change flex direction and item placement in flexbox */
+  .footer-flex {
+    /*change flex direction and item placement in flexbox */
     flex-direction: column;
     align-items: start;
     padding: 0 30px;
@@ -1083,7 +1108,8 @@ body:has(#activity-main) {
   line-height: 30px;
 }
 
-.article-flex, .sub-flex {
+.article-flex,
+.sub-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1112,7 +1138,9 @@ body:has(#activity-main) {
   max-height: 600px;
 }
 
-.info-box, .info-box p, .info-box h3 {
+.info-box,
+.info-box p,
+.info-box h3 {
   background-color: var(--activity-elem-color);
   color: var(--activity-header-color);
   padding: 20px;
@@ -1165,7 +1193,7 @@ body:has(#activity-main) {
   cursor: pointer;
 }
 
-.address-hover-div{
+.address-hover-div {
   position: relative;
 }
 
@@ -1225,7 +1253,8 @@ th {
   margin-top: 60px;
 }
 
-@media (max-width: 1200px){ /*Makes the iframe hidden for tablets and most touchscreen devices */
+@media (max-width: 1200px) {
+  /*Makes the iframe hidden for tablets and most touchscreen devices */
   .address-hover-div > iframe {
     visibility: hidden;
   }
