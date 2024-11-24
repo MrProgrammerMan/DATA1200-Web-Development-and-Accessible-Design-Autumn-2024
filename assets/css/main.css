@@ -9,7 +9,7 @@
 
   --primary-color: #2c3e50;
   --secondary-color: #add8e6;
-  --accent-color: #e74d3caa;
+  --accent-color: #a83225aa;
   --background-color: #f5f5f5;
   --text-color: #333333;
   --text--bottom-top-color: #ededed;
@@ -28,7 +28,7 @@
   --activity-header-color: #f2e9e4;
   --activity-text-color: black;
 
-  --banner-background: #8a8a8a7e;
+  --banner-background: #9696967e;
 
   background-color: var(--background-color);
 }
