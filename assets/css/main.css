@@ -1316,7 +1316,7 @@ body:has(#activity-main) {
   width: 50%;
   text-align: end;
   padding-right: 10px;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
 }
 
 .grading-info,
