@@ -142,8 +142,8 @@
           updated the CSS to increase padding and margins around touch targets.
         </p>
         <img
-        src="./assets/imgs/accessibility-touch-targets.PNG"
-        alt="Screenshot of an accessibility audit scoring 92/100. Issues identified include insufficient color contrast for a 'subscribe' button and inadequate size or spacing for touch targets on links labeled 'teknologi' and 'no-underline."
+          src="./assets/imgs/accessibility-touch-targets.PNG"
+          alt="Screenshot of an accessibility audit scoring 92/100. Issues identified include insufficient color contrast for a 'subscribe' button and inadequate size or spacing for touch targets on links labeled 'teknologi' and 'no-underline."
         />
         <h4>!ImplementCode snippets before and after</h4>
         <p></p>
@@ -182,14 +182,20 @@
           to WCAG accessibility standards. SonarLint provided real-time feedback
           during development, highlighting potential issues such as missing
           [alt] attributes, insufficient color contrast, and improper semantic
-          structures. By addressing these warnings early, we maintained high
-          code quality and ensured the website met accessibility best practices
-          efficiently.
+          structures.
         </p>
-        <h4>
-          !The SonarLint section is concise but could benefit from a screenshot
-          showing how it flagged an issue in your code.
-        </h4>
+        <p>
+          SonarLint integrates seamlessly into the IDE and highlights potential
+          problems, such as missing attributes or improper syntax, before the
+            code is committed. In this example, SonarLint flagged an &lt;iframe&gt;
+          without a "title" attribute, helping ensure the site adheres to
+          accessibility best practices. By addressing these issues early, we
+          maintained cleaner and more accessible code throughout the project.
+        </p>
+        <img
+          src="./assets/imgs/sonarLint-example.png"
+          alt="SonarLint warning for an <iframe> element missing a title attribute. The warning suggests adding a title to improve accessibility, ensuring screen readers can describe the iframe's purpose."
+        />
         <h2>Conclusion</h2>
         <p>
           Accessibility is not just a technical requirement but a vital aspect
