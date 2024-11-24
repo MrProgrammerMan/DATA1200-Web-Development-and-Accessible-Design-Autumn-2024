@@ -795,14 +795,14 @@ footer * {
   fill: white;
 }
 
-.footer-flex {
+.footer-flex, .footer-activity-flex {
   display: flex;
   padding: 0 10%;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-content {
+.footer-content { /*Make it so that all the content in the footer wont exceed 1600px even tho the footer has been put at 100% width  */
   max-width: 1600px;
   margin: auto;
   line-height: 30px;
@@ -847,9 +847,7 @@ footer li {
 }
 
 .footer-activity-flex {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0;
 }
 
@@ -862,37 +860,38 @@ footer li {
   font-size: large;
 }
 
-.social-icon {
+.social-icon, .social-icon-group { /*Group two and two icons together so i can make two colums next to eachother */
   display: flex;
 }
 
 .social-icon svg{
   height: 50px;
   margin: 2rem;
-  transition: 0.2s ease-in-out;
 }
 
-.footer-activity-flex .social-icon svg:hover {
+.social-icon svg:hover { 
   transform: scale(125%);
 }
 
-.footer-activity-flex .social-icon svg:hover path {
+.social-icon svg:hover path {
   fill: #1abc9c;
 }
  
 .footer-activity a,
-.footer-activity li{
+.footer-activity li,
+.social-icon svg{
   transition: 0.2s ease-in-out;
 }
 
-.footer-activity a:hover,
+.footer-activity li a:hover,
 .footer-activity li:hover {
   color: #1abc9c;
   transform: scale(125%);
+  fill: #1abc9c;
 }
 
 @media (max-width: 1000px) {
-  .footer-flex {
+  .footer-flex { /*change flex direction and item placement in flexbox */
     flex-direction: column;
     align-items: start;
     padding: 0 30px;
@@ -910,14 +909,10 @@ footer li {
   .footer-index ul {
     padding-left: 0;
   }
-
-  .footer-index {
-    min-height: 1300px;
-  }
 }
 
 @media (max-width: 500px) {
-  .social-icon {
+  .social-icon-group {
     flex-direction: column;
   }
 }
@@ -1090,12 +1085,16 @@ footer li {
   cursor: pointer;
 }
 
+.address-hover-div{
+  position: relative;
+}
+
 .address-hover-div > iframe {
   height: 0;
   transition: height 0.5s ease-in-out;
   position: absolute;
   z-index: 1;
-  width: 600px;
+  width: 100%;
 }
 
 .address-hover-div > iframe:hover,
@@ -1144,6 +1143,12 @@ th {
 
 .activity-margin-top {
   margin-top: 60px;
+}
+
+@media (max-width: 1200px){ /*Makes the iframe hidden for tablets and most touchscreen devices */
+  .address-hover-div > iframe {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 800px) {
