@@ -32,6 +32,7 @@
   --banner-background: #9696967e;
 
   background-color: var(--background-color);
+
 }
 
 :root:has(#dark-mode:checked) {
@@ -161,9 +162,9 @@ h3 {
   line-height: 2rem;
 }
 
-p {
-  font-size: 0.875rem;
-  line-height: 1.3rem;
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 
 /*** HEADER ***/
