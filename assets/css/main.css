@@ -32,6 +32,7 @@
   --banner-background: #9696967e;
 
   background-color: var(--background-color);
+
 }
 
 :root:has(#dark-mode:checked) {
@@ -47,9 +48,7 @@
 }
 
 :root:has(#dark-mode:checked) .color-invertible {
-  filter: invert(
-    1
-  ); /* Invert colors for elements with class 'color-invertible' */
+  filter: invert(1); /* Invert colors for elements with class 'color-invertible' */
 }
 
 img {
@@ -186,33 +185,17 @@ li {
 /*** HEADER ***/
 /* Header is composed of #logo-wrapper, nav, #search-container, #menu-toggle-wrapper, #dark-mode-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
+
 header {
   width: 100%;
-  background-color: var(--primary-color);
-}
 
-.header-container {
-  max-width: 2000px; /* Set your desired max-width here */
-  margin: 0 auto; /* Center the container */
-  
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 10% auto 1fr auto auto 10%; /* Navbar takes up available space */
   justify-items: start; /* Navbar is aligned left in the header */
   gap: 0;
-}
 
-@media (min-width: 2000px) {
-  .header-container {
-    max-width: 1600px; /* Set your desired max-width here */
-    margin: 0 auto; /* Center the container */
-
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 0% auto 1fr auto auto 0; /* Navbar takes up available space */
-    justify-items: start; /* Navbar is aligned left in the header */
-    gap: 0;
-  }
+  background-color: var(--primary-color);
 }
 
 #logo-wrapper {
@@ -928,8 +911,7 @@ footer * {
   align-items: center;
 }
 
-.footer-content {
-  /*Make it so that all the content in the footer wont exceed 1600px even tho the footer has been put at 100% width  */
+.footer-content { /*Make it so that all the content in the footer wont exceed 1600px even tho the footer has been put at 100% width  */
   max-width: 1600px; /* Limit footer content width */
   margin: auto;
   line-height: 30px;
@@ -1050,13 +1032,12 @@ footer li {
   }
 }
 
+
 /* ------------------------ */
 
 /* ACTIVITY CSS */
 .search-svg-activity * {
-  stroke: var(
-    --activity-text-color
-  ); /* Change stroke color for activity search icon */
+  stroke: var(--activity-text-color); /* Change stroke color for activity search icon */
 }
 
 .activity-menu-span {
@@ -1364,8 +1345,6 @@ th {
 @media (min-width: 1201px) {
   #to-the-top-button:hover {
     color: var(--background-color);
-    background: var(
-      --hover-background-color
-    ); /* Change background color on hover */
+    background: var(--hover-background-color); /* Change background color on hover */
   }
 }
