@@ -107,6 +107,7 @@
   :root:has(#activity-main) {
     --text-color: #333333;
     --border: #000000;
+    --background-color: #f5f5f5;
   }
 }
 
