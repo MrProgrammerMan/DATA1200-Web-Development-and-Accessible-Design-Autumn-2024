@@ -390,8 +390,9 @@ nav > ul > li > a:active {
   color: var(--text--bottom-top-color);
 }
 
-#search-text:hover,
-.search-svg:hover {
+#search-container *:hover,
+#menu-toggle-wrapper *:hover,
+#dark-mode-label-wrapper label:hover {
   cursor: pointer;
 }
 
@@ -1043,6 +1044,10 @@ footer * {
   align-items: center;
 }
 
+.footer-activity-flex li {
+  text-align: center;
+}
+
 .footer-content {
   /*Make it so that all the content in the footer wont exceed 1600px even tho the footer has been put at 100% width  */
   max-width: 1600px; /* Limit footer content width */
@@ -1316,7 +1321,7 @@ body:has(#activity-main) {
   width: 50%;
   text-align: end;
   padding-right: 10px;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
 }
 
 .grading-info,
