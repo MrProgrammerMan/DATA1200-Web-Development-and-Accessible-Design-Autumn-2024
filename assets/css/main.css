@@ -185,9 +185,17 @@ li {
 /*** HEADER ***/
 /* Header is composed of #logo-wrapper, nav, #search-container, #menu-toggle-wrapper, #dark-mode-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
+/* Makes header responsive at wide screen sizes by allowing header max width */
+.header-wrapper {
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
 
 header {
   width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
 
   display: grid;
   grid-template-rows: auto;
