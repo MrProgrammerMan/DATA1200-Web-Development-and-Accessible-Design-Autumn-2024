@@ -173,7 +173,7 @@ p, li {
 }
 
 /*** HEADER ***/
-/* Header is composed of #logoWrapper, nav, #search-container, #menu-toggle-wrapper */
+/* Header is composed of #logo-wrapper, nav, #search-container, #menu-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
 
 header {
@@ -188,13 +188,13 @@ header {
   background-color: var(--primary-color);
 }
 
-#logoWrapper {
+#logo-wrapper {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
 }
 
-#logoWrapper > svg,
-#logoWrapper > img {
+#logo-wrapper > svg,
+#logo-wrapper > img {
   height: 2.5em;
   width: 2.5em;
   padding: 0.5em;
