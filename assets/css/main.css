@@ -1063,7 +1063,7 @@ footer li {
 }
 
 .header-activity * {
-  color: var(--activity-text-color);
+  color: var(--activity-text-color) !important;
 }
 
 /* Styles for the container of activity content buttons, arranging them in a flex layout. */
