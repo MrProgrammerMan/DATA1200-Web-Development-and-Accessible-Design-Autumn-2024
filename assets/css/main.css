@@ -66,6 +66,7 @@ img {
 
   .scrollable-img::before {
     content: "SWIPE TO SEE CHANGES -->";
+    color: var(--text-color);
     font-size: 18px;
     padding: 8px;
     /* Animation could be played on scroll reveal,
