@@ -12,41 +12,43 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body class="margin0">
-    <header class="padding0">
-      <div class="margin0 padding0 align-center" id="logo-wrapper">
-        <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." />
-      </div>
-      <nav class="align-center">
-        <ul class="margin0 padding0">
-          <li><a href="index.html">MATMOD</a></li>
-          <li><a href="accessibility.html">ACCESSIBILITY</a></li>
-          <li><a href="github.html">GITHUB</a></li>
-          <li><a href="activity.html">ACTIVITY</a></li>
-        </ul>
-      </nav>
-      <form class="align-center" id="search-container">
-        <label id="search-text" for="search">SØK</label>
-        <input class="border0" id="search" type="text" />
-        <button class="border0" type="button">
-          <!--type=button prevents site refresh (because search is dummy)-->
-          <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
-        </button>
-      </form>
-      <div class="align-center" id="menu-toggle-wrapper">
-        <input id="menu-toggle" type="checkbox" hidden />
-        <label class="align-center" for="menu-toggle">
-          <p>MENY</p>
-          <div class="margin0 padding0">
-            <span id="menu-icon-span0" class="margin0 padding0"></span>
-            <span id="menu-icon-span1" class="margin0 padding0"></span>
-            <span id="menu-icon-span2" class="margin0 padding0"></span>
-          </div>
-        </label>
-      </div>
-      <div class="align-center" id="dark-mode-label-wrapper">
-        <label for="dark-mode">
-          <input id="dark-mode" type="checkbox" />
-        </label>
+    <header>
+      <div class="header-container">
+        <div class="margin0 padding0 align-center" id="logo-wrapper">
+          <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." />
+        </div>
+        <nav class="align-center">
+          <ul class="margin0 padding0">
+            <li><a href="index.html">MATMOD</a></li>
+            <li><a href="accessibility.html">ACCESSIBILITY</a></li>
+            <li><a href="github.html">GITHUB</a></li>
+            <li><a href="activity.html">ACTIVITY</a></li>
+          </ul>
+        </nav>
+        <form class="align-center" id="search-container">
+          <label id="search-text" for="search">SØK</label>
+          <input class="border0" id="search" type="text" />
+          <button class="border0" type="button">
+            <!--type=button prevents site refresh (because search is dummy)-->
+            <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
+          </button>
+        </form>
+        <div class="align-center" id="menu-toggle-wrapper">
+          <input id="menu-toggle" type="checkbox" hidden />
+          <label class="align-center" for="menu-toggle">
+            <p>MENY</p>
+            <div class="margin0 padding0">
+              <span id="menu-icon-span0" class="margin0 padding0"></span>
+              <span id="menu-icon-span1" class="margin0 padding0"></span>
+              <span id="menu-icon-span2" class="margin0 padding0"></span>
+            </div>
+          </label>
+        </div>
+        <div class="align-center" id="dark-mode-label-wrapper">
+          <label for="dark-mode">
+            <input id="dark-mode" type="checkbox" />
+          </label>
+        </div>
       </div>
     </header>
     <main>
@@ -124,7 +126,10 @@
           </details>
           <details class="border-bottom">
             <summary>Slik søker du</summary>
-            <p>Du søker på <abbr title="Samordna opptak">SO</abbr> med studiekode 215 503.</p>
+            <p>
+              Du søker på <abbr title="Samordna opptak">SO</abbr> med studiekode
+              215 503.
+            </p>
             <ul>
               <li>15. april: ordinær søknadsfrist</li>
               <li>1. mars: frist for enkelte søkere</li>
