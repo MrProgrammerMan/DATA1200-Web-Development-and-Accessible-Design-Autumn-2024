@@ -226,6 +226,10 @@ nav > ul > li > a:active {
   color: var(--text--bottom-top-color);
 }
 
+#search-text:hover, .search-svg:hover {
+  cursor: pointer;
+}
+
 #search-container > input[type="text"] {
   width: 0;
   /* 
@@ -860,7 +864,8 @@ footer li {
   font-size: large;
 }
 
-.social-icon, .social-icon-group { /*Group two and two icons together so i can make two colums next to eachother */
+.social-icon, 
+.social-icon-group { /*Group two and two icons together so i can make two colums next to eachother */
   display: flex;
 }
 
