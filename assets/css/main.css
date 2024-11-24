@@ -482,6 +482,8 @@ main {
 main > article {
   grid-column: 2 / 3;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(10, 10%);
   padding: 1em 0;
