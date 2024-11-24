@@ -998,7 +998,7 @@ footer li {
   line-height: 30px;
 }
 
-.article-flex {
+.article-flex, .sub-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1006,10 +1006,8 @@ footer li {
 }
 
 .sub-flex {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 
 .article-flex > * {
@@ -1180,21 +1178,16 @@ th {
     margin: auto;
   }
 
-  #img-vertical {
+  .img-horizontal {
     height: 0;
     visibility: hidden;
   }
 
-  .g-white,
-  .g-green,
-  .g-blue,
-  .g-yellow,
-  .g-red,
-  .g-black,
-  .g-undefined {
+  .grading-table td {
     font-size: small;
   }
 }
+
 .sub-flex-margin-big {
   margin-top: 300px;
 }
