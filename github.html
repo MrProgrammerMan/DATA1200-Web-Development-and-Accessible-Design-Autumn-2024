@@ -9,12 +9,13 @@
       rel="shortcut icon"
       href="./assets/imgs/OsloMet-favicon.ico"
       type="image/x-icon"
-    /> 
+    />
   </head>
   <body class="margin0">
     <header class="padding0">
       <div class="margin0 padding0 align-center" id="logoWrapper">
-        <svg
+        <a href="index.html">
+          <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
@@ -29,6 +30,7 @@
             transform="translate(130.783 -43.705)"
           />
         </svg>
+        </a>
       </div>
       <nav class="align-center">
         <ul class="margin0 padding0">
@@ -95,6 +97,10 @@
           </div>
         </label>
       </div>
+      <input id="dark-mode" type="checkbox" hidden />
+      <div class="align-center" id="dark-mode-label-wrapper">
+        <label for="dark-mode"></label>
+      </div>
     </header>
     <main>
       <article class="indentAllChildrenUni1">
@@ -138,6 +144,7 @@
             srcset="./assets/imgs/git-history-branches.png"
           />
           <img
+            class="color-invertible"
             src="./assets/imgs/git-history-branches.png"
             alt="Git extract of branches."
           />
@@ -174,6 +181,7 @@
             srcset="./assets/imgs/git-history-revert.png"
           />
           <img
+            class="color-invertible"
             src="./assets/imgs/git-history-revert.png"
             alt="Git history showing a feature implementation from start to finish, and how git helped us fix issues."
           />
@@ -223,6 +231,7 @@
         <h2>Change 1: A typical feature commit</h2>
         <div class="scrollable-img">
           <img
+            class="color-invertible"
             src="assets/imgs/git commit 1.png"
             alt="A feature commit adding plus/minus icons to some expandable boxes."
           />
@@ -235,6 +244,7 @@
         <h2>Change 2: A simple fix commit to main</h2>
         <div class="scrollable-img">
           <img
+            class="color-invertible"
             src="assets/imgs/git commit 2.png"
             alt="A fix commit to main branch that adds some hyperlinks that were previously placeholders."
           />
