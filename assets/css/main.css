@@ -53,6 +53,40 @@ img {
   max-width: 100%;
 }
 
+@media (max-width: 480px) {
+  .scrollable-img {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .scrollable-img img {
+    width: 800px;
+    max-width: none;
+  }
+
+  .scrollable-img::before {
+    content: "SWIPE TO SEE CHANGES -->";
+    font-size: 18px;
+    padding: 8px;
+    /* Animation could be played on scroll reveal,
+       but this is impractical and clunky to do without JS
+       As an alternative, it runs slowly with a subtle colour infinitely */
+    animation: flash 3s ease-in-out infinite;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--hover-background-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 .align-center {
   display: flex;
   align-items: center;
@@ -112,6 +146,7 @@ h1, h2, h3, p, a, summary, li, dd, dt {
 h1 {
   font-size: 2.5rem;
   line-height: 3.2rem;
+  text-align: center;
 }
 
 h2 {
@@ -437,6 +472,10 @@ main > article > * {
 /* STUDY INFORMATION */
 /* Composed of study-overview, study-info */
 /* study-info contains study-year-top, study-year, semester and subjects */
+.bachelor {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
 
 .study-overview,
 .subjects {
@@ -503,12 +542,19 @@ main > article > * {
 
 /* font style for summary */
 .study-info summary {
+  appearance: none;
+  -moz-appearance: none;
+  list-style-type: none;
   padding: 2em;
   font-weight: 700;
   font-size: 1.2rem;
-  list-style-type: none !important;
+  appearance: none;
   cursor: pointer;
   margin-left: 0;
+}
+
+.study-info summary::-webkit-details-marker {
+  display: none;
 }
 
 .study-info summary::before {
@@ -535,7 +581,7 @@ main > article > * {
   padding: 0.2em 0.3em;
 }
 
-.study-info details details p {
+.study-info details p {
   margin-left: 1.5em;
 }
 
@@ -600,8 +646,27 @@ main > article > * {
 }
 
 /* Other Studies Section */
+
+.other-studies {
+  max-width: 900px;
+  margin: auto;
+}
+
 .other-studies ul {
   list-style: none;
+}
+
+.other-studies ul ul {
+  padding: 0;
+}
+
+.other-studies ul ul li {
+  display: inline-block;
+}
+
+.other-studies ul ul > li:not(:last-child)::after {
+  content: "|";
+  padding: 0 8px;
 }
 
 .other-studies span {
@@ -613,30 +678,22 @@ main > article > * {
   /* Styling for links in .other-studies */
   border-top: 0.0625rem solid var(--border);
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
+
   text-decoration: none;
   color: var(--text-color);
 
   padding: 1.1875rem 1.875rem 1.1875rem 0;
-  background-image: url(./assets/imgs/arrow-right.svg);
-  background-repeat: no-repeat;
-  background-position: center right 50px;
-  background-size: auto, 200%;
-
   transition: 0.1s ease-in-out;
 }
 
-.other-studies a:hover {
-  background-position: center right 43px;
+.arrow-icon {
+  margin-left: 1rem;
+  transition: transform 0.25s;
 }
 
-.other-studies ul ul li {
-  display: inline;
-}
-
-.other-studies ul ul > li:not(:last-child)::after {
-  content: "|";
-  padding: 0 8px;
+.other-studies li:hover .arrow-icon {
+  transform: translateX(5px); /* Optional animation for hover */
 }
 
 .border-bottom {
@@ -665,6 +722,7 @@ main > article > * {
   justify-content: center;
   box-sizing: border-box;
   padding: 2rem 2rem 5rem;
+  max-width: 50%;
 }
 
 .stories-img {
@@ -711,37 +769,45 @@ main > article > * {
 .a-stories-button {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 1.75rem;
   margin: 50px auto auto;
   box-sizing: border-box;
-  padding-left: 3rem;
-  font-size: 1.75rem;
   font-weight: 700;
-
   color: var(--text-color);
-  grid-column-start: 4;
-  grid-column-end: 8;
+  /* grid-column-start: 4;
+  grid-column-end: 8; */
   height: 5rem;
   width: 100%;
+  max-width: 400px;
+
+  text-align: center;
 
   /*
-    This CSS rule sets a background for an element using a combination of an image and a linear gradient.
-    - The image is located at '/assets/imgs/arrow-right.svg' and is positioned at the center right with a 50px offset.
-    - The linear gradient transitions from 'var(--secondary-color)' to 'var(--button-hover-color)' at the 50% mark.
-    - The gradient is aligned to the right side of the element.
+    This CSS code snippet sets a background with a linear gradient.
+    - The gradient transitions from the `--secondary-color` to the `--button-hover-color`.
+    - The transition occurs at the 50% mark of the gradient.
+    - The gradient direction is from right to left.
+    - The background is positioned to the right.
+    - The background size is set to 200%, which means it is twice the size of the element it is applied to.
   */
-  background: url(/assets/imgs/arrow-right.svg) center right 50px no-repeat,
-    linear-gradient(
-        to left,
-        var(--secondary-color) 50%,
-        var(--button-hover-color) 50%
-      )
-      right;
-  background-size: auto, 200%;
-  transition: background-position 0.25s;
+  background: linear-gradient(
+      to left,
+      var(--secondary-color) 50%,
+      var(--button-hover-color) 50%
+    )
+    right;
+  background-size: 200%;
+  transition: background-position 0.3s ease;
 }
 
 .a-stories-button:hover {
-  background-position: center right 43px, left;
+  background-position: left;
+}
+
+.a-stories-button:hover .arrow-icon {
+  transform: translateX(5px); /* Optional animation for hover */
 }
 
 @media (max-width: 800px) {
@@ -762,13 +828,17 @@ main > article > * {
     height: auto;
     max-height: 400px;
   }
+
+  .a-stories-button {
+    font-size: 1.5em;
+  }
 }
 
 /* footer */
-.footer-index {
+footer {
   margin-top: 100px;
-  min-height: 600px;
   size: 100%;
+  min-height: 600px;
   background-color: var(--primary-color);
 }
 
@@ -777,14 +847,14 @@ footer * {
   fill: white;
 }
 
-.footer-flex {
+.footer-flex, .footer-activity-flex {
   display: flex;
   padding: 0 10%;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-content {
+.footer-content { /*Make it so that all the content in the footer wont exceed 1600px even tho the footer has been put at 100% width  */
   max-width: 1600px;
   margin: auto;
   line-height: 30px;
@@ -801,8 +871,8 @@ footer * {
   white-space: nowrap;
 }
 
-.footer-index a,
-.footer-index li {
+footer a,
+footer li {
   text-decoration: none;
   list-style: none;
 }
@@ -823,8 +893,57 @@ footer * {
   height: 30px;
 }
 
+.footer-activity {
+  min-height: 500px;
+  background-color: #22223b;
+}
+
+.footer-activity-flex {
+  flex-direction: column;
+  padding: 0;
+}
+
+.footer-activity-text {
+  padding: 0 10%;
+}
+
+.footer-activity-flex li {
+  margin: 10px;
+  font-size: large;
+}
+
+.social-icon, .social-icon-group { /*Group two and two icons together so i can make two colums next to eachother */
+  display: flex;
+}
+
+.social-icon svg{
+  height: 50px;
+  margin: 2rem;
+}
+
+.social-icon svg:hover { 
+  transform: scale(125%);
+}
+
+.social-icon svg:hover path {
+  fill: #1abc9c;
+}
+ 
+.footer-activity a,
+.footer-activity li,
+.social-icon svg{
+  transition: 0.2s ease-in-out;
+}
+
+.footer-activity li a:hover,
+.footer-activity li:hover {
+  color: #1abc9c;
+  transform: scale(125%);
+  fill: #1abc9c;
+}
+
 @media (max-width: 1000px) {
-  .footer-flex {
+  .footer-flex { /*change flex direction and item placement in flexbox */
     flex-direction: column;
     align-items: start;
     padding: 0 30px;
@@ -842,11 +961,15 @@ footer * {
   .footer-index ul {
     padding-left: 0;
   }
+}
 
-  .footer-index {
-    min-height: 1300px;
+@media (max-width: 500px) {
+  .social-icon-group {
+    flex-direction: column;
   }
 }
+
+
 /* ------------------------ */
 
 /* ACTIVITY CSS */
@@ -858,13 +981,9 @@ footer * {
   background-color: var(--activity-text-color) !important;
 }
 
-#activity-main h1 {
-  display: flex;
-  justify-content: center;
-}
-
 .header-activity {
   background-color: var(--activity-header-color);
+  border-bottom: 1px solid var(--activity-text-color);
 }
 
 .header-activity * {
@@ -885,6 +1004,7 @@ footer * {
 
 .activity-content-buttons a {
   background-color: var(--activity-header-color);
+  background-color: var(--activity-header-color);
   width: 20%;
   height: 3.5em;
   margin: 2%;
@@ -892,7 +1012,7 @@ footer * {
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: white;
+  border-color: var(--text-color);
   text-decoration: none;
   color: var(--text-color);
   font-size: 1rem;
@@ -909,7 +1029,7 @@ footer * {
   box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .activity-content-buttons {
     padding: 0.5em 0 0.5em;
     flex-direction: column;
@@ -1015,12 +1135,16 @@ footer * {
   cursor: pointer;
 }
 
+.address-hover-div{
+  position: relative;
+}
+
 .address-hover-div > iframe {
   height: 0;
   transition: height 0.5s ease-in-out;
   position: absolute;
   z-index: 1;
-  width: 600px;
+  width: 100%;
 }
 
 .address-hover-div > iframe:hover,
@@ -1071,6 +1195,12 @@ th {
   margin-top: 60px;
 }
 
+@media (max-width: 1200px){ /*Makes the iframe hidden for tablets and most touchscreen devices */
+  .address-hover-div > iframe {
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 800px) {
   .article-flex {
     flex-direction: column;
@@ -1097,9 +1227,10 @@ th {
   }
 
   .img-styler {
+    display: block;
     width: 80%;
-    padding-left: 10%;
     max-height: 250px;
+    margin: auto;
   }
 
   #img-vertical {
@@ -1128,7 +1259,7 @@ th {
   right: 20px;
   z-index: 1000;
   align-items: center;
-  border-radius: 24px;
+  border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
   box-sizing: border-box;
@@ -1137,46 +1268,23 @@ th {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
-  height: auto;
-  max-width: 100%;
-  padding: 2px 24px;
+  height: 60px;
+  width: 60px;
+  padding: none;
   letter-spacing: 0.5px;
   justify-content: center;
   text-decoration: none;
   text-align: center;
 }
 
-#to-the-top-button:hover {
-  color: var(--background-color);
-  background: var(--hover-background-color);
-}
-
 #to-the-top-button img {
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
   transform: rotate(-90deg);
 }
-
-#to-the-top-button p {
-  padding: 5px;
-  text-transform: uppercase;
-  justify-content: center;
-}
-
-@media (max-width: 1000px) {
-  #to-the-top-button {
-    height: 57px;
-    width: 57px;
-    border-radius: 50%;
-    padding: none;
-  }
-
-  #to-the-top-button p {
-    display: none;
-  }
-
-  #to-the-top-button img {
-    height: 100%;
-    width: 100%;
+@media (min-width: 1201px) {
+  #to-the-top-button:hover {
+    color: var(--background-color);
+    background: var(--hover-background-color);
   }
 }
