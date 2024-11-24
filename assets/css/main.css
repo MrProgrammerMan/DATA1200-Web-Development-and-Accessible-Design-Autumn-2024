@@ -1085,12 +1085,16 @@ footer li {
   cursor: pointer;
 }
 
+.address-hover-div{
+  position: relative;
+}
+
 .address-hover-div > iframe {
   height: 0;
   transition: height 0.5s ease-in-out;
   position: absolute;
   z-index: 1;
-  width: 600px;
+  width: 100%;
 }
 
 .address-hover-div > iframe:hover,
@@ -1139,6 +1143,12 @@ th {
 
 .activity-margin-top {
   margin-top: 60px;
+}
+
+@media (max-width: 1200px){ /*Makes the iframe hidden for tablets and most touchscreen devices */
+  .address-hover-div > iframe {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 800px) {
