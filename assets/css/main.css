@@ -547,7 +547,7 @@ main > article > * {
 .study-info > p {
   font-size: 1.5em;
   padding: 1.75em;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .study-info > details {
@@ -560,11 +560,12 @@ main > article > * {
   -moz-appearance: none;
   list-style-type: none;
   padding: 2em;
-  font-weight: 700;
+  align-items: center;
+  font-weight: bold;
   font-size: 1.2rem;
-  appearance: none;
   cursor: pointer;
   margin-left: 0;
+  display: flex;
 }
 
 .study-info summary::-webkit-details-marker {
@@ -610,6 +611,16 @@ main > article > * {
 }
 .study-info a:hover {
   text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .study-info summary {
+    padding: 1em 0;
+  }
+
+  #study-info-top {
+    padding: 1em 0.5em;
+  }
 }
 
 .study-year-top {
