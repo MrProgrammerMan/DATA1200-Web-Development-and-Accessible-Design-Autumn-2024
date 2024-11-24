@@ -390,8 +390,9 @@ nav > ul > li > a:active {
   color: var(--text--bottom-top-color);
 }
 
-#search-text:hover,
-.search-svg:hover {
+#search-container *:hover,
+#menu-toggle-wrapper *:hover,
+#dark-mode-label-wrapper label:hover {
   cursor: pointer;
 }
 
