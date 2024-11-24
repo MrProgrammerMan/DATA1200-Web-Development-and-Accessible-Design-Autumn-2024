@@ -12,54 +12,71 @@
     />
   </head>
   <body class="margin0">
-    <header class="padding0">
-      <div class="margin0 padding0 align-center" id="logo-wrapper">
-        <img src="./assets/imgs/OsloMet-logo.svg" alt="OsloMet logo." aria-label="OsloMet logo" />
-      </div>
-      <nav class="align-center">
-        <ul class="margin0 padding0">
-          <li><a href="index.html">MATMOD</a></li>
-          <li><a href="accessibility.html">ACCESSIBILITY</a></li>
-          <li><a href="github.html">GITHUB</a></li>
-          <li><a href="activity.html">ACTIVITY</a></li>
-        </ul>
-      </nav>
-      <form class="align-center" id="search-container">
-        <label id="search-text" for="search">SØK</label>
-        <input class="border0" id="search" type="text" />
-        <button class="border0" type="button" aria-label="Search">
-          <!--type=button prevents site refresh (because search is dummy)-->
-          <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
-        </button>
-      </form>
-      <div class="align-center" id="menu-toggle-wrapper">
-        <input id="menu-toggle" type="checkbox" hidden />
-        <label class="align-center" for="menu-toggle" aria-label="Menu toggle">
-          <p>MENY</p>
-          <div class="margin0 padding0">
-            <span id="menu-icon-span0" class="margin0 padding0"></span>
-            <span id="menu-icon-span1" class="margin0 padding0"></span>
-            <span id="menu-icon-span2" class="margin0 padding0"></span>
-          </div>
-        </label>
-      </div>
-      <div class="align-center" id="dark-mode-label-wrapper">
-        <label for="dark-mode" aria-label="Toggle dark mode">
-          <input id="dark-mode" type="checkbox" />
-        </label>
-      </div>
-    </header>
+    <div class="margin0 header-wrapper">
+      <header class="padding0">
+        <div class="margin0 padding0 align-center" id="logo-wrapper">
+          <img
+            src="./assets/imgs/OsloMet-logo.svg"
+            alt="OsloMet logo."
+            aria-label="OsloMet logo"
+          />
+        </div>
+        <nav class="align-center">
+          <ul class="margin0 padding0">
+            <li><a href="index.html">MATMOD</a></li>
+            <li><a href="accessibility.html">ACCESSIBILITY</a></li>
+            <li><a href="github.html">GITHUB</a></li>
+            <li><a href="activity.html">ACTIVITY</a></li>
+          </ul>
+        </nav>
+        <form class="align-center" id="search-container">
+          <label id="search-text" for="search">SØK</label>
+          <input class="border0" id="search" type="text" />
+          <button class="border0" type="button" aria-label="Search">
+            <!--type=button prevents site refresh (because search is dummy)-->
+            <img src="./assets/imgs/search-icon.svg" alt="Search icon." />
+          </button>
+        </form>
+        <div class="align-center" id="menu-toggle-wrapper">
+          <input id="menu-toggle" type="checkbox" hidden />
+          <label
+            class="align-center"
+            for="menu-toggle"
+            aria-label="Menu toggle"
+          >
+            <p>MENY</p>
+            <div class="margin0 padding0">
+              <span id="menu-icon-span0" class="margin0 padding0"></span>
+              <span id="menu-icon-span1" class="margin0 padding0"></span>
+              <span id="menu-icon-span2" class="margin0 padding0"></span>
+            </div>
+          </label>
+        </div>
+        <div class="align-center" id="dark-mode-label-wrapper">
+          <label for="dark-mode" aria-label="Toggle dark mode">
+            <input id="dark-mode" type="checkbox" />
+          </label>
+        </div>
+      </header>
+    </div>
     <main>
-      <article class="indentAllChildrenUni1" aria-label="Accessibility Information">
+      <article
+        class="indentAllChildrenUni1"
+        aria-label="Accessibility Information"
+      >
         <h1>Accessibility</h1>
         <p>
           Accessibility ensures that websites are usable by everyone, including
           people with disabilities, making it a critical aspect of web design.
-          For this project, we focused on aligning with the <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>. Using automated tools like Lighthouse
-          and SonarLint, we identified areas to improve, such as low contrast,
-          missing <abbr title="alternative">alt</abbr> attributes, and touch target sizing. However,
-          accessibility goes beyond automated checks. Through manual testing and
-          thoughtful coding, we implemented features like semantic HTML and <abbr title="Accessible Rich Internet Applications">ARIA</abbr>
+          For this project, we focused on aligning with the
+          <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>. Using
+          automated tools like Lighthouse and SonarLint, we identified areas to
+          improve, such as low contrast, missing
+          <abbr title="alternative">alt</abbr> attributes, and touch target
+          sizing. However, accessibility goes beyond automated checks. Through
+          manual testing and thoughtful coding, we implemented features like
+          semantic HTML and
+          <abbr title="Accessible Rich Internet Applications">ARIA</abbr>
           attributes. This page highlights the key improvements, coding choices,
           and tools used to achieve our accessibility goals.
         </p>
@@ -79,8 +96,10 @@
           One issue involved insufficient contrast on buttons, such as the
           "subscribe" button. Low contrast makes it difficult for users with
           visual impairments to read text. We adjusted the color palette to
-          ensure all text met the Web Content Accessibility Guidelines (<abbr title="Web Content Accessibility Guidelines">WCAG</abbr>)
-          for contrast ratios.
+          ensure all text met the Web Content Accessibility Guidelines (<abbr
+            title="Web Content Accessibility Guidelines"
+            >WCAG</abbr
+          >) for contrast ratios.
         </p>
         <img
           src="./assets/imgs/accessibility-contrast.PNG"
@@ -105,11 +124,13 @@
           alt="Screenshot of an accessibility audit scoring 86/100. Issues identified include elements missing [alt] attributes and <frame> or <iframe> elements lacking a title. Recommendations highlight the importance of improving semantic controls for better support with assistive technologies like screen readers."
         />
         <p>
-          Several images on the site were flagged for lacking <abbr title="alternative">alt</abbr> attributes,
-          which are essential for screen readers to describe the content of an
-          image. For example, images with classes like img-styler and
-          img-vertical did not include descriptive alternate text. To resolve
-          this, we ensured that informative images received appropriate <abbr title="alternative">alt</abbr>
+          Several images on the site were flagged for lacking
+          <abbr title="alternative">alt</abbr> attributes, which are essential
+          for screen readers to describe the content of an image. For example,
+          images with classes like img-styler and img-vertical did not include
+          descriptive alternate text. To resolve this, we ensured that
+          informative images received appropriate
+          <abbr title="alternative">alt</abbr>
           attributes.
         </p>
         <h3>Aria-label</h3>
@@ -120,8 +141,10 @@
         <p>
           Some interactive elements, like the "to-the-top-button," lacked
           meaningful names, making them inaccessible to screen readers. We added
-          descriptive <abbr title="Accessible Rich Internet Applications">aria-label</abbr> attributes and ensured all links had clear,
-          visible text where possible.
+          descriptive
+          <abbr title="Accessible Rich Internet Applications">aria-label</abbr>
+          attributes and ensured all links had clear, visible text where
+          possible.
         </p>
         <h2>SonarLint</h2>
         <img
@@ -130,15 +153,19 @@
         />
         <p>
           Throughout the project, we used SonarLint to ensure our code adhered
-          to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> accessibility standards. SonarLint provided real-time feedback
-          during development, highlighting potential issues such as missing
-          <abbr title="alternative">alt</abbr> attributes, insufficient color contrast, and improper semantic
-          structures.
+          to
+          <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>
+          accessibility standards. SonarLint provided real-time feedback during
+          development, highlighting potential issues such as missing
+          <abbr title="alternative">alt</abbr> attributes, insufficient color
+          contrast, and improper semantic structures.
         </p>
         <p>
-          SonarLint integrates seamlessly into the <abbr title="Integrated Development Environment">IDE</abbr> and highlights potential
-          problems, such as missing attributes or improper syntax, before the
-          code is committed. In this example, SonarLint flagged an <dfn title="Inline Frame">iframe</dfn>
+          SonarLint integrates seamlessly into the
+          <abbr title="Integrated Development Environment">IDE</abbr> and
+          highlights potential problems, such as missing attributes or improper
+          syntax, before the code is committed. In this example, SonarLint
+          flagged an <dfn title="Inline Frame">iframe</dfn>
           without a "title" attribute, helping ensure the site adheres to
           accessibility best practices. By addressing these issues early, we
           maintained cleaner and more accessible code throughout the project.
