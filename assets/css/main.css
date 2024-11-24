@@ -52,6 +52,60 @@
   ); /* Invert colors for elements with class 'color-invertible' */
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:has(#dark-mode:checked) {
+    --text-color: #333333;
+    --background-color: #f5f5f5;
+    --border-high-contrast: #000;
+    --primary-color: #2c3e50;
+    --secondary-color: #add8e6;
+    --button-hover-color: #a0c8d6;
+    --banner-background: #9696967e;
+  }
+  
+  :root {
+    /* Dark Mode Theme */
+    /* TODO: Add dark mode colors */
+    /* Base text color and font family */
+    font-family: Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    --accent-color: #a83225aa;
+    --text--bottom-top-color: #ededed;
+    --link-color: #3498db;
+    --link-hover-color: #2980b9;
+    --link-active-color: #405a75;
+    --activity-elem-color: #22223b;
+    --hover-background-color: #1abc9c;
+    --nav-buttons: #333333;
+    --border: #e2e2e2;
+    --border-nav-footer-color: black;
+    --activity-header-color: #f2e9e4;
+    --activity-text-color: black;
+    background-color: var(--background-color);
+
+    --text-color: #fff;
+    --background-color: #292929;
+    --border-high-contrast: #fff;
+    --primary-color: #3b3b3b;
+    --secondary-color: #004964;
+    --button-hover-color: #004057;
+    --banner-background: #1111117e;
+  }
+
+  .color-invertible {
+    filter: invert(
+      1
+    ); /* Invert colors for elements with class 'color-invertible' */
+  }
+  
+  :root:has(#dark-mode:checked) .color-invertible {
+    filter: invert(
+      0
+    );
+  }
+}
+
 img {
   max-width: 100%;
 }
@@ -412,6 +466,19 @@ nav > ul > li > a:active {
 
 :root:has(#dark-mode:checked) #dark-mode-label-wrapper label {
   background-image: url(../imgs/dark-mode.webp);
+}
+
+/* Swap icons if user prefers dark mode */
+@media (prefers-color-scheme: dark) {
+  #dark-mode-label-wrapper label {
+    background-image: url(../imgs/dark-mode.webp);
+  }
+  
+  :root:has(#dark-mode:checked) #dark-mode-label-wrapper label {
+    background-image: url(../imgs/light-mode.webp);
+  }
+
+
 }
 
 @media (max-width: 1200px) {
