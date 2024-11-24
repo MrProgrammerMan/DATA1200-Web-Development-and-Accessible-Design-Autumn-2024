@@ -32,7 +32,6 @@
   --banner-background: #9696967e;
 
   background-color: var(--background-color);
-
 }
 
 :root:has(#dark-mode:checked) {
@@ -48,7 +47,9 @@
 }
 
 :root:has(#dark-mode:checked) .color-invertible {
-  filter: invert(1); /* Invert colors for elements with class 'color-invertible' */
+  filter: invert(
+    1
+  ); /* Invert colors for elements with class 'color-invertible' */
 }
 
 img {
@@ -905,7 +906,8 @@ footer * {
   align-items: center;
 }
 
-.footer-content { /*Make it so that all the content in the footer wont exceed 1600px even tho the footer has been put at 100% width  */
+.footer-content {
+  /*Make it so that all the content in the footer wont exceed 1600px even tho the footer has been put at 100% width  */
   max-width: 1600px; /* Limit footer content width */
   margin: auto;
   line-height: 30px;
@@ -975,10 +977,12 @@ footer li {
   margin: 2rem 2rem 0rem 2rem;
 }
 
+/* Enlarges the social icon when hovered over, creating a zoom effect. */
 .social-icon svg:hover {
   transform: scale(125%);
 }
 
+/* Changes the color of the social icon's path when hovered over. */
 .social-icon svg:hover path {
   fill: #1abc9c;
 }
@@ -990,11 +994,12 @@ footer li {
   transition: 0.2s ease-in-out; /* Smooth transition for hover effects */
 }
 
+/* Changes text fill color to #1abc9c and enlarges the element by 125% on hover */
 .footer-activity li a:hover,
 .footer-activity li:hover,
 .social-icon p:hover {
   color: #1abc9c;
-  transform: scale(125%); /* Enlarge elements on hover */
+  transform: scale(125%);
   fill: #1abc9c;
 }
 
@@ -1026,12 +1031,13 @@ footer li {
   }
 }
 
-
 /* ------------------------ */
 
 /* ACTIVITY CSS */
 .search-svg-activity * {
-  stroke: var(--activity-text-color); /* Change stroke color for activity search icon */
+  stroke: var(
+    --activity-text-color
+  ); /* Change stroke color for activity search icon */
 }
 
 .activity-menu-span {
@@ -1047,6 +1053,7 @@ footer li {
   color: var(--activity-text-color);
 }
 
+/* Styles for the container of activity content buttons, arranging them in a flex layout. */
 .activity-content-buttons {
   list-style-type: none;
   padding: 0;
@@ -1059,6 +1066,7 @@ footer li {
   border-radius: 5px;
 }
 
+/* Styles for anchor links inside .activity-content-buttons, creating styled buttons with smooth transition effects. */
 .activity-content-buttons a {
   background-color: var(--activity-header-color);
   background-color: var(--activity-header-color);
@@ -1197,9 +1205,11 @@ body:has(#activity-main) {
   position: relative;
 }
 
+/* Styles for an iframe within a container that reveals its content on hover.
+   Initially hidden with a height of 0, it transitions smoothly to a visible state. */
 .address-hover-div > iframe {
   height: 0;
-  transition: height 0.5s ease-in-out; /* Smooth transition for iframe height */
+  transition: height 0.5s ease-in-out;
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -1306,6 +1316,8 @@ th {
   margin-top: 300px;
 }
 
+/* Styles for a "Back to Top" button, positioned fixed at the bottom-right corner for quick access. 
+   The button is circular, with shadows for a raised effect, customizable colors, and alignment styling. */
 #to-the-top-button {
   display: inline-flex;
   position: fixed;
@@ -1339,6 +1351,8 @@ th {
 @media (min-width: 1201px) {
   #to-the-top-button:hover {
     color: var(--background-color);
-    background: var(--hover-background-color); /* Change background color on hover */
+    background: var(
+      --hover-background-color
+    ); /* Change background color on hover */
   }
 }
