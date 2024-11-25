@@ -195,7 +195,7 @@ img {
   }
 }
 
-/* Animation to flash background color slowly infinately. Could be replaced with running set number of times after scroll reveal with javascript. */
+/* Animation to flash background color slowly infinitely. Could be replaced with running set number of times after scroll reveal with javascript. */
 @keyframes flash {
   0% {
     background-color: transparent;
