@@ -278,17 +278,6 @@ nav > ul > li > a {
   text-decoration: none;
 }
 
-nav > ul > li > a {
-  display: block;
-
-  font-size: 1em;
-  padding: 0.9em;
-  line-height: 1.2em;
-
-  color: var(--text--bottom-top-color);
-  text-decoration: none;
-}
-
 nav > ul > li > a:hover {
   text-decoration-line: underline;
 }
@@ -435,7 +424,7 @@ nav > ul > li > a:active {
   margin: 0;
 }
 
-/* Place ouline on label when input is in focus */
+/* Place outline on label when input is in focus */
 #dark-mode-label-wrapper label:focus-within {
   outline: auto;
 }
@@ -853,7 +842,7 @@ main > article > * {
 }
 
 .other-studies li:hover .arrow-icon {
-  transform: translateX(5px); /* Optional animation for hover */
+  transform: translateX(5px); /* Animation for hover */
 }
 
 /* Student Stories */
@@ -932,8 +921,6 @@ main > article > * {
   box-sizing: border-box;
   font-weight: 700;
   color: var(--text-color);
-  /* grid-column-start: 4;
-  grid-column-end: 8; */
   height: 5rem;
   width: 100%;
   max-width: 400px;
@@ -1012,7 +999,8 @@ footer * {
 }
 
 .footer-activity-flex li {
-  text-align: center;
+  margin: 10px;
+  font-size: large;
 }
 
 .footer-content {
@@ -1070,14 +1058,9 @@ footer li {
   padding: 0 10%;
 }
 
-.footer-activity-flex li {
-  margin: 10px;
-  font-size: large;
-}
-
 .social-icon,
 .social-icon-group {
-  /*Group two and two icons together so i can make two colums next to eachother */
+  /*Group two and two icons together so i can make two columns next to each other */
   display: flex;
 }
 
@@ -1190,7 +1173,6 @@ footer li {
 
 /* Styles for anchor links inside .activity-content-buttons, creating styled buttons with smooth transition effects. */
 .activity-content-buttons a {
-  background-color: var(--activity-header-color);
   background-color: var(--activity-header-color);
   width: 20%;
   height: 3.5em;
