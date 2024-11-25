@@ -36,7 +36,6 @@
 
 :root:has(#dark-mode:checked) {
   /* Dark Mode Theme */
-  /* TODO: Add dark mode colors */
   --text-color: #fff;
   --background-color: #292929;
   --border-high-contrast: #fff;
@@ -55,6 +54,7 @@
 /* Swap variable definitions if dark theme is preferred. This is the closest to remembering theme state with no javascript. */
 @media (prefers-color-scheme: dark) {
   :root:has(#dark-mode:checked) {
+    /* Light mode theme */
     --text-color: #333333;
     --background-color: #f5f5f5;
     --border-high-contrast: #000;
@@ -66,7 +66,6 @@
 
   :root {
     /* Dark Mode Theme */
-    /* TODO: Add dark mode colors */
     /* Base text color and font family */
     font-family: Helvetica, Arial, sans-serif;
     text-rendering: optimizeLegibility;
@@ -103,71 +102,75 @@
   :root:has(#dark-mode:checked) .color-invertible {
     filter: invert(0);
   } /* Reset inversion if light mode is enabled(states flipped when dark preferred) */
-
-  :root:has(#activity-main) {
-    --text-color: #333333;
-    --border: #000000;
-    --background-color: #f5f5f5;
-  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:has(#dark-mode:checked) {
-    --text-color: #333333;
-    --background-color: #f5f5f5;
-    --border-high-contrast: #000;
-    --primary-color: #2c3e50;
-    --secondary-color: #add8e6;
-    --button-hover-color: #a0c8d6;
-    --banner-background: #9696967e;
-  }
-  
-  :root {
-    /* Dark Mode Theme */
-    /* TODO: Add dark mode colors */
-    /* Base text color and font family */
-    font-family: Helvetica, Arial, sans-serif;
-    text-rendering: optimizeLegibility;
-    scroll-behavior: smooth;
-    --accent-color: #a83225aa;
-    --text--bottom-top-color: #ededed;
-    --link-color: #3498db;
-    --link-hover-color: #2980b9;
-    --link-active-color: #405a75;
-    --activity-elem-color: #22223b;
-    --hover-background-color: #1abc9c;
-    --nav-buttons: #333333;
-    --border: #e2e2e2;
-    --border-nav-footer-color: black;
-    --activity-header-color: #f2e9e4;
-    --activity-text-color: black;
-    background-color: var(--background-color);
+/* END of root variables */
+/* Generic classes */
 
-    --text-color: #fff;
-    --background-color: #292929;
-    --border-high-contrast: #fff;
-    --primary-color: #3b3b3b;
-    --secondary-color: #004964;
-    --button-hover-color: #004057;
-    --banner-background: #1111117e;
-  }
+.align-center {
+  display: flex;
+  align-items: center;
+}
 
-  .color-invertible {
-    filter: invert(
-      1
-    ); /* Invert colors for elements with class 'color-invertible' */
-  }
-  
-  :root:has(#dark-mode:checked) .color-invertible {
-    filter: invert(
-      0
-    );
-  }
+.margin0 {
+  margin: 0;
+}
+
+.border0 {
+  border: 0;
+}
+
+.padding0 {
+  padding: 0;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border);
+}
+
+/* END of generic classes */
+/* Generic tag styling */
+
+h1,
+h2,
+h3,
+p,
+a,
+summary,
+li,
+dd,
+dt {
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+p,
+li {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 
 img {
   max-width: 100%;
 }
+
+/* END of generic tag styling */
+/* Scrollable images mobile */
 
 @media (max-width: 480px) {
   .scrollable-img {
@@ -205,106 +208,18 @@ img {
   }
 }
 
-.align-center {
-  display: flex;
-  align-items: center;
-}
-
-.margin0 {
-  margin: 0;
-}
-
-.border0 {
-  border: 0;
-}
-
-.padding0 {
-  padding: 0;
-}
-
-.indentAllChildrenUni1 > * {
-  grid-column-start: 2;
-  grid-column-end: 10;
-}
-
-.indentLeft1,
-.indentUni1 {
-  grid-column-start: 2;
-}
-
-.indentLeft2,
-.indentUni2 {
-  grid-column-start: 3;
-}
-
-.indentLeft3,
-.indentUni3 {
-  grid-column-start: 4;
-}
-
-.indentRight1,
-.indentUni1 {
-  grid-column-end: 10;
-}
-
-.indentRight2,
-.indentUni2 {
-  grid-column-end: 9;
-}
-
-.indentRight3,
-.indentUni3 {
-  grid-column-end: 8;
-}
-
-h1,
-h2,
-h3,
-p,
-a,
-summary,
-li,
-dd,
-dt {
-  color: var(--text-color);
-}
-
-h1 {
-  font-size: 2.5rem;
-  line-height: 3.2rem;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-p,
-li {
-  font-size: 1.1rem;
-  line-height: 1.5rem;
-}
-
-.full-bachelor-program p,
-.full-bachelor-program li {
-  font-size: small;
-}
+/* END of scrollable images mobile */
 
 /*** HEADER ***/
 /* Header is composed of #logo-wrapper, nav, #search-container, #menu-toggle-wrapper, #dark-mode-toggle-wrapper */
 /* #menu-toggle-wrapper hidden by default (desktop) */
-/* Makes header responsive at wide screen sizes by allowing header max width */
+/* .header-wrapper makes header responsive at wide screen sizes by extending banner to screen edge */
 .header-wrapper {
   width: 100%;
   background-color: var(--primary-color);
 }
 
+/* Color override for activity.html */
 body:has(#activity-main) .header-wrapper {
   background-color: var(--activity-header-color);
   border-bottom: 1px solid black;
@@ -520,10 +435,12 @@ nav > ul > li > a:active {
   margin: 0;
 }
 
+/* Place ouline on label when input is in focus */
 #dark-mode-label-wrapper label:focus-within {
   outline: auto;
 }
 
+/* Replace toggle image with dark mode icon */
 :root:has(#dark-mode:checked) #dark-mode-label-wrapper label {
   background-image: url(../imgs/dark-mode.webp);
 }
@@ -539,6 +456,7 @@ nav > ul > li > a:active {
   }
 }
 
+/* Collapse menu for tablets and mobile */
 @media (max-width: 1200px) {
   header {
     grid-template-columns: 5% auto 1fr auto auto auto 5%;
@@ -584,7 +502,7 @@ nav > ul > li > a:active {
   }
 }
 
-/*ADD A COMMENT:D*/
+/*Down to 400px, this is sufficient*/
 @media (max-width: 440px) {
   header {
     grid-template-columns: 1% auto 1fr auto auto auto 1%;
@@ -595,6 +513,7 @@ nav > ul > li > a:active {
   }
 }
 
+/* Below 400px, remove labels */
 @media (max-width: 400px) {
   header {
     grid-template-columns: 2px auto 1fr auto auto auto 2px;
@@ -606,18 +525,22 @@ nav > ul > li > a:active {
   }
 }
 
-/**** MAIN CONTENT ****/
+/* END of header */
 
+/**** MAIN CONTENT ****/
 main {
   display: grid;
-  grid-template-columns: 10% auto 10%;
+  grid-template-columns: 10% auto 10%; /* All content has margin */
 }
 
+/* Main positioning grid */
 main > article {
   grid-column: 2 / 3;
+
   width: 100%;
-  max-width: 1600px;
+  max-width: 1600px; /* Ultrawide support */
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: repeat(10, 10%);
   padding: 1em 0;
@@ -628,6 +551,44 @@ main > article > * {
   grid-column: 1 / 11;
 }
 
+/* Classes used for simple element positioning in main grid */
+
+.indentAllChildrenUni1 > * {
+  grid-column-start: 2;
+  grid-column-end: 10;
+}
+
+.indentLeft1,
+.indentUni1 {
+  grid-column-start: 2;
+}
+
+.indentLeft2,
+.indentUni2 {
+  grid-column-start: 3;
+}
+
+.indentLeft3,
+.indentUni3 {
+  grid-column-start: 4;
+}
+
+.indentRight1,
+.indentUni1 {
+  grid-column-end: 10;
+}
+
+.indentRight2,
+.indentUni2 {
+  grid-column-end: 9;
+}
+
+.indentRight3,
+.indentUni3 {
+  grid-column-end: 8;
+}
+
+/* Slimmer margins on smaller screens */
 @media (max-width: 1200px) {
   main {
     grid-template-columns: 5% auto 5%;
@@ -788,6 +749,13 @@ main > article > * {
   }
 }
 
+/* .full-bachelor-program includes .study-year-top, .study-year, semester and subjects */
+
+.full-bachelor-program p,
+.full-bachelor-program li {
+  font-size: small;
+}
+
 .study-year-top {
   display: flex;
   justify-content: end;
@@ -834,6 +802,8 @@ main > article > * {
     line-height: 2em;
   }
 }
+
+/* END of study info */
 
 /* Other Studies Section */
 
@@ -884,10 +854,6 @@ main > article > * {
 
 .other-studies li:hover .arrow-icon {
   transform: translateX(5px); /* Optional animation for hover */
-}
-
-.border-bottom {
-  border-bottom: 1px solid var(--border);
 }
 
 /* Student Stories */
@@ -1177,6 +1143,20 @@ footer li {
 /* ------------------------ */
 
 /* ACTIVITY CSS */
+/* Dark mode is not available on activity.html, but system preferences may force it anyways */
+/* Override root variables in case of forced dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:has(#activity-main) {
+    --text-color: #333333;
+    --border: #000000;
+    --background-color: #f5f5f5;
+  }
+}
+
+:root:has(#activity-main) {
+  --link-active-color: #e0c695;
+}
+
 .search-svg-activity * {
   stroke: var(
     --activity-text-color
