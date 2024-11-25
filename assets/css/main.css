@@ -1153,6 +1153,10 @@ footer li {
   }
 }
 
+:root:has(#activity-main) {
+  --link-active-color: #e0c695;
+}
+
 .search-svg-activity * {
   stroke: var(
     --activity-text-color
